@@ -1,4 +1,4 @@
-# 昕力資訊設計部 gulp 靜態頁面模板
+靜態頁面模板
 
 ## Check for node, npm, and npx
 
