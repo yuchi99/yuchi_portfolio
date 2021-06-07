@@ -1,0 +1,33 @@
+.btn {
+  @include size(160px, 60px);
+  border-radius: 50px;
+  color: $black;
+  direction: 0.5s;
+  position: relative;
+  background-color: $yellow-500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    direction: 0.5s;
+    color: #545454;
+    background-color: #f0eb5f;
+    .ic-arrow {
+      position: absolute;
+      left: 250px;
+    }
+  }
+  &.full-btn {
+    width: 100%;
+  }
+  .ic-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 245px;
+    transform: translateY(-50%);
+  }
+  .go-back {
+    margin-left: -25px;
+  }
+}

@@ -1,0 +1,11 @@
+.login-bg {
+  width: 1920px;
+  background-size: 100%;
+  background-image: url(../../images/login-bg.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .login-bg {
+    background-image: url(../../images/login-bg-xl@2x.png);
+  }
+}

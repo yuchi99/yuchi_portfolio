@@ -1,0 +1,54 @@
+* {
+  outline: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: $font-family;
+  color: $black;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background-size: 12px;
+  letter-spacing: 0.5px;
+  @include media-breakpoint-down("sm") {
+    font-size: 14px;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  &.bg-plaid {
+    background-image: url(../images/bg-plaid.png);
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/bg-plaid@2x.png);
+    }
+  }
+}
+.content {
+  min-height: calc(100% - 400px);
+  @include media-breakpoint-down("sm") {
+    min-height: calc(100% - 290px);
+  }
+  padding-bottom: 20px;
+  &-inner {
+    justify-content: center;
+    padding: 10px 35px;
+    @include media-breakpoint-down("lg") {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    @include media-breakpoint-down("md") {
+      padding-right: 0px;
+      padding-left: 0px;
+      padding-top: 16px;
+    }
+  }
+}
+.section {
+  padding: 0 20px;
+  margin: 0 auto;
+}

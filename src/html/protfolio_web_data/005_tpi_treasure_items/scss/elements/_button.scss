@@ -1,0 +1,297 @@
+@import "../sprite";
+
+button {
+  color: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  &:hover {
+    color: inherit;
+  }
+}
+
+button:focus,
+.btn.focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* bootstrap: btn -------------------- */
+
+.btn {
+  width: 240px;
+  font-size: 18px;
+  padding: 10px 16px;
+  white-space: nowrap;
+  @media (max-width: 767px) {
+    padding: 5px 16px;
+    width: 100%;
+  }
+  @include media-breakpoint-down("sm") {
+    font-size: 16px;
+  }
+  margin: 10px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  position: relative;
+  top: 0;
+  background-color: $gray-200;
+  @include tran();
+  &:focus,
+  &.focus,
+  &:not(:disabled):not(.disabled):active:focus,
+  &:not(:disabled):not(.disabled):active {
+    box-shadow: none;
+  }
+  &-link {
+    color: $green-500;
+    text-decoration: underline;
+    &:hover {
+      color: $green-700;
+    }
+  }
+  &-primary {
+    background-color: $green-500;
+    border-color: $green-500;
+    box-shadow: 0 6px 0 0 $green-300;
+    transition-property: all;
+    -webkit-font-smoothing: subpixel-antialiased;
+    @include tran();
+    @media (max-width: 767px) {
+      box-shadow: 0 4px 0 0 $green-300;
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus {
+      background-color: $green-500;
+      border-color: $green-500;
+    }
+    &:focus,
+    &.focus {
+      background-color: $green-700;
+      border-color: $green-700;
+      box-shadow: 0 6px 0 0 $green-300;
+    }
+    &:hover {
+      border-color: $green-500;
+      background-color: $green-500;
+      box-shadow: inherit;
+      transform: translateY(3px);
+      backface-visibility: hidden;
+    }
+  }
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+    background-color: $gray-400;
+    border-color: $gray-400;
+    color: #fff;
+    cursor: not-allowed;
+    box-shadow: 0 6px 0 0 $gray-200;
+    transition-property: all;
+    @include tran();
+    @media (max-width: 767px) {
+      box-shadow: 0 4px 0 0 $gray-200;
+    }
+    -webkit-font-smoothing: subpixel-antialiased;
+    &:hover {
+      border-color: $gray-400;
+      background-color: $gray-400;
+      box-shadow: inherit;
+      transform: translateY(3px);
+      backface-visibility: hidden;
+      color: #fff;
+    }
+  }
+
+  &-secondary {
+    background-color: #fff;
+    border-color: $green-500;
+    color: $green-500;
+    box-shadow: 0 6px 0 0 $green-300;
+    transition-property: all;
+    -webkit-font-smoothing: subpixel-antialiased;
+    @include tran();
+    @media (max-width: 767px) {
+      box-shadow: 0 4px 0 0 $green-300;
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus {
+      border-color: $green-500;
+      background-color: #fff;
+      color: $green-500;
+    }
+    &:focus,
+    &.focus {
+      background-color: #fff;
+      border-color: $green-700;
+      color: $green-700;
+      box-shadow: 0 6px 0 0 $green-300;
+    }
+    &:hover {
+      border-color: $green-500;
+      background-color: #fff;
+      color: $green-500;
+      box-shadow: inherit;
+      transform: translateY(3px);
+      backface-visibility: hidden;
+    }
+    &.disabled,
+    &:disabled {
+      background-color: #fff;
+      border-color: $gray-400;
+      color: $gray-400;
+      box-shadow: 0 6px 0 0 $gray-200;
+    }
+    &.disabled:hover {
+      background-color: #fff;
+      border-color: $gray-400;
+      color: $gray-400;
+    }
+  }
+}
+
+/* bootstrap: dropdown -------------------- */
+.btn-dropdown {
+  &-wrapper {
+    display: inline-block;
+    margin: 10px;
+  }
+  .dropdown {
+    &-menu {
+      width: 100%;
+      margin-top: 0;
+      border: 1px solid $gray-400;
+      border-radius: 8px;
+      padding: 8px 0;
+      max-height: 216px;
+      overflow-y: auto;
+      &.triangle {
+        top: calc(100% + 10px) !important;
+        border: 2px solid $purple-500;
+        overflow: visible;
+        &::before {
+          content: "";
+          width: 6px;
+          height: 10px;
+          position: absolute;
+          display: inline-block;
+          margin: 0 5px;
+          vertical-align: middle;
+          border-bottom: solid 10px #fff;
+          border-left: solid 6px transparent;
+          border-right: solid 6px transparent;
+          z-index: 1;
+        }
+        &::after {
+          content: "";
+          width: 6px;
+          height: 10px;
+          position: absolute;
+          display: inline-block;
+          margin: 0 5px;
+          vertical-align: middle;
+          border-bottom: solid 10px $purple-500;
+          border-left: solid 6px transparent;
+          border-right: solid 6px transparent;
+        }
+        &.center {
+          &::before {
+            left: 50%;
+            top: -8px;
+            transform: translateX(-50%);
+          }
+          &::after {
+            left: 50%;
+            top: -12px;
+            transform: translateX(-50%);
+          }
+        }
+        &.right {
+          &::before {
+            right: 10px;
+            top: -8px;
+          }
+          &::after {
+            right: 10px;
+            top: -12px;
+          }
+        }
+      }
+      .menu-inner {
+        max-height: 200px;
+        overflow-y: auto;
+      }
+    }
+    &-item {
+      padding: 8px 12px;
+      text-decoration: none;
+      color: $black;
+      white-space: normal;
+      line-height: 1.5;
+      &:last-child {
+        border-bottom-width: 0;
+      }
+      &:hover {
+        background-color: $gray-200;
+        color: $black;
+      }
+      &.active {
+        background-color: #fff;
+        color: $purple-500;
+        font-weight: $text-bold;
+      }
+    }
+    &-toggle {
+      @include flex(space-between, top);
+      font-size: inherit;
+      margin: 0;
+      width: auto;
+      border-color: $gray-400;
+      background-color: #fff;
+      padding: 5px 12px;
+      border-radius: 10px;
+      align-items: center;
+      &::after {
+        @include retina-sprite($select-default-group);
+        border: none;
+      }
+      &.nav {
+        border: 2px solid $purple-500;
+        color: $purple-500;
+        font-weight: $text-bold;
+        border-radius: 21px;
+        &::after {
+          @include retina-sprite($ic-dropdown-default-group);
+          border: none;
+        }
+      }
+    }
+  }
+  &.show {
+    .btn {
+      &:focus,
+      &.focus {
+        box-shadow: none;
+      }
+    }
+    .dropdown-toggle::after {
+      transform: scaleY(-1);
+    }
+  }
+}
+@include media-breakpoint-down("md") {
+  .btn {
+    &.btn-half {
+      width: 140px;
+    }
+  }
+}
+@include media-breakpoint-down("sm") {
+  .btn {
+    font-size: 16px;
+    &.btn-half {
+      width: 120px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+/* footer -------------------- */
+.footer {
+  height: 240px;
+  background-size: auto 240px;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  position: relative;
+  z-index: 6;
+  margin-top: -45px;
+  background-image: url(../images/bg-mountain.png);
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url(../images/bg-mountain@2x.png);
+  }
+  &-inner {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* footer > decorations -------------------- */
+.decorations {
+  &-man {
+    position: relative;
+    bottom: -15px;
+  }
+  &-woman {
+    position: relative;
+    bottom: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  .decorations-man {
+    left: -250px;
+  }
+  .decorations-woman {
+    right: -140px;
+  }
+}
+
+@include media-breakpoint-down("lg") {
+  .footer {
+    margin-top: -20px;
+  }
+  .footer-inner {
+    max-width: 800px;
+  }
+}
+@include media-breakpoint-down("md") {
+  .footer-inner {
+    max-width: 600px;
+  }
+  .decorations-woman {
+    display: none;
+  }
+}
+@include media-breakpoint-down("sm") {
+  .footer {
+    height: 130px;
+    background-position: bottom left 60%;
+    margin-top: 90px;
+  }
+  .decorations-man {
+    height: 130px;
+    position: relative;
+    left: -20px;
+    bottom: 0px;
+  }
+}
+@media (max-width: 414px) {
+  .footer-inner {
+    max-width: 414px;
+  }
+}
+@media (max-width: 375px) {
+  .footer-inner {
+    max-width: 375px;
+  }
+}

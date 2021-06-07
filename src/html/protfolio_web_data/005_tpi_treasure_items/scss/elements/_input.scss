@@ -1,0 +1,253 @@
+@import "../sprite";
+
+// clears the 'X' from Internet Explorer
+input::-ms-clear {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+// clears type = number arrow
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+// clears type = number arrow
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.select-placeholder {
+  color: $gray-400;
+}
+
+/* default setting for input, textarea, select -------------------- */
+@mixin input($height: 40px) {
+  height: $height;
+  border-radius: $radius;
+  border: 1px solid $gray-400;
+  padding: 6px 12px;
+  color: $black;
+  &:hover,
+  &:focus {
+    border: 1px solid $purple-500;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &::placeholder {
+    color: $gray-400;
+  }
+  &:disabled {
+    background-color: $gray-200;
+    border-color: $gray-400;
+    color: $gray-400;
+    -webkit-text-fill-color: $gray-400; // for safari
+  }
+}
+
+$input-red-color: $red-500; // required and invalid
+
+/* bootstrap: label -------------------- */
+.form-label {
+  margin-bottom: 0.5rem;
+}
+.col-form-label,
+.form-control-static {
+  padding-top: calc(0.5rem + 1px);
+  padding-bottom: calc(0.5rem + 1px);
+}
+.row {
+  .col-form-label {
+    padding-right: 16px;
+  }
+}
+
+/* bootstrap: original input -------------------- */
+input,
+input.form-control {
+  @include input();
+}
+
+/* radio & check -------------------- */
+input[type="checkbox"],
+input[type="radio"] {
+  @include size(auto);
+  appearance: none;
+  margin-top: 0.1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &::before {
+    @include pseudo();
+  }
+  &:disabled,
+  &[disabled],
+  &.disabled {
+    + .form-check-label {
+      color: $gray-200;
+    }
+  }
+}
+
+/* setting radio img -------------------- */
+input[type="radio"] {
+  &::before {
+    @include retina-sprite($radio-default-group);
+  }
+  &:hover::before {
+    @include retina-sprite($radio-hover-group);
+  }
+  &:checked::before {
+    @include retina-sprite($radio-checked-group);
+  }
+  &[disabled],
+  &.disabled {
+    &::before {
+      @include retina-sprite($radio-disabled-group);
+    }
+  }
+  &[disabled],
+  &.disabled {
+    &:checked::before {
+      @include retina-sprite($radio-disabled-checked-group);
+    }
+  }
+}
+
+/* setting checkbox img -------------------- */
+input[type="checkbox"] {
+  &::before {
+    @include retina-sprite($checkbox-default-group);
+  }
+  &:hover::before {
+    @include retina-sprite($checkbox-hover-group);
+  }
+  &:checked::before {
+    @include retina-sprite($checkbox-checked-group);
+  }
+  &[disabled],
+  &.disabled {
+    &::before {
+      @include retina-sprite($checkbox-disabled-group);
+    }
+  }
+  &[disabled],
+  &.disabled {
+    &:checked::before {
+      @include retina-sprite($checkbox-disabled-checked-group);
+    }
+  }
+}
+
+/* bootstrap: form-check > radio & checkbox -------------------- */
+.form-check {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  min-height: 24px; // radio & check height
+  &-label {
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  &-inline {
+    margin-right: 40px;
+    display: inline-flex;
+  }
+}
+
+/* bootstrap: textarea -------------------- */
+textarea,
+textarea.form-control {
+  @include input(auto);
+  width: 100%;
+  max-width: none;
+}
+
+/* bootstrap: select -------------------- */
+select,
+.form-select {
+  @include input();
+  appearance: none;
+  text-overflow: ellipsis;
+  padding-right: 40px;
+  background: no-repeat center right 10px;
+  background-size: 20px;
+  background-image: url(../../images/select-default@2x.png);
+  &:active,
+  &:hover {
+    background-image: url(../../images/select-hover@2x.png);
+  }
+  &:disabled {
+    background-image: url(../../images/select-default@2x.png);
+  }
+}
+
+/* required -------------------- */
+.required {
+  label,
+  .col-form-label,
+  .legend {
+    &::after {
+      content: "*";
+      color: $input-red-color;
+    }
+  }
+}
+
+/* invalid -------------------- */
+.invalid {
+  &-feedback {
+    @include text($size: 13px, $color: $input-red-color);
+    margin-top: 4px;
+    width: 100%;
+    display: none;
+  }
+  input,
+  textarea,
+  .form-control {
+    border-color: $input-red-color;
+    &:focus,
+    &:hover:focus,
+    &:hover {
+      border-color: $input-red-color;
+    }
+  }
+  select,
+  .form-select {
+    border-color: $input-red-color;
+    &:active,
+    &:hover {
+      background-image: url(../../images/select-default@2x.png);
+    }
+  }
+  .invalid-feedback {
+    display: block;
+  }
+  input[type="checkbox"] {
+    &::before {
+      @include retina-sprite($checkbox-error-group);
+    }
+    &:checked::before {
+      @include retina-sprite($checkbox-error-checked-group);
+    }
+  }
+  input[type="radio"] {
+    &::before {
+      @include retina-sprite($radio-error-group);
+    }
+    &:checked::before {
+      @include retina-sprite($radio-error-checked-group);
+    }
+  }
+  .form-check-label {
+    color: $input-red-color;
+  }
+}
+
+/* form-text -------------------- */
+.form-text {
+  @include text($size: 13px, $color: $gray-400);
+  margin-top: 4px;
+}

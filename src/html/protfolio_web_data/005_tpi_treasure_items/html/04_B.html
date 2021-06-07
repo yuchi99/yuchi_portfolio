@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--非 RWD 網站不需設定 viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>04_B_購物車</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/sprite.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper bg-plaid shopping-cart">
+        <script src="../js/layout-header.js"></script>
+        <div class="content">
+            <div class="section-bg bg-checklist">
+                <div class="bg-group top">
+                    <img class="bg-img xl" src="../images/bg-checklist-on-xl.png"
+                        srcset="../images/bg-checklist-on-xl@2x.png 2x" alt="">
+                    <img class="bg-img l" src="../images/bg-checklist-on-l.png"
+                        srcset="../images/bg-checklist-on-l@2x.png 2x" alt="">
+                    <img class="bg-img m" src="../images/bg-checklist-on-m.png"
+                        srcset="../images/bg-checklist-on-m@2x.png 2x" alt="">
+                    <img class="bg-img sm" src="../images/bg-checklist-on-sm.png"
+                        srcset="../images/bg-checklist-on-sm@2x.png 2x" alt="">
+                    <img class="bg-img ssm" src="../images/bg-checklist-on-ssm.png"
+                        srcset="../images/bg-checklist-on-ssm@2x.png 2x" alt="">
+                </div>
+                <div class="bg-group middle">
+                </div>
+                <div class="bg-group bottom">
+                    <img class="bg-img xl" src="../images/bg-checklist-under-xl.png"
+                        srcset="../images/bg-checklist-under-xl@2x.png 2x" alt="">
+                    <img class="bg-img l" src="../images/bg-checklist-under-l.png"
+                        srcset="../images/bg-checklist-under-l@2x.png 2x" alt="">
+                    <img class="bg-img m" src="../images/bg-checklist-under-m.png"
+                        srcset="../images/bg-checklist-under-m@2x.png 2x" alt="">
+                    <img class="bg-img sm" src="../images/bg-checklist-under-sm.png"
+                        srcset="../images/bg-checklist-under-sm@2x.png 2x" alt="">
+                    <img class="bg-img ssm" src="../images/bg-checklist-under-ssm.png"
+                        srcset="../images/bg-checklist-under-ssm@2x.png 2x" alt="">
+                </div>
+            </div>
+
+            <main class="container section-container">
+                <div class="content-inner purchase-record">
+                    <h3 class="text-purple">購物車</h3>
+                    <div class="d-block d-md-none instead select-all">
+                        <div class="form-check">
+                            <input class="form-check-input ml-0" type="checkbox" name="exampleCheckbox1"
+                                id="exampleCheckbox2" value="option2">
+                        </div>
+                    </div>
+                    <table class="table rwd checkbox">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="exampleCheckbox1"
+                                            id="exampleCheckbox2" value="option2">
+                                    </div>
+                                </th>
+                                <th scope="col" class="commodity">物品名稱</th>
+                                <th scope="col" class="price">價格</th>
+                                <th scope="col" class="amount">數量</th>
+                                <th scope="col" class="total-price">小計</th>
+                                <th scope="col">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="exampleCheckbox1"
+                                            id="exampleCheckbox2" value="option2">
+                                    </div>
+                                </td>
+                                <td data-th="物品名稱" class="commodity">MacBook Pro 13吋 2016 A1502 i7 16GB</td>
+                                <td data-th="價格" class="price">$15,000</td>
+                                <td data-th="數量" class="amount center">
+                                    <div class="btn-dropdown dropdown bs-select">
+                                        <button class="btn dropdown-toggle select-wrapper" type="button"
+                                            id="dropdownSelect" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <div class="select-tags">
+                                                <div class="select-placeholder">1</div>
+                                                <div class="select-single"></div>
+                                            </div>
+                                        </button>
+                                        <div class="dropdown-menu select-content" aria-labelledby="dropdownSelect">
+                                            <a class="dropdown-item select-item active" href="#">1</a>
+                                            <a class="dropdown-item select-item" href="#">2</a>
+                                            <a class="dropdown-item select-item" href="#">3</a>
+                                            <a class="dropdown-item select-item" href="#">4</a>
+                                            <a class="dropdown-item select-item" href="#">5</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-th="小計" class="total-price">$15,000</td>
+                                <td data-th="操作" class="center">
+                                    <button type="button" class="btn btn-primary">刪除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="exampleCheckbox1"
+                                            id="exampleCheckbox2" value="option2">
+                                    </div>
+                                </td>
+                                <td data-th="物品名稱" class="text-left">ASUS 筆電</td>
+                                <td data-th="價格" class="price">$5,000</td>
+                                <td data-th="數量" class="amount center">
+                                    <div class="btn-dropdown dropdown bs-select">
+                                        <button class="btn dropdown-toggle select-wrapper" type="button"
+                                            id="dropdownSelect" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <div class="select-tags">
+                                                <div class="select-placeholder">1</div>
+                                                <div class="select-single"></div>
+                                            </div>
+                                        </button>
+                                        <div class="dropdown-menu select-content" aria-labelledby="dropdownSelect">
+                                            <a class="dropdown-item select-item active" href="#">1</a>
+                                            <a class="dropdown-item select-item" href="#">2</a>
+                                            <a class="dropdown-item select-item" href="#">3</a>
+                                            <a class="dropdown-item select-item" href="#">4</a>
+                                            <a class="dropdown-item select-item" href="#">5</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-th="小計" class="total-price">$5,000</td>
+                                <td data-th="操作" class="center">
+                                    <button type="button" class="btn btn-primary">刪除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            <div class="total-group-outer">
+                <div class="d-block d-sm-none instead">
+                    <span>總計</span>
+                    <span class="text-purple">$20,000</span>
+                </div>
+                <div class="total-group">
+                    <div class="">
+                        <button type="button" class="btn btn-secondary">回首頁</button>
+                    </div>
+                    <div class="total-group-inner">
+                        <div class="d-none d-sm-block">
+                            <span>總計</span>
+                            <span class="text-purple">$20,000</span>
+                        </div>
+                        <button type="button" class="btn btn-primary">確認購買</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

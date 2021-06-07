@@ -1,0 +1,612 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icons-checkbox-checked {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -62px;
+  width: 24px;
+  height: 24px;
+}
+.icons-checkbox-default {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -87px;
+  width: 24px;
+  height: 24px;
+}
+.icons-checkbox-disabled-checked {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -112px;
+  width: 24px;
+  height: 24px;
+}
+.icons-checkbox-disabled {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -137px;
+  width: 24px;
+  height: 24px;
+}
+.icons-checkbox-error-checked {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -162px;
+  width: 24px;
+  height: 24px;
+}
+.icons-checkbox-error {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -187px;
+  width: 24px;
+  height: 24px;
+}
+.icons-checkbox-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -212px;
+  width: 24px;
+  height: 24px;
+}
+.icons-ic-account-s {
+  background-image: url(../images/sprite.png);
+  background-position: -82px -186px;
+  width: 32px;
+  height: 32px;
+}
+.icons-ic-account {
+  background-image: url(../images/sprite.png);
+  background-position: -51px -135px;
+  width: 40px;
+  height: 40px;
+}
+.icons-ic-cancel {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -237px;
+  width: 20px;
+  height: 20px;
+}
+.icons-ic-dropdown-default {
+  background-image: url(../images/sprite.png);
+  background-position: -221px -164px;
+  width: 20px;
+  height: 20px;
+}
+.icons-ic-dropdown-down-white {
+  background-image: url(../images/sprite.png);
+  background-position: -165px -113px;
+  width: 20px;
+  height: 20px;
+}
+.icons-ic-form-asc {
+  background-image: url(../images/sprite.png);
+  background-position: -242px -164px;
+  width: 14px;
+  height: 14px;
+}
+.icons-ic-form-both {
+  background-image: url(../images/sprite.png);
+  background-position: -247px -186px;
+  width: 14px;
+  height: 14px;
+}
+.icons-ic-form-desc {
+  background-image: url(../images/sprite.png);
+  background-position: -247px -201px;
+  width: 14px;
+  height: 14px;
+}
+.icons-ic-hamburger-s {
+  background-image: url(../images/sprite.png);
+  background-position: -115px -186px;
+  width: 32px;
+  height: 32px;
+}
+.icons-ic-hamburger {
+  background-image: url(../images/sprite.png);
+  background-position: -92px -135px;
+  width: 40px;
+  height: 40px;
+}
+.icons-ic-landmark-s {
+  background-image: url(../images/sprite.png);
+  background-position: -293px -45px;
+  width: 12px;
+  height: 12px;
+}
+.icons-ic-landmark {
+  background-image: url(../images/sprite.png);
+  background-position: -293px 0px;
+  width: 14px;
+  height: 14px;
+}
+.icons-ic-next-gray {
+  background-image: url(../images/sprite.png);
+  background-position: -186px -113px;
+  width: 20px;
+  height: 20px;
+}
+.icons-ic-next-purple-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -175px -260px;
+  width: 20px;
+  height: 20px;
+}
+.icons-ic-notice-circle-s {
+  background-image: url(../images/sprite.png);
+  background-position: -148px -186px;
+  width: 32px;
+  height: 32px;
+}
+.icons-ic-notice-circle {
+  background-image: url(../images/sprite.png);
+  background-position: -133px -135px;
+  width: 40px;
+  height: 40px;
+}
+.icons-ic-notice-s {
+  background-image: url(../images/sprite.png);
+  background-position: -181px -186px;
+  width: 32px;
+  height: 32px;
+}
+.icons-ic-notice {
+  background-image: url(../images/sprite.png);
+  background-position: -174px -135px;
+  width: 40px;
+  height: 40px;
+}
+.icons-ic-prev-gray {
+  background-image: url(../images/sprite.png);
+  background-position: -196px -260px;
+  width: 20px;
+  height: 20px;
+}
+.icons-ic-prev-purple-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -217px -260px;
+  width: 20px;
+  height: 20px;
+}
+.icons-ic-search-purple {
+  background-image: url(../images/sprite.png);
+  background-position: -238px -260px;
+  width: 20px;
+  height: 20px;
+}
+.icons-ic-search-s {
+  background-image: url(../images/sprite.png);
+  background-position: -214px -186px;
+  width: 32px;
+  height: 32px;
+}
+.icons-ic-search {
+  background-image: url(../images/sprite.png);
+  background-position: -221px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icons-ic-shopping-cart-s {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -227px;
+  width: 32px;
+  height: 32px;
+}
+.icons-ic-shopping-cart {
+  background-image: url(../images/sprite.png);
+  background-position: -221px -41px;
+  width: 40px;
+  height: 40px;
+}
+.icons-modal-failure {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -135px;
+  width: 50px;
+  height: 50px;
+}
+.icons-modal-success {
+  background-image: url(../images/sprite.png);
+  background-position: -165px -61px;
+  width: 51px;
+  height: 51px;
+}
+.icons-nav-bg-active {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -61px;
+  width: 164px;
+  height: 73px;
+}
+.icons-nav-cancel {
+  background-image: url(../images/sprite.png);
+  background-position: -33px -227px;
+  width: 32px;
+  height: 32px;
+}
+.icons-nav-next-gray {
+  background-image: url(../images/sprite.png);
+  background-position: -66px -227px;
+  width: 30px;
+  height: 30px;
+}
+.icons-nav-next-purple {
+  background-image: url(../images/sprite.png);
+  background-position: -97px -227px;
+  width: 30px;
+  height: 30px;
+}
+.icons-nav-prev-gray {
+  background-image: url(../images/sprite.png);
+  background-position: -128px -227px;
+  width: 30px;
+  height: 30px;
+}
+.icons-nav-prev-purple-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -159px -227px;
+  width: 30px;
+  height: 30px;
+}
+.icons-radio-checked {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -260px;
+  width: 24px;
+  height: 24px;
+}
+.icons-radio-default {
+  background-image: url(../images/sprite.png);
+  background-position: -25px -260px;
+  width: 24px;
+  height: 24px;
+}
+.icons-radio-disabled-checked {
+  background-image: url(../images/sprite.png);
+  background-position: -50px -260px;
+  width: 24px;
+  height: 24px;
+}
+.icons-radio-disabled {
+  background-image: url(../images/sprite.png);
+  background-position: -75px -260px;
+  width: 24px;
+  height: 24px;
+}
+.icons-radio-error-checked {
+  background-image: url(../images/sprite.png);
+  background-position: -100px -260px;
+  width: 24px;
+  height: 24px;
+}
+.icons-radio-error {
+  background-image: url(../images/sprite.png);
+  background-position: -125px -260px;
+  width: 24px;
+  height: 24px;
+}
+.icons-radio-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -150px -260px;
+  width: 24px;
+  height: 24px;
+}
+.icons-select-checked-s {
+  background-image: url(../images/sprite.png);
+  background-position: -293px -15px;
+  width: 14px;
+  height: 14px;
+}
+.icons-select-default-s {
+  background-image: url(../images/sprite.png);
+  background-position: -293px -30px;
+  width: 14px;
+  height: 14px;
+}
+.icons-select-default {
+  background-image: url(../images/sprite.png);
+  background-position: -259px -260px;
+  width: 20px;
+  height: 20px;
+}
+.icons-tab-bg-default {
+  background-image: url(../images/sprite.png);
+  background-position: 0px 0px;
+  width: 220px;
+  height: 60px;
+}
+.icons-tab-information-active {
+  background-image: url(../images/sprite.png);
+  background-position: -221px -82px;
+  width: 40px;
+  height: 40px;
+}
+.icons-tab-information-default {
+  background-image: url(../images/sprite.png);
+  background-position: -190px -227px;
+  width: 30px;
+  height: 30px;
+}
+.icons-tab-purchase-active {
+  background-image: url(../images/sprite.png);
+  background-position: -221px -123px;
+  width: 40px;
+  height: 40px;
+}
+.icons-tab-purchase-default {
+  background-image: url(../images/sprite.png);
+  background-position: -221px -227px;
+  width: 30px;
+  height: 30px;
+}
+.icons-tab-qa-active {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -186px;
+  width: 40px;
+  height: 40px;
+}
+.icons-tab-qa-default {
+  background-image: url(../images/sprite.png);
+  background-position: -262px 0px;
+  width: 30px;
+  height: 30px;
+}
+.icons-tab-record-active {
+  background-image: url(../images/sprite.png);
+  background-position: -41px -186px;
+  width: 40px;
+  height: 40px;
+}
+.icons-tab-record-default {
+  background-image: url(../images/sprite.png);
+  background-position: -262px -31px;
+  width: 30px;
+  height: 30px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icons-checkbox-checked {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-checkbox-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-checkbox-disabled-checked {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-checkbox-disabled {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-checkbox-error-checked {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-checkbox-error {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-checkbox-hover {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-account-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-account {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-cancel {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-dropdown-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-dropdown-down-white {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-form-asc {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-form-both {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-form-desc {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-hamburger-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-hamburger {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-landmark-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-landmark {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-next-gray {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-next-purple-hover {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-notice-circle-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-notice-circle {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-notice-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-notice {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-prev-gray {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-prev-purple-hover {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-search-purple {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-search-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-search {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-shopping-cart-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-ic-shopping-cart {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-modal-failure {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-modal-success {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-nav-bg-active {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-nav-cancel {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-nav-next-gray {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-nav-next-purple {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-nav-prev-gray {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-nav-prev-purple-hover {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-radio-checked {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-radio-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-radio-disabled-checked {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-radio-disabled {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-radio-error-checked {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-radio-error {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-radio-hover {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-select-checked-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-select-default-s {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-select-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-bg-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-information-active {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-information-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-purchase-active {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-purchase-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-qa-active {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-qa-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-record-active {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+  .icons-tab-record-default {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 307px 284px;
+  }
+}

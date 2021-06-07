@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>通用 header , footer , nav</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/sprite.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo">
+                <button class="hamburger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="icons-ic-hamburger d-none d-sm-block"></i>
+                    <i class="icons-ic-hamburger-s d-block d-sm-none"></i>
+                </button>
+                <div class="logo-inner">
+                    <a href="">
+                        <img class="header-logo" src="../images/header-logo.png"
+                            srcset="../images/header-logo@2x.png 2x" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="header-menu">
+
+                <!--search-->
+                <div class="header-item item-search-box">
+                    <input type="text" class="search" placeholder="">
+                    <button class="icons-ic-search-purple" type="button"></button>
+                </div>
+                <button class="header-item item-search-box-s" onclick="toggleSearchBar()">
+                    <i class=" icons-ic-search d-none d-sm-block"></i>
+                    <i class=" icons-ic-search-s d-block d-sm-none"></i>
+                </button>
+
+                <!--購物車-->
+                <button class="header-item item-shopping-cart">
+                    <i class="d-none d-sm-block icons-ic-shopping-cart"></i>
+                    <i class="d-block d-sm-none icons-ic-shopping-cart-s"></i>
+                    <div class="circle-number">1</div>
+                </button>
+
+                <!--小鈴鐺：有未讀狀態增加 .unread -->
+                <!-- <button class="header-item item-notice">
+                    <div class="badge">
+                        <i class=" icons-ic-notice d-none d-sm-block"></i>
+                        <i class=" icons-ic-notice-s d-block d-sm-none"></i>
+                    </div>
+                    <div class="unread-badge">
+                        <i class=" icons-ic-notice-circle d-none d-sm-block"></i>
+                        <i class=" icons-ic-notice-circle-s d-block d-sm-none"></i>
+                    </div>
+                </button> -->
+
+                <!--account-->
+                <div class="btn-dropdown dropdown item-account">
+                    <button class="btn dropdown-toggle nav account" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" data-display="static">
+                        <div class="account-name">蘇漢祥</div>
+                        <i class="icons-ic-account account-s"></i>
+                        <i class="icons-ic-account-s account-s"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right triangle right" aria-labelledby="dropdownMenuButton">
+                        <div class="menu-inner">
+                            <a class="dropdown-item" href="#">購買紀錄</a>
+                            <a class="dropdown-item" href="#">出價紀錄</a>
+                            <a class="dropdown-item" href="#">物品總覽</a>
+                            <a class="dropdown-item" href="#">登出</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-searchbar">
+                <div class="mask"></div>
+                <div class="searchbar">
+                    <input type="text" class="search" placeholder="">
+                    <button class="ic icons-ic-search-purple p-0" type="button"></button>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand nav-main">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto nav-main-ul">
+                    <li class="nav-item nav-main-li active">
+                        <a class="nav-link nav-main-link" href="#">總覽</a>
+                    </li>
+                    <li class="nav-item dropdown nav-main-li" data-hover="dropdown">
+                        <a class="nav-link nav-main-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            data-hover="dropdown">
+                            辦公室裝潢/設備
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <a class="dropdown-item" href="#">冷氣</a>
+                            <a class="dropdown-item" href="#">桌子</a>
+                            <a class="dropdown-item" href="#">椅子</a>
+                            <a class="dropdown-item" href="#">影印機</a>
+                            <a class="dropdown-item" href="#">櫃子</a>
+                            <a class="dropdown-item" href="#">燈管/燈泡</a>
+                            <a class="dropdown-item" href="#">咖啡機</a>
+                            <a class="dropdown-item" href="#">冰箱</a>
+                            <a class="dropdown-item" href="#">碎紙機</a>
+                            <a class="dropdown-item" href="#">門</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-main-li" data-hover="dropdown">
+                        <a class="nav-link nav-main-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            data-hover="dropdown">
+                            電腦/周邊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <a class="dropdown-item" href="#">電腦</a>
+                            <a class="dropdown-item" href="#">滑鼠</a>
+                            <a class="dropdown-item" href="#">螢幕</a>
+                            <a class="dropdown-item" href="#">硬碟</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-main-li" data-hover="dropdown">
+                        <a class="nav-link nav-main-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            data-hover="dropdown">
+                            3C產品/網路
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                            <a class="dropdown-item" href="#">電話</a>
+                            <a class="dropdown-item" href="#">網路分享器</a>
+                            <a class="dropdown-item" href="#">手機</a>
+                            <a class="dropdown-item" href="#">投影設備</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-main-li">
+                        <a class="nav-link nav-main-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            data-hover="dropdown">
+                            4
+                        </a>
+                    </li>
+                    <li class="nav-item nav-main-li">
+                        <a class="nav-link nav-main-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            data-hover="dropdown">
+                            5
+                        </a>
+                    </li>
+                    <li class="nav-item nav-main-li">
+                        <a class="nav-link nav-main-link dropdown-toggle" href="#" id="navbarDropdownMenuLink6"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            data-hover="dropdown">
+                            6
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="menu-mob collapse" id="navbarSupportedContent">
+            <div class="ctrlbar">
+                <button class="close" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="icons-nav-cancel"></div>
+                </button>
+            </div>
+            <nav class="navbar">
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li> <a class="nav-link" href="#">總覽</a></li>
+                        <li class="nav-item dropdown show">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true" id="navbarDropdownMenuLink1">
+                                辦公室裝潢/設備
+                                <i class="icons-ic-dropdown-down-white i-up"></i>
+                                <i class="icons-ic-dropdown-down-white i-down"></i>
+                            </a>
+                            <div class="dropdown-menu show" aria-labelledby="navbarDropdownMenuLink1"
+                                style="display: block;">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">冷氣</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">桌子</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">椅子</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">影印機</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">櫃子</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">燈管/燈泡</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">咖啡機</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">冰箱</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">碎紙機</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">門</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" id="navbarDropdownMenuLink2">
+                                電腦/周邊
+                                <i class="icons-ic-dropdown-down-white i-up"></i>
+                                <i class="icons-ic-dropdown-down-white i-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">電腦</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">滑鼠</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">螢幕</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">硬碟</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" id="navbarDropdownMenuLink2">
+                                3C產品/網路
+                                <i class="icons-ic-dropdown-down-white i-up"></i>
+                                <i class="icons-ic-dropdown-down-white i-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">電話</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">網路分享器</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">手機</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">投影設備</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="content">
+            <main class="container section-container">
+                <div class="content-inner">
+
+                </div>
+            </main>
+        </div>
+
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <img class="
+                decorations-man" src="../images/bg-one-man.png" srcset="../images/bg-one-man@2x.png 2x" alt="">
+                <img class="decorations-woman" src="../images/bg-two-woman.png"
+                    srcset="../images/bg-two-woman@2x.png 2x" alt="">
+            </div>
+        </footer>
+    </div>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

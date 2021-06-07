@@ -1,0 +1,194 @@
+/* ------- media query ------- */
+/* $breakpoints: (
+  "mobile-s": $width-mobile-s,
+  "mobile-m": $width-mobile-m,
+  "mobile-l": $width-mobile-l,
+  "tablet": $width-tablet,
+  "tablet-s": $width-tablet-s,
+  "desktop-s": $width-desktop-s,
+  "desktop-m": $width-desktop-m,
+  "desktop-l": $width-desktop-l,
+  "desktop-xl": $width-desktop-xl,
+);
+
+@mixin mq($width) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @media screen and (max-width: $width) {
+      @content;
+    }
+  }
+} */
+
+/* font */
+//@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;600&display=swap");
+
+$font-family: "Helvetica Neue", "PingFangTC-Regular", "sans-serif",
+  "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", Verdana;
+$text-bold: 600;
+
+/* ------- media query ------- */
+
+$width-xs: 360px;
+$width-sm: 576px;
+$width-md: 768px;
+$width-lg: 992px;
+$width-xl: 1200px;
+$width-xxl: 1400px;
+
+$breakpoints: (
+  "xs": $width-xs,
+  "sm": $width-sm,
+  "md": $width-md,
+  "lg": $width-lg,
+  "xl": $width-xl,
+  "xxl": $width-xxl,
+);
+
+@mixin media-breakpoint-down($width) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width) - 0.02;
+    @media (max-width: $width) {
+      @content;
+    }
+  } @else {
+    @error "breakpoint `#{$width}` not found in `#{$breakpoints}`";
+  }
+}
+
+@mixin media-breakpoint-up($width) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    $current: ceil($width);
+    @media (min-width: $current) {
+      @content;
+    }
+  } @else {
+    @error "breakpoint `#{$width}` not found in `#{$breakpoints}`";
+  }
+}
+
+@mixin media-breakpoint-only($width) {
+  @if map_has_key($breakpoints, $width) {
+    $breakpoint-names: map-keys($breakpoints);
+    $n: index($breakpoint-names, $width);
+    $current: map_get($breakpoints, $width);
+    $next: null;
+    @if $n == length($breakpoints) {
+      $next: null;
+    } @else {
+      $next: map_get($breakpoints, nth($breakpoint-names, $n + 1)) - 0.02;
+    }
+
+    @if $next {
+      @media (min-width: $current) and (max-width: $next) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $current) {
+        @content;
+      }
+    }
+  } @else {
+    @error "breakpoint `#{$width}` not found in `#{$breakpoints}`";
+  }
+}
+
+/* ------- mixins ------- */
+
+/* size */
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/* pseudo */
+@mixin pseudo($display: block, $content: "") {
+  content: $content;
+  display: $display;
+}
+
+@mixin arrow-icon-pseudo($width: 45px, $height: 20px) {
+  @extend .svg-icon_arrow_right;
+  @include pseudo(inline-block);
+  @include relative($top: 7px, $left: 15px);
+  width: $width;
+  height: $height;
+}
+
+/* position */
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+@mixin relative($args...) {
+  @include position(relative, $args...);
+}
+
+@mixin fixed($args...) {
+  @include position(fixed, $args...);
+}
+
+/* border-radius */
+@mixin border-radius($pixel...) {
+  border-radius: $pixel;
+}
+
+/* ------- extends ------- */
+%transition {
+  transition: all 0.3s;
+}
+
+%reset {
+  margin: 0;
+  padding: 0;
+}
+
+%responsive-img {
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+%weight-font-style {
+  font-family: "Palanquin Dark", sans-serif;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+}
+
+// %fontawesome-icon {
+//   @extend %fa-icon;
+//   @extend .fas;
+//   display: inline-block;
+//   text-rendering: auto;
+// }
+
+%custom-border-bottom {
+  content: "";
+  display: block;
+  background: #ebd8d8;
+  width: 100%;
+  height: 9px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  z-index: -1;
+}

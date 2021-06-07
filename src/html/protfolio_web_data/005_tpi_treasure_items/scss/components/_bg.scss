@@ -1,0 +1,194 @@
+/* content > .section-container ------------ */
+.section-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* .section-bg > .bg-group ------------ */
+.bg-group {
+  img {
+    display: block;
+    margin: auto;
+  }
+  &.middle {
+    background-repeat: repeat-y;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-size: 1200px;
+  }
+  &.top,
+  &.bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    .bg-img {
+      display: none;
+    }
+    .xl {
+      display: block;
+    }
+  }
+  &.top {
+    top: 0;
+  }
+  &.bottom {
+    bottom: 0;
+  }
+
+  @include media-breakpoint-down("lg") {
+    &.middle {
+      background-size: 800px;
+    }
+    &.top,
+    &.bottom {
+      .bg-img {
+        display: none;
+      }
+      .l {
+        display: block;
+      }
+    }
+  }
+  @include media-breakpoint-down("md") {
+    &.middle {
+      background-size: 600px;
+    }
+    &.top,
+    &.bottom {
+      .bg-img {
+        display: none;
+      }
+      .m {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 414px) {
+    &.middle {
+      background-size: 414px;
+    }
+    &.top,
+    &.bottom {
+      .bg-img {
+        display: none;
+      }
+      .sm {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    &.middle {
+      background-size: 375px;
+    }
+    &.top,
+    &.bottom {
+      .bg-img {
+        display: none;
+      }
+      .ssm {
+        display: block;
+      }
+    }
+  }
+}
+
+/* bg-main images -------------------- */
+.content {
+  position: relative;
+}
+
+.content-inner {
+  padding: 10px 10px 50px;
+  min-height: 300px;
+  @include media-breakpoint-down("lg") {
+    padding: 10px 10px 70px;
+  }
+  @include media-breakpoint-down("sm") {
+    padding: 10px 10px 50px;
+  }
+}
+
+.bg-main {
+  .middle {
+    height: calc(100% - 600px);
+    background-image: url(../images/bg-main-center-xl.png);
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/bg-main-center-xl@2x.png);
+    }
+    @media (max-width: 1100px) {
+      background-image: url(../images/bg-main-center-l.png);
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/bg-main-center-l@2x.png);
+      }
+    }
+    @include media-breakpoint-down("md") {
+      background-image: url(../images/bg-main-center-m.png);
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/bg-main-center-m@2x.png);
+      }
+    }
+    @media (max-width: 414px) {
+      background-image: url(../images/bg-main-center-sm.png);
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/bg-main-center-sm@2x.png);
+      }
+    }
+    @media (max-width: 375px) {
+      background-image: url(../images/bg-main-center-ssm.png);
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/bg-main-center-ssm@2x.png);
+      }
+    }
+  }
+}
+
+/* bg-checklist images -------------------- */
+.bg-checklist {
+  .middle {
+    bottom: 100px;
+    top: 300px;
+    height: calc(100% - 400px);
+    background-image: url(../images/bg-checklist-center-xl.png);
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/bg-checklist-center-xl@2x.png);
+    }
+    @include media-breakpoint-down("lg") {
+      background-image: url(../images/bg-checklist-center-l.png);
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/bg-checklist-center-l@2x.png);
+      }
+    }
+    @include media-breakpoint-down("md") {
+      background-image: url(../images/bg-checklist-center-m.png);
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/bg-checklist-center-m@2x.png);
+      }
+    }
+    @media (max-width: 414px) {
+      background-image: url(../images/bg-checklist-center-sm.png);
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/bg-checklist-center-sm@2x.png);
+      }
+    }
+    @media (max-width: 375px) {
+      background-image: url(../images/bg-checklist-center-ssm.png);
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/bg-checklist-center-ssm@2x.png);
+      }
+    }
+  }
+}
+
+/* bg-plaid images -------------------- */
+.bg-plaid {
+  background-image: url(../images/bg-plaid.png);
+  background-size: 12px 12px;
+  background-repeat: repeat;
+}

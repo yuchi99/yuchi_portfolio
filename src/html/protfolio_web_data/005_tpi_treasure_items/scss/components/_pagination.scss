@@ -1,0 +1,80 @@
+.page {
+  display: flex;
+  justify-content: center;
+  &.page-top {
+    nav {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+  nav {
+    @include flex(start, center);
+    margin: 10px;
+  }
+  .page-link {
+    @include size(30px, 30px);
+    color: $black;
+    border: none;
+    margin-left: 8px;
+    border-radius: 4px;
+    padding: 4px;
+    text-align: center;
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  .page-item {
+    &.active {
+      .page-link {
+        background: #fff;
+        border-color: transparent;
+        color: $purple-500;
+        border: 1px solid $purple-500;
+      }
+    }
+    .page-link {
+      border: 1px solid transparent;
+      &:hover {
+        padding: 4px;
+        color: $purple-500;
+      }
+    }
+  }
+  .prev-button {
+    .page-link {
+      border: none;
+      &:before {
+        content: "";
+        @include size(30px, 30px);
+        @include retina-sprite($ic-prev-gray-group);
+        @include position-center;
+      }
+      &:hover {
+        border: none;
+        &:before {
+          @include retina-sprite($ic-prev-purple-hover-group);
+        }
+      }
+    }
+  }
+  .next-button {
+    .page-link {
+      border: none;
+      &:before {
+        content: "";
+        @include size(30px, 30px);
+        @include retina-sprite($ic-next-gray-group);
+        @include position-center;
+      }
+      &:hover {
+        border: none;
+        &:before {
+          @include retina-sprite($ic-next-purple-hover-group);
+        }
+      }
+    }
+  }
+}

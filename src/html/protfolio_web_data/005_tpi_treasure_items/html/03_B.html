@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--非 RWD 網站不需設定 viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>商品總覽_搜尋結果</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/sprite.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <script src="../js/layout-header.js"></script>
+        <script src="../js/layout-navbar.js"></script>
+        <div class="content product product-wrapper">
+            <div class="section-bg bg-main">
+                <div class="bg-group top">
+                    <img class="bg-img xl" src="../images/bg-main-on-xl.png" srcset="../images/bg-main-on-xl@2x.png 2x"
+                        alt="">
+                    <img class="bg-img l" src="../images/bg-main-on-l.png" srcset="../images/bg-main-on-l@2x.png 2x"
+                        alt="">
+                    <img class="bg-img m" src="../images/bg-main-on-m.png" srcset="../images/bg-main-on-m@2x.png 2x"
+                        alt="">
+                    <img class="bg-img sm" src="../images/bg-main-on-sm.png" srcset="../images/bg-main-on-sm@2x.png 2x"
+                        alt="">
+                    <img class="bg-img ssm" src="../images/bg-main-on-ssm.png"
+                        srcset="../images/bg-main-on-ssm@2x.png 2x" alt="">
+                </div>
+                <div class="bg-group middle">
+                </div>
+                <div class="bg-group bottom">
+                    <img class="bg-img xl" src="../images/bg-main-under-xl.png"
+                        srcset="../images/bg-main-under-xl@2x.png 2x" alt="">
+                    <img class="bg-img l" src="../images/bg-main-under-l.png"
+                        srcset="../images/bg-main-under-l@2x.png 2x" alt="">
+                    <img class="bg-img m" src="../images/bg-main-under-m.png"
+                        srcset="../images/bg-main-under-m@2x.png 2x" alt="">
+                    <img class="bg-img sm" src="../images/bg-main-under-sm.png"
+                        srcset="../images/bg-main-under-sm@2x.png 2x" alt="">
+                    <img class="bg-img ssm" src="../images/bg-main-under-ssm.png"
+                        srcset="../images/bg-main-under-ssm@2x.png 2x" alt="">
+                </div>
+            </div>
+
+            <main class="container section-container">
+                <div class="content-inner">
+                    <!-- <div class="search-result">
+                        <h5 class="title">搜尋結果</h5>
+                        <div>共 <span class="text-purple">100</span> 筆</div>
+                    </div> -->
+                    <!-- 電腦版篩選 -->
+                    <div class="row filter-product filter-product-pc">
+                        <div class="col-12 filter-product-inner">
+                            <div class="filter-product-title">篩選</div>
+                            <div class="row filter-product-content">
+                                <div class="col col-sm-6 col-lg-3 mob-dropdown-wrapper">
+                                    <div class="btn-dropdown-wrapper flex-fill">
+                                        <div class="btn-dropdown dropdown bs-select">
+                                            <button class="btn dropdown-toggle select-wrapper" type="button"
+                                                id="dropdownSelect" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" data-display="static">
+                                                <div class="select-tags">
+                                                    <div class="select-placeholder">物品地點</div>
+                                                    <div class="select-single"></div>
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-menu select-content mob-cancel"
+                                                aria-labelledby="dropdownSelect">
+                                                <a class="dropdown-item select-item" href="#">台北T-Hub</a>
+                                                <a class="dropdown-item select-item" href="#">台北瑞光</a>
+                                                <a class="dropdown-item select-item" href="#">新竹</a>
+                                                <a class="dropdown-item select-item" href="#">台中</a>
+                                                <a class="dropdown-item select-item" href="#">台南</a>
+                                                <a class="dropdown-item select-item" href="#">高雄</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 col-lg-3 mob-dropdown-wrapper">
+                                    <div class="btn-dropdown-wrapper flex-fill">
+                                        <div class="btn-dropdown dropdown bs-select">
+                                            <button class="btn dropdown-toggle select-wrapper" type="button"
+                                                id="dropdownSelect" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" data-display="static">
+                                                <div class="select-tags">
+                                                    <div class="select-placeholder">上架時間</div>
+                                                    <div class="select-single"></div>
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-menu select-content mob-cancel"
+                                                aria-labelledby="dropdownSelect">
+                                                <a class="dropdown-item select-item" href="#">上架時間：新到舊</a>
+                                                <a class="dropdown-item select-item" href="#">上架時間：舊到新</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 col-lg-3 mob-dropdown-wrapper">
+                                    <div class="btn-dropdown-wrapper flex-fill">
+                                        <div class="btn-dropdown dropdown bs-select">
+                                            <button class="btn dropdown-toggle select-wrapper" type="button"
+                                                id="dropdownSelect" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" data-display="static">
+                                                <div class="select-tags">
+                                                    <div class="select-placeholder">價格</div>
+                                                    <div class="select-single"></div>
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-menu select-content mob-cancel"
+                                                aria-labelledby="dropdownSelect">
+                                                <a class="dropdown-item select-item" href="#">價格：低到高</a>
+                                                <a class="dropdown-item select-item" href="#">價格：高到低</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 col-lg-3 mob-dropdown-wrapper">
+                                    <div class="btn-dropdown-wrapper flex-fill">
+                                        <div class="btn-dropdown dropdown bs-select">
+                                            <button class="btn dropdown-toggle select-wrapper" type="button"
+                                                id="dropdownSelect" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" data-display="static">
+                                                <div class="select-tags">
+                                                    <div class="select-placeholder">購買方式</div>
+                                                    <div class="select-single"></div>
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-menu select-content mob-cancel"
+                                                aria-labelledby="dropdownSelect">
+                                                <a class="dropdown-item select-item" href="#">直購</a>
+                                                <a class="dropdown-item select-item" href="#">競標</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 page page-top">
+                            <nav aria-label="Page navigation">
+                                <span class="mr-2">共 <span>100</span> 筆</span>
+                                <ul class="pagination">
+                                    <li class="page-item prev-button">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item next-button">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- 手機版篩選 -->
+                    <div class="filter-product filter-product-mob" id="accordionExample">
+                        <div class="filter-product-controls">
+                            <button class="btn collapsed" type="button" data-toggle="collapse"
+                                data-target="#multiCollapseExample1" aria-expanded="false"
+                                aria-controls="multiCollapseExample1">物品地點</button>
+                            <button class="btn collapsed" type="button" data-toggle="collapse"
+                                data-target="#multiCollapseExample2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">上架時間</button>
+                            <button class="btn collapsed" type="button" data-toggle="collapse"
+                                data-target="#multiCollapseExample3" aria-expanded="false"
+                                aria-controls="multiCollapseExample3">價格</button>
+                            <button class="btn collapsed" type="button" data-toggle="collapse"
+                                data-target="#multiCollapseExample4" aria-expanded="false"
+                                aria-controls="multiCollapseExample4">購買方式</button>
+                        </div>
+                        <div class="filter-product-content">
+                            <div class="collapse filter-product-collapse" id="multiCollapseExample1"
+                                data-parent="#accordionExample">
+                                <!--select-item 加 active 可變換點選樣式-->
+                                <div class="row no-gutters filter-col-3">
+                                    <div class="col">
+                                        <div class="select-item">台北T-Hub</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="select-item">台北瑞光</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="select-item">新竹</div>
+                                    </div>
+                                    <div class="col">
+                                        <diva class="select-item">台中</diva>
+                                    </div>
+                                    <div class="col">
+                                        <div class="select-item">台南</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="select-item">高雄</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse filter-product-collapse" id="multiCollapseExample2"
+                                data-parent="#accordionExample">
+                                <div class="row no-gutters filter-col-2">
+                                    <div class="col">
+                                        <div class="select-item">上架時間：新到舊</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="select-item">上架時間：舊到新</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse filter-product-collapse" id="multiCollapseExample3"
+                                data-parent="#accordionExample filter-col-2">
+                                <div class="row no-gutters">
+                                    <div class="col">
+                                        <div class="select-item">價格：低到高</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="select-item">價格：高到低</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse filter-product-collapse" id="multiCollapseExample4"
+                                data-parent="#accordionExample">
+                                <div class="row no-gutters filter-col-2">
+                                    <div class="col">
+                                        <div class="select-item">直購</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="select-item">競標</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row product-group">
+                        <!--1-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div><span class="text-purple">30,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北T-Hub</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--2-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div>尚未出價</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北瑞光</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--3-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--4-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">Apple<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--5-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div><span class="text-purple">30,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北T-Hub</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--6-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div>尚未出價</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北瑞光</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--7-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--8-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">Apple<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--9-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div><span class="text-purple">30,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北T-Hub</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--10-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div>尚未出價</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北瑞光</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--11-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--12-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">Apple<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--13-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div><span class="text-purple">30,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北T-Hub</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--14-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div>尚未出價</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北瑞光</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--15-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--16-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">Apple<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--17-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div><span class="text-purple">30,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北T-Hub</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--18-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">底價</div>
+                                            <div>30,000 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">出價</div>
+                                            <div>尚未出價</div>
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台北瑞光</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--19-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-1.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">筆記型<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--20-->
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="">
+                                <div class="card">
+                                    <div class="product-photo">
+                                        <img src="../images/product-test-2.png" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">Apple<mark>電腦</mark></div>
+                                        <div class="card-item">
+                                            <div class="card-item-title">直購價</div>
+                                            <div><span class="text-red">50,000</span> 元</div>
+                                        </div>
+                                        <div class="card-item">
+                                            &nbsp;
+                                        </div>
+                                        <div class="card-item location">
+                                            <i class="icons-ic-landmark"></i>
+                                            <span>台中</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 page">
+                        <nav aria-label="Page navigation">
+                            <span class="mr-2">共 <span>100</span> 筆</span>
+                            <ul class="pagination">
+                                <li class="page-item prev-button">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item next-button">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="../js/layout-footer.js"></script>
+    </div>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

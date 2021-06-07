@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--非 RWD 網站不需設定 viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>05_01_A_購買紀錄空白畫面</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/sprite.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper bg-plaid">
+        <script src="../js/layout-header.js"></script>
+        <div class="content">
+            <div class="section-bg bg-checklist">
+                <div class="bg-group top">
+                    <img class="bg-img xl" src="../images/bg-checklist-on-xl.png"
+                        srcset="../images/bg-checklist-on-xl@2x.png 2x" alt="">
+                    <img class="bg-img l" src="../images/bg-checklist-on-l.png"
+                        srcset="../images/bg-checklist-on-l@2x.png 2x" alt="">
+                    <img class="bg-img m" src="../images/bg-checklist-on-m.png"
+                        srcset="../images/bg-checklist-on-m@2x.png 2x" alt="">
+                    <img class="bg-img sm" src="../images/bg-checklist-on-sm.png"
+                        srcset="../images/bg-checklist-on-sm@2x.png 2x" alt="">
+                    <img class="bg-img ssm" src="../images/bg-checklist-on-ssm.png"
+                        srcset="../images/bg-checklist-on-ssm@2x.png 2x" alt="">
+                </div>
+                <div class="bg-group middle">
+                </div>
+                <div class="bg-group bottom">
+                    <img class="bg-img xl" src="../images/bg-checklist-under-xl.png"
+                        srcset="../images/bg-checklist-under-xl@2x.png 2x" alt="">
+                    <img class="bg-img l" src="../images/bg-checklist-under-l.png"
+                        srcset="../images/bg-checklist-under-l@2x.png 2x" alt="">
+                    <img class="bg-img m" src="../images/bg-checklist-under-m.png"
+                        srcset="../images/bg-checklist-under-m@2x.png 2x" alt="">
+                    <img class="bg-img sm" src="../images/bg-checklist-under-sm.png"
+                        srcset="../images/bg-checklist-under-sm@2x.png 2x" alt="">
+                    <img class="bg-img ssm" src="../images/bg-checklist-under-ssm.png"
+                        srcset="../images/bg-checklist-under-ssm@2x.png 2x" alt="">
+                </div>
+            </div>
+
+            <main class="container section-container">
+                <div class="content-inner purchase-record">
+                    <h3 class="text-purple">歷史紀錄</h3>
+                    <!-- tab-nav -->
+                    <ul class="nav nav-tabs information-slider" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link purchase active" id="purchase-tab" data-toggle="tab" href="#purchase"
+                                role="tab" aria-controls="purchase" aria-selected="true">
+                                <div class="d-flex align-items-center">
+                                    <i class="ic"></i>
+                                    <h6 class="m-0">購買記錄</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link bid" id="bid-tab" data-toggle="tab" href="#bid" role="tab"
+                                aria-controls="bid" aria-selected="false">
+                                <div class="d-flex align-items-center">
+                                    <i class="ic"></i>
+                                    <h6 class="m-0">出價紀錄</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- tab 區塊內容 -->
+                    <div class="tab-content">
+                        <!-- 購買紀錄 start -->
+                        <div class="tab-pane fade show active" id="purchase" role="tabpanel"
+                            aria-labelledby="purchase-tab">
+                            <div class="purchase-inner">
+                                <div class="empty">
+                                    <div>- 目前暫無資料 -</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 出價紀錄 start -->
+                        <div class="tab-pane fade" id="bid" role="tabpanel" aria-labelledby="bid-tab">
+                            <div class="purchase-inner">
+                                <div class="empty">
+                                    <div>- 目前暫無資料 -</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

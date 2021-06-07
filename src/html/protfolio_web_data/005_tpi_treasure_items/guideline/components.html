@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>guideline</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/sprite.css">
+    <link rel="stylesheet" href="../css/guideline.css">
+
+</head>
+
+<body>
+    <div class="guid">
+        <div class="row no-gutters h-100">
+            <div class="col-md-12 col-lg-2  bd-sidebar align-self-start">
+                <!-- menu -->
+                <script src="../js/guideline-menu.js"></script>
+                <!-- menu END-->
+            </div>
+            <div class="col-md-12 col-lg-10  bd-content">
+                <div class="container">
+                    <h1>Components</h1>
+                    <p>不同元件所構成的組件，使用時需注意層級與樣式。</p>
+                    <section>
+                        <hr class="mb-5">
+                        <h2 id="table">Table</h2>
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 id="table">General Table</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Num</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                            <th scope="col">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row">1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <div class="table-btn-group">
+                                                    <button type="button" class="btn btn-primary">新增</button>
+                                                    <button type="button" class="btn btn-primary">編輯</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>text</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <pre><code class="">&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot;&gt;Num&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;First&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Last&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Handle&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;操作&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td scope=&quot;row&quot;&gt;1&lt;/td&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+            &lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;新增&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td scope=&quot;row&quot;&gt;2&lt;/td&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+            &lt;td&gt;text&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td scope=&quot;row&quot;&gt;3&lt;/td&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+            &lt;td&gt;text&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <script src="https://highlightjs.org/static/highlight.site.pack.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</body>
+
+</html>

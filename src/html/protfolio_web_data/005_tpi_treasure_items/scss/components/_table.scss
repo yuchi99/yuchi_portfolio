@@ -1,0 +1,208 @@
+.table {
+  color: $black;
+  thead {
+    color: $purple-500;
+    th {
+      border-bottom: solid 2px $purple-300;
+      border-top: 0;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+  th,
+  td {
+    border-top: 0;
+    padding: 8px 12px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: $purple-100;
+    }
+  }
+  .btn {
+    font-size: 16px;
+    width: auto;
+    padding: 3px 12px;
+    color: #fff;
+    margin: 0 0 2px 0;
+    @include tran();
+    box-shadow: 0 4px 0 0 $green-300;
+    transition-property: all;
+    &:hover {
+      border-color: $green-500;
+      background-color: $green-500;
+      box-shadow: inherit;
+      transform: translateY(3px);
+      backface-visibility: hidden;
+      color: #fff;
+    }
+    &.disabled,
+    &:disabled {
+      font-size: 16px;
+      width: auto;
+      padding: 3px 12px;
+      @include tran();
+      box-shadow: 0 4px 0 0 $gray-200;
+      &:hover {
+        border-color: $gray-400;
+        background-color: $gray-400;
+        box-shadow: inherit;
+        transform: translateY(3px);
+        backface-visibility: hidden;
+        color: #fff;
+      }
+    }
+  }
+  .dropdown-toggle {
+    box-shadow: none;
+    color: $black;
+    padding: 3px 12px;
+    margin-bottom: 0;
+    &:hover {
+      border-color: $gray-400;
+      background-color: #fff;
+      color: $black;
+      transform: none;
+    }
+  }
+  .table-btn-group {
+    .btn {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .form-check {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .form-check-input {
+    margin-top: 0;
+  }
+  //客製化表格寬度 & 文字排版方向 start
+  th {
+    &.price,
+    &.status {
+      width: 100px;
+    }
+    &.amount {
+      width: 80px;
+    }
+    &.total-price {
+      width: 110px;
+    }
+  }
+  td {
+    &.commodity {
+      text-align: left;
+    }
+    &.amount {
+      .dropdown-toggle {
+        width: 80px;
+      }
+      .select-placeholder {
+        color: $black;
+      }
+    }
+    &.price {
+      text-align: right;
+    }
+    &.total-price {
+      text-align: right;
+    }
+  }
+  //客製化表格寬度 & 文字排版方向 end
+}
+
+//table rwd
+@include media-breakpoint-down("md") {
+  table.rwd {
+    thead {
+      display: none;
+    }
+    tr {
+      padding: 16px;
+      position: relative;
+      display: flex;
+      background-color: transparent;
+      flex-wrap: wrap;
+      border-radius: 16px;
+      &:nth-of-type(even) {
+        &:before {
+          content: "";
+          @include size(100%, 100%);
+          position: absolute;
+          background-color: $purple-100;
+          border-radius: 16px;
+          z-index: -1;
+          top: 0px;
+          left: 0px;
+        }
+      }
+    }
+    td {
+      display: flex;
+      text-align: left;
+      margin: 0;
+      padding: 4px 0 4px 110px;
+      width: 100%;
+      position: relative;
+      &::before {
+        content: attr(data-th);
+        display: table-cell;
+        font-weight: bold;
+        color: $purple-500;
+        padding: 0px;
+        text-align: left;
+        width: 100px;
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+      &.center {
+        &::before {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    //客製化表格寬度 & 文字排版方向 start
+    th {
+      .price {
+        width: 80px;
+      }
+      .amount {
+        width: 80px;
+      }
+      .total-price {
+        width: 80px;
+      }
+    }
+    //客製化表格寬度 & 文字排版方向 end
+  }
+  table.checkbox {
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    td {
+      margin-left: 10px;
+      width: calc(100% - 34px);
+      &::before {
+        padding: 0;
+      }
+      &:first-child {
+        padding: 0;
+        margin: 0;
+        width: 24px;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}

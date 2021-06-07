@@ -1,0 +1,59 @@
+.portfolio-card {
+  padding: 80px 40px;
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .card {
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      color: #545454;
+    }
+    &-body {
+      min-height: 80px;
+    }
+    img {
+      transform: scale(1, 1);
+      transition: all 0.3s ease-out;
+      opacity: 1;
+
+      &:hover {
+        transform: scale(1.05, 1.05);
+        opacity: 0.6;
+      }
+    }
+    .card-hidden {
+      overflow: hidden;
+      position: relative;
+      border-radius: 8px;
+      &.border-line {
+        box-sizing: content-box;
+        border: 2px solid $gray-200;
+        border-radius: 8px;
+      }
+      .card-img-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  .card-text {
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-down("sm") {
+  .portfolio-card {
+    padding: 50px 40px;
+    .card {
+      margin-bottom: 30px;
+    }
+  }
+}

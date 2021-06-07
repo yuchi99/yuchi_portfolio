@@ -1,0 +1,273 @@
+.product-wrapper {
+  &.detail {
+    padding-top: 60px;
+  }
+}
+.product-briefing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h4 {
+    margin-bottom: 16px;
+  }
+  .text-purple,
+  .text-red {
+    font-size: 18px;
+    font-weight: $text-bold;
+  }
+  .text-gray {
+    font-size: 14px;
+    color: $gray-500;
+  }
+  .quantity {
+    @include flex(space-between, center);
+    .dropdown {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .text-rest {
+      padding: 4px 0;
+      white-space: nowrap;
+    }
+  }
+  .item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-toggle {
+    width: 100%;
+  }
+  .buy-btn {
+    text-align: center;
+    .btn {
+      margin: 0;
+    }
+  }
+}
+.divider {
+  margin: 40px 0;
+  @include flex(center, center);
+}
+.tab-pane {
+  min-height: 300px;
+}
+.tab-content {
+  .information-inner {
+    margin: 80px 40px 40px;
+    padding: 50px 80px 30px;
+    &.information-bg {
+      background-color: $purple-100;
+      border-radius: 16px;
+      position: relative;
+      &::before {
+        content: "";
+        @include size(170px, 40px);
+        background-image: url(../images/tab-title-bg.png);
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background-image: url(../images/tab-title-bg@2x.png);
+        }
+        background-size: 100%;
+        z-index: 5;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    h6 {
+      padding-top: 1rem;
+    }
+    .hr {
+      border: solid 1px $gray-400;
+      margin: 20px 0;
+    }
+  }
+  .introduction-title {
+    @include size(170px, 40px);
+    @include flex(center, center);
+    color: #fff;
+    z-index: 5;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .qa-inner {
+    margin: 40px 20px 10px;
+    .question,
+    .answer {
+      padding: 20px;
+      margin-top: 20px;
+      background-color: $purple-100;
+      border-radius: 16px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+    .answer {
+      margin-top: 10px;
+      padding-left: 40px;
+      background-color: #fff;
+    }
+    .qa-name-group {
+      @include flex(space-between, center);
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: $gray-500;
+    }
+    .time {
+      text-align: right;
+    }
+    .qa-btn {
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .form-control {
+      padding: 20px;
+    }
+  }
+  .record-inner {
+    margin: 40px 20px 20px;
+  }
+}
+
+//產品資訊 [空值] 時使用
+.information-inner,
+.record-inner {
+  &.empty {
+    @include flex(center, center);
+    min-height: 340px;
+    height: 10px; //for ie
+    padding: 0;
+    margin: 0;
+  }
+}
+.qa-inner {
+  &.empty {
+    @include flex(center, center);
+    min-height: 70px;
+    height: 10px; //for ie
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-wrapper {
+    margin-bottom: 80px;
+  }
+}
+
+@include media-breakpoint-down("lg") {
+  .product-wrapper {
+    &.detail {
+      padding-top: 36px;
+    }
+  }
+  .product-briefing {
+    .quantity {
+      @include flex(start, start);
+      flex-direction: column;
+      .dropdown {
+        flex: 1;
+        width: 100%;
+        margin-right: 10px;
+      }
+    }
+  }
+  .tab-content {
+    .information-inner {
+      margin: 60px 20px 30px;
+      padding: 50px 40px 30px;
+    }
+  }
+}
+@include media-breakpoint-down("md") {
+  .product-briefing {
+    .buy-btn {
+      .btn {
+        margin-top: 20px;
+      }
+    }
+  }
+  .tab-content {
+    .information-inner {
+      padding: 40px 20px 30px;
+      margin: 40px 0 0;
+      &.empty {
+        margin: 0;
+      }
+    }
+    .qa-inner {
+      margin: 20px 0 0;
+    }
+    .record-inner {
+      margin: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-down("sm") {
+  .tab-pane {
+    min-height: 270px;
+  }
+  .product-wrapper {
+    &.detail {
+      padding-top: 16px;
+    }
+  }
+  .tab-content {
+    .information-inner {
+      margin: 40px 0 20px;
+      padding: 40px 16px 30px;
+    }
+    .qa-inner {
+      margin: 20px 0px 10px;
+      &.empty {
+        min-height: 100px;
+        height: 10px; //for ie
+      }
+      .time {
+        text-align: left;
+      }
+      .question,
+      .answer {
+        padding: 16px;
+      }
+    }
+    .record-inner {
+      margin: 0px 16px 10px;
+    }
+  }
+  //產品資訊 [空值] 時使用
+  .information-inner,
+  .record-inner {
+    &.empty {
+      @include flex(center, center);
+      min-height: 320px;
+      height: 10px; //for ie
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .qa-inner {
+    &.empty {
+      @include flex(center, center);
+      min-height: 0;
+      height: 10px; //for ie
+      padding: 0;
+      margin: 0;
+      margin-top: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-down("xs") {
+  .divider {
+    img {
+      width: 90%;
+    }
+  }
+}
