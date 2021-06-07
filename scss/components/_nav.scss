@@ -1,0 +1,185 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  .navbar-menu {
+    display: flex;
+    @include media-breakpoint-down("md") {
+      display: none;
+    }
+  }
+  .nav-link {
+    @include size(160px, 60px);
+    border-radius: 50px;
+    margin-left: 10px;
+    padding: 0;
+    text-align: center;
+    line-height: 60px;
+    color: $black;
+    direction: 0.5s;
+    position: relative;
+    &:last-of-type {
+      background-color: $yellow-500;
+    }
+    &:hover {
+      background-color: #f0eb5f;
+      direction: 0.5s;
+      color: #545454;
+      .ic-arrow {
+        position: absolute;
+        left: 110px;
+      }
+    }
+    &.icon-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ic-arrow {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 105px;
+    }
+    .work-list {
+      margin-left: -25px;
+    }
+  }
+}
+.navbar-brand {
+  cursor: pointer;
+  @include size(240px, 60px);
+  background: url(../image/logo.png) center center no-repeat;
+  background-size: 100%;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background: url(../image/logo@2x.png) center center no-repeat;
+    background-size: 100%;
+  }
+  @include media-breakpoint-down("md") {
+    @include size(200px, 50px);
+    background: url(../image/logo-s.png) center center no-repeat;
+    background-size: 100%;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background: url(../image/logo-s@2x.png) center center no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+.navbar-collapse {
+  justify-content: flex-end;
+  width: auto;
+  .collapse-nav {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  display: none;
+  @include size(40px, 40px);
+  background: url(../image/hamburger.png) center center no-repeat;
+  background-size: 100%;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background: url(../image/hamburger@2x.png) center center no-repeat;
+    background-size: 100%;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    background: url(../src/image/hamburger-hover.png) center center no-repeat;
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background: url(../image/hamburger-hover@2x.png) center center no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down("md") {
+  .navbar {
+    height: 60px;
+    .nav-link:last-of-type {
+      background-color: #fff;
+    }
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    left: -1000px;
+    direction: 0.5s;
+    &.show {
+      height: 100vh;
+      background-color: #fff;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      .navbar-nav {
+        padding: 40px 20px;
+      }
+      .nav-link {
+        width: 100%;
+        margin: 10px auto;
+        background-color: #fff;
+        font-size: 16px;
+        &:active {
+          background-color: $yellow-500;
+        }
+        .ic-arrow {
+          display: none;
+        }
+        .work-list {
+          margin-left: 0;
+        }
+      }
+      .navbar-brand {
+        cursor: pointer;
+        @include size(200px, 50px);
+        background: url(../image/logo-darkbg.png) center center no-repeat;
+        background-size: 100%;
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background: url(../image/logo-darkbg@2x.png) center center no-repeat;
+          background-size: 100%;
+        }
+      }
+      .btn {
+        background-color: #fff;
+        margin: auto;
+        font-size: 16px;
+      }
+    }
+    .collapse-nav {
+      height: 60px;
+      background-color: $black;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .navbar-toggler {
+        @include size(40px, 40px);
+        background: url(../image/hamburger-close.png) center center no-repeat;
+        background-size: 100%;
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background: url(../image/hamburger-close@2x.png) center center
+            no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}
