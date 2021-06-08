@@ -76,3 +76,14 @@
     }
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .experience {
+    display: flex;
+    align-items: center;
+    .experience-group-two {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
