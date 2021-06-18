@@ -276,7 +276,7 @@ button:hover {
 }
 
 .navbar-toggler:hover {
-  background: url(../src/image/hamburger-hover.png) center center no-repeat;
+  background: url(../image/hamburger-hover.png) center center no-repeat;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {

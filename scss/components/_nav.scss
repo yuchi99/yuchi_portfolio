@@ -97,7 +97,7 @@
     box-shadow: none;
   }
   &:hover {
-    background: url(../src/image/hamburger-hover.png) center center no-repeat;
+    background: url(../image/hamburger-hover.png) center center no-repeat;
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       background: url(../image/hamburger-hover@2x.png) center center no-repeat;
       background-size: 100%;

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yuchi Portfolio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -37,64 +38,67 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <a href="protfolio_design_002.html">
-                            <div class="card">
-                                <div class="card-hidden">
-                                    <div class="card-img-bg"></div>
-                                    <img src="image/protfolio-002.png" srcset="image/protfolio-002@2x.png 2x"
-                                        class="card-img-top">
+                <div class=" wow bounceInUp">
+                    <div class="row" data-wow-duration="2s" data-wow-delay="5s">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <a href="protfolio_design_002.html">
+                                <div class="card">
+                                    <div class="card-hidden">
+                                        <div class="card-img-bg"></div>
+                                        <img src="image/protfolio-002.png" srcset="image/protfolio-002@2x.png 2x"
+                                            class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">國泰金控 My Open Data</p>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">國泰金控 My Open Data</p>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <a href="protfolio_design_005.html">
+                                <div class="card">
+                                    <div class="card-hidden border-line">
+                                        <div class="card-img-bg"></div>
+                                        <img src="image/protfolio-005.png" srcset="image/protfolio-005@2x.png 2x"
+                                            class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">昕力資訊 惜物網</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <a href="protfolio_design_005.html">
-                            <div class="card">
-                                <div class="card-hidden border-line">
-                                    <div class="card-img-bg"></div>
-                                    <img src="image/protfolio-005.png" srcset="image/protfolio-005@2x.png 2x"
-                                        class="card-img-top">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <a href="protfolio_design_008.html">
+                                <div class="card">
+                                    <div class="card-hidden">
+                                        <div class="card-img-bg"></div>
+                                        <img src="image/protfolio-008.png" srcset="image/protfolio-008@2x.png 2x"
+                                            class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">國泰HR DEEP員工通勤平台</p>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">昕力資訊 惜物網</p>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <a href="protfolio_design_007.html">
+                                <div class="card">
+                                    <div class="card-hidden">
+                                        <div class="card-img-bg"></div>
+                                        <img src="image/protfolio-007.png" srcset="image/protfolio-007@2x.png 2x"
+                                            class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">思拓數位 官網網站設計</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <a href="protfolio_design_008.html">
-                            <div class="card">
-                                <div class="card-hidden">
-                                    <div class="card-img-bg"></div>
-                                    <img src="image/protfolio-008.png" srcset="image/protfolio-008@2x.png 2x"
-                                        class="card-img-top">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">國泰HR DEEP員工通勤平台</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <a href="protfolio_design_007.html">
-                            <div class="card">
-                                <div class="card-hidden">
-                                    <div class="card-img-bg"></div>
-                                    <img src="image/protfolio-007.png" srcset="image/protfolio-007@2x.png 2x"
-                                        class="card-img-top">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">思拓數位 官網網站設計</p>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </div>
@@ -106,6 +110,20 @@
     <script src="js/contact_modal.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="./js/main.js"></script> -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+            {
+                boxClass: 'wow',      // default
+                animateClass: 'animated', // default
+                offset: 0,          // default
+                mobile: false,       // default
+                live: true        // default
+            }
+        )
+        wow.init();
+        new WOW().init();
+    </script>
 </body>
 
 </html>
