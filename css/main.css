@@ -67,7 +67,6 @@ body {
   color: #747474;
   font-size: 16px;
   line-height: 1.5;
-  overflow-x: hidden;
   background-size: 12px;
 }
 
@@ -76,6 +75,10 @@ body {
   body {
     font-size: 14px;
   }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .text-title {
@@ -142,9 +145,15 @@ button:hover {
           align-items: center;
   padding: 0 20px;
   background-color: #fff;
+  z-index: 1000;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navbar.shadow {
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
 }
 
 .navbar .navbar-menu {
@@ -276,7 +285,7 @@ button:hover {
 }
 
 .navbar-toggler:hover {
-  background: url(../image/hamburger-hover.png) center center no-repeat;
+  background: url(../src/image/hamburger-hover.png) center center no-repeat;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
@@ -289,6 +298,8 @@ button:hover {
 @media (max-width: 767.98px) {
   .navbar {
     height: 60px;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   .navbar .nav-link:last-of-type {
     background-color: #fff;
@@ -382,7 +393,7 @@ button:hover {
 }
 
 .portfolio-card {
-  padding: 80px 40px;
+  padding: 100px 40px;
 }
 
 .portfolio-card .card-title {
@@ -550,7 +561,7 @@ button:hover {
 
 header {
   padding-top: 80px;
-  margin-bottom: 80px;
+  padding-bottom: 150px;
 }
 
 header .header-img {
@@ -577,6 +588,15 @@ header img {
 
 .contact-btn-s {
   display: none;
+}
+
+.portfolio-card.index {
+  padding: 100px 40px 60px 40px;
+  color: #f4f4f4;
+}
+
+.portfolio-card.index .card:hover {
+  color: #f4f4f4;
 }
 
 @media (max-width: 767.98px) {
@@ -698,20 +718,71 @@ header img {
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media (min-width: 992px) {
   .experience {
+    padding-top: 50px;
+    padding-left: 0;
+    overflow: hidden;
+  }
+  .experience .horizontal-scroll {
+    width: calc(100vh - 80px);
+    height: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transform-origin: right top;
+        -ms-transform-origin: right top;
+            transform-origin: right top;
+    -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0) translate3d(0, 80px, 0);
+            transform: rotate(-90deg) translate3d(0, -100vh, 0) translate3d(0, 80px, 0);
+  }
+  .experience .horizontal-scroll__index,
+  .experience .horizontal-scroll__project {
+    width: calc(100vh - 90px);
+    height: calc(100vw - 80px);
+    position: relative;
+  }
+  .experience .rotate {
+    position: absolute;
+    width: calc(100vw - 80px);
+    height: calc(100vh - 90px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: rotate(90deg) translate3d(0, -100vh, 0) translate3d(0, 90px, 0);
+            transform: rotate(90deg) translate3d(0, -100vh, 0) translate3d(0, 90px, 0);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  .experience .experience-group-one-wrapper,
+  .experience .experience-group-two-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .experience .experience-group-one-wrapper {
+    padding-left: 60px;
+    padding-top: 100px;
+    padding-right: 60px;
   }
   .experience .experience-group-two {
-    top: 50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
+    top: 50%;
+    padding-top: 60px;
   }
 }
 
@@ -736,7 +807,7 @@ header img {
   height: calc(100% - 80px);
   width: 480px;
   position: fixed;
-  overflow: scroll;
+  overflow-y: auto;
   padding: 30px 30px 120px 30px;
   right: 0;
   top: 80px;
@@ -802,7 +873,7 @@ header img {
     height: calc(100% - 80px);
     width: 350px;
     position: fixed;
-    overflow: scroll;
+    overflow-y: auto;
     padding: 30px 30px 120px 30px;
   }
 }
@@ -820,6 +891,15 @@ header img {
   }
   .portfolio .left {
     padding-right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .scrollbar-none::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }
 

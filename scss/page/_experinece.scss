@@ -76,14 +76,53 @@
     }
   }
 }
-
-@media screen and (min-width: 1920px) {
+@include media-breakpoint-up("lg") {
   .experience {
-    display: flex;
-    align-items: center;
+    padding-top: 50px;
+    padding-left: 0;
+    overflow: hidden;
+    .horizontal-scroll {
+      width: calc(100vh - 80px);
+      height: 100vw;
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      transform-origin: right top;
+      transform: rotate(-90deg) translate3d(0, -100vh, 0)
+        translate3d(0, 80px, 0);
+    }
+
+    .horizontal-scroll__index,
+    .horizontal-scroll__project {
+      width: calc(100vh - 90px);
+      height: calc(100vw - 80px);
+      position: relative;
+    }
+
+    .rotate {
+      position: absolute;
+      width: calc(100vw - 80px);
+      height: calc(100vh - 90px);
+      display: flex;
+      transform: rotate(90deg) translate3d(0, -100vh, 0) translate3d(0, 90px, 0);
+      transform-origin: 0 0;
+    }
+    .experience-group-one-wrapper,
+    .experience-group-two-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .experience-group-one-wrapper {
+      padding-left: 60px;
+      padding-top: 100px;
+      padding-right: 60px;
+    }
     .experience-group-two {
-      top: 50%;
       transform: translateY(-50%);
+      top: 50%;
+      padding-top: 60px;
     }
   }
 }

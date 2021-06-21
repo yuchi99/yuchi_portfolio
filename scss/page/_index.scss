@@ -1,6 +1,7 @@
 header {
   padding-top: 80px;
-  margin-bottom: 80px;
+  padding-bottom: 150px;
+  //background-color: #fff;
   .header-img {
     padding-top: 40px;
     display: flex;
@@ -21,6 +22,17 @@ header {
 
 .contact-btn-s {
   display: none;
+}
+.portfolio-card {
+  &.index {
+    padding: 100px 40px 60px 40px;
+    color: $gray-200;
+    .card {
+      &:hover {
+        color: $gray-200;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-down("md") {
