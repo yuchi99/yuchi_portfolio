@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab news</title>
+    <link rel="stylesheet" href="../../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="../assets/gudabAllStyleCn.css" rel="stylesheet">
+   	<link href="../assets/gudabNewsStyleCn.css" rel="stylesheet">
+   	<link href="../assets/gudabNewsDetailStyleCn.css" rel="stylesheet">
+	<script src="../,,/assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+			$(".NewsButton").hover(enterHandler,leaveHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$("nav").toggleClass("pushed");
+
+			if(toggle){			
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+
+				}
+		function enterHandler(){
+			$(".NewsButton img").attr("src","../../images/news/downloadButton_hover.png");
+		}
+		function leaveHandler(){
+			$(".NewsButton img").attr("src","../../images/news/downloadButton.png");
+		}
+    </script>	
+</head>
+<body>
+	<div>
+		<!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="../indexCn.html"><img src="../../images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="../indexCn.html">产品简介</a></li>
+                        <li class="navFocus"><a href="../newsCn.html">最新消息</a></li>
+                        <li><a href="../featuresCn.html">使用说明</a></li>
+                        <li><a href="../pricingCn.html">服务与价格</a></li>
+                        <li><a href="../successCn.html">成功案例</a></li>
+                        <li><a href="../downloadCn.html">免费下载</a></li>
+                        <li><a href="../contactCn.html">联络我们</a></li>
+                        <li><a class="navBtn rounded-circle" href="../../en/newsEn/news1.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="news1.html">简</a></li>
+                        <li><a class="navBtn rounded-circle" href="../../news/news1.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                        <ul>
+                            <li><a href="../indexCn.html">产品简介</a></li>
+                            <li class="navFocus"><a href="../newsCn.html">最新消息</a></li>
+                            <li><a href="../featuresCn.html">使用说明</a></li>
+                            <li><a href="../pricingCn.html">服务与价格</a></li>
+                            <li><a href="../successCn.html">成功案例</a></li>
+                            <li><a href="../downloadCn.html">免费下载</a></li>
+                            <li><a href="../contactCn.html">联络我们</a></li>
+                            <hr class="showMenuLine">
+                            <div class="btn-group chooseLanguage">
+                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    选择语言
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../../en/newsEn/news1.html">英文</a>
+                                    <a class="dropdown-item" href="news1.html">简体中文</a>
+                                    <a class="dropdown-item" href="../../news/news1.html">繁体中文</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+		<!--news start-->
+		<div class="container news">
+			<div class="row">
+				<div class="col-12">
+					<h1>最新消息</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<span>产品新讯</span>
+					<span>2017/12/29</span>
+				</div>
+				<div class="col-12">
+					<h3>Gudab : 企业级MongoDB管理系统</h3>
+					<hr>
+				</div>
+				<div class="col-12">
+					<p>Gudab全新企业版本上线啰! 即日起开方免费下载! 隋开随用!</p>
+				</div>
+				<div class="col-12">
+					<a href="../downloadCn.html" class="btn btn-outline-secondary NewsButton"><span>立刻下载</span><img src="../../images/news/downloadButton.png" alt="gudab download button"></a>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-12">
+					<a href="../newsCn.html" class="btn btn-outline-secondary prevBtn"><span>回上一页</span></a>
+				</div>
+			</div>
+		</div>
+	<!--footer start-->
+    <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="../../images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">相关文件</h5>
+                                            <span onclick="javascript:window.open('../../doc/gudab_v3.6.1.0_使用說明書(簡中).pdf')"><a href="#">使用手册</a></span>   <br>
+                                            <span onclick="javascript:window.open('../../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')"><a href="#">系统整合书</a></span>  <br>
+                                            <span><a href="../licenseCn.html">授权声明</a></span><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <span><a href="../gudabFAQCn.html">gudab</a></span><br>
+                                            <span><a href="../mongodbFAQCn.html">MongoDB</a></span><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <span><a href="https://www.thinkpower.com.tw/about.html" target="_blank">关于我们</a></span><br>
+                                            <span><a href="../contactCn.html">联络我们</a></span><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>我们的据点</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>台湾<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    台北市内湖区瑞光路437号3F</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>新加坡<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12 d-none d-sm-block">
+                            <p>Copyright©昕力资讯股份有限公司 ThinkPower Information Corporation</p>
+                        </div>
+                        <div class="col-12 d-block d-sm-none">
+                            <p>Copyright©昕力资讯股份有限公司<br> ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	</div>   
+</body>
+</html>

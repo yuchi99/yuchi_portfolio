@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleEn.css" rel="stylesheet">
+   	<link href="assets/gudabIndexStyleEn.css" rel="stylesheet">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+	        $(window).resize(resizeHandler);
+	        resizeHandler();
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){			
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+
+				}
+
+		function resizeHandler(){
+    	var winW=$(window).width();
+			if(winW>=991){
+				$(".gudabMan").attr("src","../images/index/bigPic.png");
+			}else{
+				$(".gudabMan").attr("src","../images/index/bigPic2.png");
+				 }		
+		}
+    </script>	
+</head>
+<body>
+	<div class="wrapper">
+		<!--nav start-->
+		<div class="allMenu">
+			<nav>
+				<div class="logo"><a href="indexEN.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+				<div class="menu">
+					<ul>
+						<li class="navFocus"><a href="indexEn.html">Why gudab</a></li>
+						<li><a href="newsEn.html">News</a></li>
+						<li><a href="featuresEn.html">Features</a></li>
+						<li><a href="pricingEn.html">Pricing</a></li>
+						<li><a href="successEn.html">Success</a></li>
+						<li><a href="downloadEn.html">Download</a></li>
+						<li><a href="contactEn.html">Contact</a></li>
+						<li><a class="navBtn rounded-circle" href="indexEn.html">EN</a></li>
+						<li><a class="navBtn rounded-circle" href="../cn/indexCn.html">简</a></li>
+						<li><a class="navBtn rounded-circle" href="../index.html">繁</a></li>
+					</ul>
+				</div>
+				<div class="showMenu">
+	           		<div class="toggle-icon">
+	           			<span class="bar"></span>
+					    <span class="bar"></span>
+					    <span class="bar"></span>
+	           		</div>
+						<ul>
+							<li class="navFocus"><a href="indexEn.html">Why gudab</a></li>
+							<li><a href="newsEN.html">News</a></li>
+							<li><a href="featuresEn.html">Features</a></li>
+							<li><a href="pricingEn.html">Pricing</a></li>
+							<li><a href="successEn.html">Success</a></li>
+							<li><a href="downloadEn.html">Download</a></li>
+							<li><a href="contactEn.html">Contact</a></li>
+							<hr class="showMenuLine">
+							<div class="btn-group chooseLanguage">
+								 <button type="button" class="btn dropdown-toggle dropdown-menu-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    Language
+								</button>
+								<div class="dropdown-menu">
+								    <a class="dropdown-item" href="indexEn.html">English</a>
+								    <a class="dropdown-item" href="../cn/indexCn.html">simplified Chinese</a>
+								    <a class="dropdown-item" href="../index.html">traditional Chinese</a>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--header start-->
+		<header class="container">
+				<div class="row">
+					<div class="col-12 col-md-5 headerTxt">
+						<img class="headerLogo" src="../images/index/headerLogo.png" alt="gudabLogo">
+						<h1>Manage your MongoDB<br>with Ease!</h1>
+						<p>One-stop solution for<br>database Monitoring, Backup,<br>Restore,Alert and more.</p>
+						<a href="downloadEn.html" class="btn btn-lg downloadBtn" role="button" aria-pressed="true">Free Download</a>
+					</div>
+					<div class="col-12 col-md-7 headerPic">
+						<img class="img-fluid" src="../images/index/headerPic.png" alt="gudab pic">
+					</div>
+				</div>
+		</header>
+		<!--about start-->
+		<div class="container-fluid about">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-sm-4 order-12 order-sm-1 aboutPic">
+						<img src="../images/index/about01.png" alt="gudab pic">
+					</div>
+					<div class="col-12 col-sm-7 order-1 order-sm-12 aboutTxt">
+						<h2>gudab : </h2>
+						<h2>An Enterprise-Class Management System for MongoDB</h2>
+						<p>MongoDB is the most common NoSQL database among enterprises but without proper management tools, business operation is exposed to risk. gudab delivers database management including performance metrics monitoring, alerts, data backup, restoration and more.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--features start-->
+		<div class="container features">
+			<div class="row">
+				<div class="col-12">
+					<h1>Features</h1>
+				</div>
+				<div class="row featureMain justify-content-center">
+					<div class="col-sm-12 col-lg-4 featuresItem">
+						<h5>Cluster structure<br>auto-detection</h5>
+						<p>Automatically portrait system topology and list host types within the cluster for easier setting and monitoring.</p>
+						<div class="itemPic"><img src="../images/index/Features1.jpg" alt="gudab 叢集架構自動偵測"></div>
+					</div>
+					<div class="col-sm-12 col-lg-4 featuresItem">
+						<h5>MongoDB system log</h5>
+						<p>Record activities of MongoDB servers and simplify auditing work.</p>
+						<div class="itemPic"><img src="../images/index/Features2.jpg" alt="gudab 指標監控"></div>
+					</div>
+					<div class="col-sm-12 col-lg-4 featuresItem">
+						<h5>Performance metrics</h5>
+						<p>Monitor system through real-time status graphs of CPU, RAM, Disk, Connection, Index, Throughput and over 30 different type of metrics.</p>
+						<div class="itemPic"><img src="../images/index/Features3.jpg" alt="gudab 系統告警"></div>
+					</div>
+					<div class="col-sm-12 col-lg-4 featuresItem">
+						<h5>Customizable dashboard</h5>
+						<p>Select your own combination of indicator watch. Add or remove metrics through my favorite list to facilitate daily monitoring work.</p>
+						<div class="itemPic"><img src="../images/index/Features4.jpg" alt="gudab MongoDB系統活動日誌"></div>
+					</div>
+					<div class="col-sm-12 col-lg-4 featuresItem">
+						<h5>System Alerts</h5>	
+						<p>Flexible alert setting by individual server/indicators and notify via Email and SNMP.</p>
+						<div class="itemPic"><img src="../images/index/Features5.jpg" alt="gudab 個人化儀錶板"></div>
+					</div>
+					<div class="col-sm-12 col-lg-4 featuresItem">
+						<h5>Data backup and restoration</h5>
+						<p>Featured differential backup, export/import restoration on selected servers.</p>
+						<div class="itemPic"><img src="../images/index/Features6.jpg" alt="gudab 備份還原"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid advantages">
+			<div class="container">
+				<div class="row ">
+					<h1>Why gudab?</h1>
+					<div class="row justify-content-center advantagesMain">
+						<div class="col-md-12 col-lg-4 col-xl-6 advantagesItemTxt">
+							<div class="row advantagesItem">
+								<!--1 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="../images/index/index_icon01.png" alt="gudab advantages icon"></div>
+										<h5>Enterprise-specific</h5>
+									</div>
+									<p>Comprehensive solution for enterprise database management including performance monitoring, alert, backup/restore, custom dashboard and more.</p>
+								</div>
+								<!--2 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="../images/index/index_icon02.png" alt="gudab advantages icon"></div>
+										<h5>Agent Free</h5>
+									</div>
+									<p>No need to install agent software, greatly reduce complications and workload for system maintenance.</p>
+								</div>
+								<!--3 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="../images/index/index_icon03.png" alt="gudab advantages icon"></div>
+										<h5>Browser Based</h5>
+									</div>
+									<p>Operable through web browsers and enable remote monitoring on MongoDB server.</p>
+								</div>
+								<!--4 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="../images/index/index_icon04.png" alt="gudab advantages icon"></div>
+										<h5>Diverse performance metrics</h5>
+									</div>
+									<p>Providing more than 30 metrics for database administrators to have full range of database operating statistics.</p>
+								</div>
+								<!--5 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="../images/index/index_icon05.png" alt="gudab advantages icon"></div>
+										<h5>Always up-to-date</h5>
+									</div>
+									<p>gudab supports the latest version of MongoDB. Stay up-to-date to ensure on compatibility.</p>
+								</div>
+								<!--6 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="../images/index/index_icon06.png" alt="gudab advantages icon"></div>
+										<h5>Complete MongoDB service</h5>
+									</div>
+									<p>Full MongoDB support from system design, build, remote backup, full backup, alert integration, to professional consulting and advisory.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-7 col-xl-6 advantagesPic">
+							<img class="gudabMan" src="../images/index/bigPic.png" alt="gudab 產品優勢">
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	<!--footer-->   
+        <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="../images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8 footTxt">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">Document</h5>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_user guide (English).pdf')"><a href="#">User Guide</a></p>    <br>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')"><a href="#">System integration document</a></p>  <br>
+                                            <p><a href="licenseEn.html">License</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <p><a href="gudabFAQEn.html">gudab</a></p><br>
+                                            <p><a href="mongodbFAQEn.html">MongoDB</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <p><a href="https://www.thinkpower.com.tw/about.html" target="_blank">About</a></p><br>
+                                            <p><a href="contactEn.html">Contact</a></p><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>Our locations</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Taiwan<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    3F., No.437, Ruiguang Rd. Neihu Dist., Taipei City 114, Taiwan (R.O.C.)</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Singapore<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p>Copyright©ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	</div>   
+</body>
+</html>

@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>gudab Download</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleEn.css" rel="stylesheet">
+    <link href="assets/gudabDownloadStyleEn.css" rel="stylesheet">
+    <script src="../assets/jquery.js"></script>
+    <script src="../assets/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script src="../assets/download.js"></script>
+
+    <script>
+        $(document).ready(init);
+        function init() {
+            $(".toggle-icon").click(navHandler);
+            $(".gdDownloadPic img").hover(enterHandler1, leaveHandler1);
+            $(".gdDownloadPic2 img").hover(enterHandler2, leaveHandler2);
+        }
+
+        var toggle = true;
+        function navHandler() {
+            $('nav').toggleClass("pushed");
+
+            if (toggle) {
+                $(".showMenu ul, .toggleLanguage").show(0);
+            }
+            else {
+                $(".showMenu ul, .toggleLanguage").hide(0);
+            }
+            toggle = !toggle;
+
+        }
+        /*------------------------------------------*/
+        function enterHandler1() {
+            $(this).attr("src", "../images/download/downloadWindowsHover.png");
+        }
+        function leaveHandler1() {
+            $(this).attr("src", "../images/download/downloadWindows.png");
+        }
+        /*------------------------------------------*/
+        function enterHandler2() {
+            $(this).attr("src", "../images/download/downloadLinuxHover.png");
+        }
+        function leaveHandler2() {
+            $(this).attr("src", "../images/download/downloadLinux.png");
+        }
+        /*------------------------------------------*/
+        var recaptcha1;
+        var onloadCallback = function () {
+            recaptcha1 = grecaptcha.render(document.getElementById('RecaptchaField1'), {
+                'sitekey': '6LfmSy0UAAAAAKbune-h7gUBJ20xfq52oQne2OlD'
+            });
+        };
+
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="indexEn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="indexEn.html">Why gudab</a></li>
+                        <li><a href="newsEn.html">News</a></li>
+                        <li><a href="featuresEn.html">Features</a></li>
+                        <li><a href="pricingEn.html">Pricing</a></li>
+                        <li><a href="successEn.html">Success</a></li>
+                        <li class="navFocus"><a href="downloadEn.html">Download</a></li>
+                        <li><a href="contactEn.html">Contact</a></li>
+                        <li><a class="navBtn rounded-circle" href="downloadEn.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="../cn/downloadCn.html">简</a></li>
+                        <li><a class="navBtn rounded-circle" href="../download.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                        <ul>
+                            <li><a href="indexEn.html">Why gudab</a></li>
+                            <li><a href="newsEN.html">News</a></li>
+                            <li><a href="featuresEn.html">Features</a></li>
+                            <li><a href="pricingEn.html">Pricing</a></li>
+                            <li><a href="successEn.html">Success</a></li>
+                            <li class="navFocus"><a href="downloadEn.html">Download</a></li>
+                            <li><a href="contactEn.html">Contact</a></li>
+                            <hr class="showMenuLine">
+                            <div class="btn-group chooseLanguage">
+                                 <button type="button" class="btn dropdown-toggle dropdown-menu-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Language
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="downloadEn.html">English</a>
+                                    <a class="dropdown-item" href="../cn/downloadCn.html">simplified Chinese</a>
+                                    <a class="dropdown-item" href="../download.html">traditional Chinese</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    <!--download start-->
+        <div class="container download">
+            <div class="row">
+                <div class="col-12 d-md-block d-none gdTitle1">
+                    <h1>
+                        Monitor your MongoDB now!<br>
+                        Download gudab Enterprise Free
+                    </h1>
+                </div>
+                <div class="col-12 d-md-none d-block gdTitle2">
+                    <h1>
+                        Monitor your<br>MongoDB now!<br>
+                        Download gudab<br>Enterprise Free
+                    </h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-10 col-md-7 col-lg-6 downloadInput">
+                    <form id="downloadForm" action="" method="POST">
+                        <fieldset>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="＊Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control formMarginTop" id="email" name="email" aria-describedby="emailHelp" placeholder="＊E-mail">
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div id="RecaptchaField1" class="g-recaptcha"></div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="my-1 mr-2" for="clientDataNodeCounter">Choose a Distro</label>
+                                        <select class="custom-select my-1 mr-sm-2" id="systemSelector">
+                                            <option value="" selected>Select...</option>
+                                            <option value="windows">Windows</option>
+                                            <option value="linux">Linux</option>
+                                        </select>
+                                        <div id="error-message"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="my-1 mr-2" for="clientDataNodeCounter">Choose a Release</label>
+                                        <select class="custom-select my-1 mr-sm-2" id="versionSelector" lang="En">
+                                            <option selected>Select...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button id="submitBtn" type="submit" value="Submit" class="Submit btn btn-primary btn-block">Download</button>
+                                </div>
+                                <p>If you have any problems, please<span><a href="contactEn.html">contact us</a></span>.</p>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-auto order-last order-sm-first">
+                    <div class="downloadGudabMan">
+                        <img src="../images/download/downloadGudabMan.png">
+                    </div>
+                </div>
+                <div class="col-11 col-sm-auto GudabManTalk order-first order-sm-last">
+                    <h4 class="d-sm-block d-none">
+                        Interesting in gudab Enterprise? <br>
+                        Please contact our sales representative
+                    </h4>
+                    <h4 class="d-sm-none d-block">
+                        Interesting in<br>gudab Enterprise?<br>
+                        Please contact our<br>sales representative
+                    </h4>
+                    <a href="contactEn.html" class="btn btn-lg QABtn" role="button" aria-pressed="true" data-type="inline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    <!--footer-->   
+        <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="../images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8 footTxt">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">Document</h5>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_user guide (English).pdf')"><a href="#">User Guide</a></p>    <br>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')"><a href="#">System integration document</a></p>  <br>
+                                            <p><a href="licenseEn.html">License</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <p><a href="gudabFAQEn.html">gudab</a></p><br>
+                                            <p><a href="mongodbFAQEn.html">MongoDB</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <p><a href="https://www.thinkpower.com.tw/about.html" target="_blank">About</a></p><br>
+                                            <p><a href="contactEn.html">Contact</a></p><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>Our locations</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Taiwan<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    3F., No.437, Ruiguang Rd. Neihu Dist., Taipei City 114, Taiwan (R.O.C.)</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Singapore<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p>Copyright©ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!-- Button trigger modal -->
+        <button id="modalButton" type="button" style="display:none;" data-toggle="modal" data-target="#exampleModalCenter">
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>  
+                <div class="modal-body text-center">
+                    <div class="gudabSuccessMan"><img src="../images/modal/gudabSuccessMan.png" alt=""></div>
+                    <h5 class="modal-title text-center" id="exampleModalCenterTitle">Thank you</h5>
+                    <p>Success! The download link has been sent to your mailbox.</p>   
+                </div>
+                <div class="modal-footer">
+                    <div class="text-center"><img src="../images/modal/gdSuccessLogo.png"></div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

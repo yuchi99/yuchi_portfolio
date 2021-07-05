@@ -1,0 +1,75 @@
+.news span{
+	color: #5aaa23;
+	font-size: 1em;
+	padding: 0 0 0 15px;
+}
+.news p span{
+	padding: 0px;
+}
+.news h1{
+	margin: 155px auto 85px auto;
+}
+.news h3{
+	font-family:"微軟正黑體", "STHeitiTC", Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 1.375em;
+	line-height: 1.3em;
+	font-weight: 600;
+	/*text-align: justify;*/
+	color: #646464;
+	letter-spacing: -0.6px;
+	padding: 5px 15px 15px 15px;
+}
+.news hr{
+	width: 100%;
+	color: #dbdbdb;
+	border-width: 2px;
+	margin: 0;
+	}
+.news p{
+	padding: 15px;
+}
+.NewsButton{
+	width: 114px;
+	height: 36px;
+	line-height: 34px;
+	padding: 0 13px;
+	border-radius: 10px;
+  	border: solid 1px #5aaa23;
+  	margin-left: 15px;
+}
+.NewsButton:hover, .prevBtn:hover{
+	background-color: #5aaa23;
+  	border: solid 1px #5aaa23;
+}
+.btn-outline-secondary:not([disabled]):not(.disabled):active, .btn-outline-secondary:not([disabled]):not(.disabled).active,
+	.show > .btn-outline-secondary.dropdown-toggle {
+	background-color: #5aaa23;
+  	border: solid 1px #5aaa23;
+}
+.NewsButton:hover span, .prevBtn:hover span{
+  	color: #fff;
+}
+.btn-outline-secondary:hover{
+	background-color: #5aaa23;
+	color: #fff;
+}
+.NewsButton img{
+	height: 1em;
+	line-height: 36px;
+}
+.NewsButton span{
+	padding-right: 5px;
+	padding-left: 0;
+}
+.prevBtn{
+	margin-top: 40px;
+	width: 114px;
+	height: 36px;
+	line-height: 34px;
+	padding: 0 13px;
+	border-radius: 10px;
+  	border: solid 1px #5aaa23;
+}
+.prevBtn span{
+	padding-left: 0;
+}

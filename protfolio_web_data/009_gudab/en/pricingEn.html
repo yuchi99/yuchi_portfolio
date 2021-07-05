@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab pricing</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleEn.css" rel="stylesheet">
+   	<link href="assets/gudabPricingStyleEn.css" rel="stylesheet">
+	<link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){			
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+				}
+    </script>	
+</head>
+<body>
+	<div>
+		<!--nav start-->
+		<div class="allMenu">
+			<nav>
+				<div class="logo"><a href="indexEn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+				<div class="menu">
+					<ul>
+						<li><a href="indexEn.html">Why gudab</a></li>
+						<li><a href="newsEn.html">News</a></li>
+						<li><a href="featuresEn.html">Features</a></li>
+						<li class="navFocus"><a href="pricingEn.html">Pricing</a></li>
+						<li><a href="successEn.html">Success</a></li>
+						<li><a href="downloadEn.html">Download</a></li>
+						<li><a href="contactEn.html">Contact</a></li>
+						<li><a class="navBtn rounded-circle" href="pricingEn.html">EN</a></li>
+						<li><a class="navBtn rounded-circle" href="../cn/pricingCn.html">简</a></li>
+						<li><a class="navBtn rounded-circle" href="../pricing.html">繁</a></li>
+					</ul>
+				</div>
+				<div class="showMenu">
+	           		<div class="toggle-icon">
+	           			<span class="bar"></span>
+					    <span class="bar"></span>
+					    <span class="bar"></span>
+	           		</div>
+						<ul>
+							<li><a href="indexEn.html">Why gudab</a></li>
+							<li><a href="newsEN.html">News</a></li>
+							<li><a href="featuresEn.html">Features</a></li>
+							<li class="navFocus"><a href="pricingEn.html">Pricing</a></li>
+							<li><a href="successEn.html">Success</a></li>
+							<li><a href="downloadEn.html">Download</a></li>
+							<li><a href="contactEn.html">Contact</a></li>
+							<hr class="showMenuLine">
+							<div class="btn-group chooseLanguage">
+								 <button type="button" class="btn dropdown-toggle dropdown-menu-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    Language
+								</button>
+								<div class="dropdown-menu">
+								    <a class="dropdown-item" href="pricingEn.html">English</a>
+								    <a class="dropdown-item" href="../cn/pricingCn.html">simplified Chinese</a>
+								    <a class="dropdown-item" href="../pricing.html">traditional Chinese</a>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--pricing start-->
+		<div class="container pricing">
+			<div class="row">
+				<div class="col-12">
+					<h1>Our Pricing</h1>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-9 col-sm-5 col-md-5 gdEnterprise">
+					<div class="text-center">
+						<img src="../images/pricing/enterpriseMan.png" alt="">
+						<h6>gudab Enterprise</h6>
+						<h3>by data node</h3>
+					</div>
+					<div class="enterpriseList">
+						<ul>
+							<li><i class="fa fa-check"></i> Auto detect cluter structure</li>
+							<li><i class="fa fa-check"></i>Server Monitoring</li>
+							<li><i class="fa fa-check"></i>Mongodb activity log</li>
+							<li><i class="fa fa-check"></i>Customizable Dashboard</li>
+							<li><i class="fa fa-check"></i>Email and telephone support</li>
+							<li><i class="fa fa-check"></i>System Alert</li>
+							<li><i class="fa fa-check"></i>Mongodb advisory</li>
+							<li><i class="fa fa-check"></i>Backup/Restore</li>
+							<li><i class="fa fa-check"></i>High Availability Architecture</li>
+							<li><i class="fa fa-check"></i>User control</li>
+							<li><i class="fa fa-check"></i>gudab system log</li>	
+							<li><i class="fa fa-check"></i>Report download</li>
+						</ul>
+					</div>
+					<div>
+						<a class="btn btn-primary btn-block" href="contactEn.html" role="button">contact Us</a>	
+					</div>
+				</div>
+				<div class="col-9 col-sm-5 col-md-5 gdExpress">
+					<div class="text-center">
+						<img src="../images/pricing/expressMan.png" alt="">
+						<h6>gudab Express</h6>
+						<h3>FREE</h3>
+					</div>
+					<div class="expressList">
+						<ul>
+							<li class="greenColor"><i class="fa fa-check"></i>Auto detect cluter structure</li>
+							<li class="greenColor"><i class="fa fa-check"></i>Server Monitoring</li>
+							<li class="greenColor"><i class="fa fa-check"></i>Mongodb activity log</li>
+							<li class="greenColor"><i class="fa fa-check"></i>Customizable Dashboard</li>
+							<li class="greenColor"><i class="fa fa-check"></i>Email installation support</li>
+							<li class="greenColor"><i class="fa fa-check"></i>System Alert</li>
+							<li><i class="fa fa-times"></i>Mongodb advisory</li>
+							<li><i class="fa fa-times"></i>Backup/Restore</li>
+							<li><i class="fa fa-times"></i>High Availability Architecture</li>
+							<li><i class="fa fa-times"></i>User control</li>
+							<li><i class="fa fa-times"></i>gudab system log</li>	
+							<li><i class="fa fa-times"></i>Report download</li>
+						</ul>
+					</div>
+					<div>
+						<a class="btn btn-primary btn-block btnFree" href="downloadEn.html" role="button">Free Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid pricingQA">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 d-none d-sm-block ">
+						<h1>gudab Pricing FAQ</h1>
+					</div>
+					<div class="col-12 d-block d-sm-none">
+						<h1>gudab Pricing<br>FAQ</h1>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>What if I switch server?</h4>
+						<p>No problem. You can add and delete any server within the number of data node purchased at anytime.</p>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>How does gudab Business charge?</h4>
+						<p>gudab Business licensing is billed annually by number of servers under alert. For detail pricing, please contact us.</p>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>How do I get discounts?</h4>
+						<p>Discounts are offered when you renew licenses before the expiry date. Or order additional data node monitoring and server services within the effective licensing period. For more details, please contact us.</p>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>What is your refund policy?</h4>
+						<p>We want you to be happy with our service and have the flexibility to test and choose. If at anytime during the first 45 days using our service that you are dissatisfied, please contact us. We will gladly offer you a full refund for your purchase, and downgrade your account to gudab express.</p>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>What kind of support do you offer?</h4>
+						<p>We offer Email and telephone support on gudab installation.For on-premises service and mongoDB consultation, please contact us for details and pricing.</p>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>What happens if I cancel my licensing service</h4>
+						<p>We will start sending notification one month prior to the licensing expiry date. In case, you are unable to renew your license in time. We offer grace period of 30 days. If you do not wish to extend the license, the service will downgrade to gudab express.</p>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>How does gudab Enterprise charge?</h4>
+						<p>gudab Enterprise licensing is billed annually by number of monitored data nodes including primary and secondary servers. (Router, configuration server and arbiter are excluded). For detail pricing, please contact us.</p>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>When can I upgrade my licensing service?</h4>
+						<p>You can upgrade to gudab Enterprise at any time. We will consolidate your billing, deduct remaining credits and provide you the updated payment balance.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--footer-->   
+        <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="../images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8 footTxt">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">Document</h5>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_user guide (English).pdf')"><a href="#">User Guide</a></p>    <br>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')"><a href="#">System integration document</a></p>  <br>
+                                            <p><a href="licenseEn.html">License</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <p><a href="gudabFAQEn.html">gudab</a></p><br>
+                                            <p><a href="mongodbFAQEn.html">MongoDB</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <p><a href="https://www.thinkpower.com.tw/about.html" target="_blank">About</a></p><br>
+                                            <p><a href="contactEn.html">Contact</a></p><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>Our locations</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Taiwan<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    3F., No.437, Ruiguang Rd. Neihu Dist., Taipei City 114, Taiwan (R.O.C.)</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Singapore<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p>Copyright©ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	</div>   
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab Success Cases</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleEn.css" rel="stylesheet">
+   	<link href="assets/gudabSuccessStyleEn.css" rel="stylesheet">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){			
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+
+				}
+			
+    </script>	
+</head>
+<body>
+	<div>
+		<!--nav start-->
+		<div class="allMenu">
+			<nav>
+				<div class="logo"><a href="indexEn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+				<div class="menu">
+					<ul>
+						<li><a href="indexEn.html">Why gudab</a></li>
+						<li><a href="newsEn.html">News</a></li>
+						<li><a href="featuresEn.html">Features</a></li>
+						<li><a href="pricingEn.html">Pricing</a></li>
+						<li class="navFocus"><a href="successEn.html">Success</a></li>
+						<li><a href="downloadEn.html">Download</a></li>
+						<li><a href="contactEn.html">Contact</a></li>
+						<li><a class="navBtn rounded-circle" href="successEn.html">EN</a></li>
+						<li><a class="navBtn rounded-circle" href="../cn/successCn.html">简</a></li>
+						<li><a class="navBtn rounded-circle" href="../success.html">繁</a></li>
+					</ul>
+				</div>
+				<div class="showMenu">
+	           		<div class="toggle-icon">
+	           			<span class="bar"></span>
+					    <span class="bar"></span>
+					    <span class="bar"></span>
+	           		</div>
+						<ul>
+							<li><a href="indexEn.html">Why gudab</a></li>
+							<li><a href="newsEN.html">News</a></li>
+							<li><a href="featuresEn.html">Features</a></li>
+							<li><a href="pricingEn.html">Pricing</a></li>
+							<li class="navFocus"><a href="successEn.html">Success</a></li>
+							<li><a href="downloadEn.html">Download</a></li>
+							<li><a href="contactEn.html">Contact</a></li>
+							<hr class="showMenuLine">
+							<div class="btn-group chooseLanguage">
+								 <button type="button" class="btn dropdown-toggle dropdown-menu-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    Language
+								</button>
+								<div class="dropdown-menu">
+								    <a class="dropdown-item" href="successEn.html">English</a>
+								    <a class="dropdown-item" href="../cn/successCn.html">simplified Chinese</a>
+								    <a class="dropdown-item" href="../success.html">traditional Chinese</a>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--success start-->
+		<div class="container success">
+			<div class="row">
+				<div class="col-12">
+					<h1>Success Cases</h1>
+				</div>
+			</div>
+			<div class="row justify-content-center successGroup">
+				<div class="col-10 col-md-5 col-lg-3 successList">
+					<div class="text-center"><img src="../images/success/cathayLogo.png"></div>
+					<h4>Cathay Life Insurance</h4>
+					<p>Cathay Life Insurance handles enormous amount of insurance policy data every day. When it comes to insurance policy, all data need to be stored and process safely, consistently, and promptly. Not one customer’s data allows to be compromised with database problems. With gudab, managing data backup and monitoring for more than 20 MongoDB servers, Cathay life insurance is assured on database protection and secures its customers’ trust.</p>
+				</div>
+				<div class="col-10 col-md-5 col-lg-3 successList">
+					<div class="text-center"><img src="../images/success/ChunghwaTelecomLogo.png"></div>
+					<h4>Chunghwa Telecom</h4>
+					<p>Chunghwa Telecom's CDR(Call Detail Record) management system process over 60,000,000 CDR data every day. To deal this tremendous amount of workload, Chunghwa Telecom leverages MongoDB’s NoSQL hyper efficient processing feature for data integration. And all its MongoDB systems are managed and monitored by gudab to make database management easier and simpler.</p>
+				</div>
+				<div class="col-10 col-md-5 col-lg-3 successList">
+					<div class="text-center"><img src="../images/success/fareastoneLogo.png"></div>
+					<h4>Far Eastone</h4>
+					<p>Far Eastone adapts MongoDB to store data for its centralized log management system which consist of numerous servers. The log data generated for telecommunication system is considerably massive. When an error or abnormality occurs, Far EasTone’s engineers need to quickly resort to the analysis of the generated logs for troubleshooting. And gudab effectively assists and eases the system administrators’ daily job through continuously monitoring and management functions.</p>
+				</div>
+				<div class="col-10 col-md-5 successList d-none d-md-block d-lg-none">
+					
+				</div>
+			</div>
+		</div>
+	<!--footer-->   
+        <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="../images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8 footTxt">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">Document</h5>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_user guide (English).pdf')"><a href="#">User Guide</a></p>    <br>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')"><a href="#">System integration document</a></p>  <br>
+                                            <p><a href="licenseEn.html">License</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <p><a href="gudabFAQEn.html">gudab</a></p><br>
+                                            <p><a href="mongodbFAQEn.html">MongoDB</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <p><a href="https://www.thinkpower.com.tw/about.html" target="_blank">About</a></p><br>
+                                            <p><a href="contactEn.html">Contact</a></p><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>Our locations</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Taiwan<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    3F., No.437, Ruiguang Rd. Neihu Dist., Taipei City 114, Taiwan (R.O.C.)</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Singapore<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p>Copyright©ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	</div>   
+</body>
+</html>

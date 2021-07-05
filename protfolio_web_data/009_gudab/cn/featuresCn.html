@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab 使用說明</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleCn.css" rel="stylesheet">
+   	<link href="assets/gudabFeaturesStyleCn.css" rel="stylesheet">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+	        $(".smallMark").click(clickHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+			}
+
+		var plus = "images/features/plus.png";
+		var minus = "images/features/minus.png";
+		function clickHandler(){
+			$(this).next(".featuresContent").slideToggle(800);
+			$(this).toggleClass("smallMark_click").toggleClass("smallMark_removeclick");
+			
+			  if ($(this).find(".gdImg").attr("src") === plus) {
+			    $(this).find(".gdImg").attr("src", minus);
+			  } else {
+			    $(this).find(".gdImg").attr("src", plus);
+			  }
+		}
+    </script>	
+</head>
+<body>
+	<div class="wrapper">
+		<!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="indexCn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="indexCn.html">产品简介</a></li>
+                        <li><a href="newsCn.html">最新消息</a></li>
+                        <li class="navFocus"><a href="featuresCn.html">使用说明</a></li>
+                        <li><a href="pricingCn.html">服务与价格</a></li>
+                        <li><a href="successCn.html">成功案例</a></li>
+                        <li><a href="downloadCn.html">免费下载</a></li>
+                        <li><a href="contactCn.html">联络我们</a></li>
+                        <li><a class="navBtn rounded-circle" href="../en/featuresEn.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="featuresCn.html">简</a></li>
+                        <li><a class="navBtn rounded-circle" href="../features.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                        <ul>
+                            <li><a href="indexCn.html">产品简介</a></li>
+                            <li><a href="newsCn.html">最新消息</a></li>
+                            <li class="navFocus"><a href="featuresCn.html">使用说明</a></li>
+                            <li><a href="pricingCn.html">服务与价格</a></li>
+                            <li><a href="successCn.html">成功案例</a></li>
+                            <li><a href="downloadCn.html">免费下载</a></li>
+                            <li><a href="contactCn.html">联络我们</a></li>
+                            <hr class="showMenuLine">
+                            <div class="btn-group chooseLanguage">
+                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    选择语言
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../en/featuresEn.html">英文</a>
+                                    <a class="dropdown-item" href="featuresCn.html">简体中文</a>
+                                    <a class="dropdown-item" href="../features.html">繁体中文</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+		<!--header start-->
+		<div class="container features">
+			<div class="row">
+				<div class="col-12">
+					<h1>使用說明</h1>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/features/featuresIcon01.png" alt="gudab 安裝icon">
+					<h3>安装</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>被监控对象(MongoDB)⽀持说明</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(一) 支援MongoDB版本：v2.6 ~ 3.6</p>
+                    <p>(二)支援OS版本<br>
+					a.Rehat6、Redhat7<br>
+	                b.CentOS6、CentOS7<br>
+	                c.Ubuntu14、Ubuntu16<br>
+	                d.Windows Server 2008 R2 64-bit and later
+	            	</p>
+	                <p>(三) 建立 Linux Service Account：参考
+                        <a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')">gudab_v3.6.1.0_系统整合书</a>。
+                    </p>
+                    <p>(四) 建立 MongoDB Service Account：参考
+                        <a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')">gudab_v3.6.1.0_系统整合书</a>。
+                    </p>
+                    <p>(五) 编辑 hosts file：参考
+                        <a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')">gudab_v3.6.1.0_系统整合书</a>。
+                    </p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab系统需求</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(一) Java 1.8</p>
+                    <p>(二) OS版本<br>
+					<ol class="gdlower-alpha">
+						<li>Redhat6、Redhat7</li>
+						<li>CentOS6、CentOS7</li>
+						<li>Ubuntu14、Ubuntu16</li>
+						<li>Windows Server 2008 R2 64-bit and later</li>
+					</ol>
+					 <p>(三) 硬件资源<br> 
+					 	<ol class="gdlower-alpha">
+						<li>CPU：最低需求 4core、建议8core以上。</li>
+						<li>RAM：最低需求 16GB、建议32GB以上。</li>
+						<li>Disk： 所需准备的空间 = 安装 + 指标 + 备份</li>
+					</ol>
+					<ol class="gdLower-roman">
+						<li>安装：300MB。</li>
+						<li>指标：最低需求为 10GB，建议 20GB。( 10 host/month)。</li>
+						<li>备份：最低需求为 data size的 1.5倍、建议 2.5倍以上。</li>
+					</ol>
+					<p>註：至少一台consoleDB(MongoDB)，只监控不备份。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="gdIllustrating">
+					  	<figcaption class="figure-caption">2-1 架构图(示意)</figcaption>
+					</figure>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab Enterprise 下载安装步骤</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(一) 到官网免费下载 gudab Enterprise 软件 <a href="http://www.gudab.com/">http://www.gudab.com/</a></p>
+					<p>(二) 解压缩于任意目录，但路径名称不可有特殊字符符号，例. []。 </p>
+					<p>(三) 编辑 hosts file：参考 <a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')">gudab_v3.6.1.0_系统整合书</a>。 </p>
+					<p>(四) 以SSH公钥认证、编辑 SSH properties file：参考 <a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')">gudab_v3.6.1.0_系统整合书</a>。 </p>
+					<p>(五) 编辑 gudab properties file：参考<a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')">gudab_v3.6.1.0_系统整合书</a>。 </p>
+					<p>(六) 防火墙端口设定(可选-全备用)：参考<a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')">gudab_v3.6.1.0_系统整合书</a>。</p>
+					<p>(七) 准备档案到指定路径(可选-全备用)：参考<a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')">gudab_v3.6.1.0_系统整合书</a>。</p> 
+					<p>(八) 变更 consoleDB 的密码：执行 changePwd.sh (linux) 或 changePwd.bat(windows)。</p>
+					<p>(九) 启动 gudab：执行 start.sh (linux) 或 start.bat (windows)<br>PS. windows 用户要"以管理员身分执行"。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/downloadPageCn.png" alt="2-2 官方下载">
+					  	<figcaption class="figure-caption">2-2 官方下载</figcaption>
+					</figure>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/features/featuresIcon02.png" alt="gudab 安裝icon">
+					<h3>首页与登入</h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>首页与登入</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>使用者可透过浏览器连结至以下网址「http://localhost:8080/view」，即可进入gudab系统的登入页面，例. http://192.168.1.64:8080/view 。</p>
+                    <p>点选「登入」，输入帐号与密码后，按下「登入」，若帐号与密码经过认证成功后，即可登入gudab系统，系统会自动显示「系统监控」模组的首页。</p>
+					<p>gudab系统安装完成后，系统中所预设的管理者帐号为「root」，管理者密码为「root」。建议使用者登入gudab系统后，可利用「个人资料」功能来变更管理者密码，以确保系统安全性。<详见 6.1 个人资料></p>
+					<p>假设今日为 20180118</p>
+					<ol class="inherit decimal">
+						<li>到期日为 20180130
+							<ol class="inherit disc">
+								<li>过期前1个月内显示提示讯息</li>
+								<li>初次登入，左上会提醒试用 Enterprise 30 天的到期日。</li>
+								<figure class="figure col-12 text-center">
+								  	<img class="img-fluid gdDefinePic" src="images/features/3-1.png" alt="3-1 首页登入(过期前1个月)">
+								  	<figcaption class="figure-caption gdPaddingbottom40">3-1 首页登入(过期前1个月)</figcaption>
+								</figure>
+							</ol>
+						</li>
+						<li>到期日为 20171225
+							<ol class="inherit disc">
+								<li>过期后1个月内显示告警讯息，并倒数可用天数。</li>
+								<li>请订阅 Enterprise，或降版至 Express。</li>
+								<figure class="figure col-12 text-center">
+								  	<img class="img-fluid gdDefinePic" src="images/features/3-2.png" alt="3-2 首页登入(过期后1个月)">
+								  	<figcaption class="figure-caption gdPaddingbottom40">3-2 首页登入(过期后1个月)</figcaption>
+								</figure>
+								<li>点击画面上的按钮，永久降版至 Express。</li>
+								<figure class="figure col-12 text-center">
+								  	<img class="img-fluid gdDefinePic" src="images/features/3-3.png" alt="3-3 首页登入(Express)">
+								  	<figcaption class="figure-caption gdPaddingbottom40">3-3 首页登入(Express)</figcaption>
+								</figure>
+							</ol>
+						</li>
+						<li>到期日为 20171212
+							<ol class="inherit disc">
+								<li>过期超过 1 个月锁住画面</li>
+								<li>请订阅 Enterprise，或降版至 Express。</li>
+								<figure class="figure col-12 text-center">
+								  	<img class="img-fluid gdDefinePic" src="images/features/3-4.png" alt="3-4 首页登入(Expired)">
+								  	<figcaption class="figure-caption">3-4 首页登入(Expired)</figcaption>
+								</figure>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/features/featuresIcon03.png" alt="gudab 安裝icon">
+					<h3>监控管理</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>系统监控首页</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>「系统监控」模块的首页会显示目前被监控中的 MongoDB 服务器列表以及状态信息。</p>
+                    <figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-1.png" alt="4-1 服务器列表">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-1 服务器列表</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 1 服务器列表(以下由左到右说明各字段的意义)
+					  	<figcaption>
+				  	</figure>
+					<table class="table table-responsive table-striped table-sm">
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 80%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">字段</th>
+						    	<th scope="col">说明</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row">架构类型</th>
+						      	<td>该 MongoDB 服务器的服务器类型，包含以下类型：<br>
+									SA (StandAlone)<br>
+									RS (Replica Set)<br> 
+									SC (Sharded Cluster)
+								</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">灯号</th>
+						    	<td>此灯号代表是目前该 MongoDB服务器的状态，绿灯代表正常运作中，红灯则代表该服务器目前已停止 运作或状态异常。</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">别名</th>
+						    	<td>用户自定义义名称。预设为"host:port"</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">服务器名称</th>
+						    	<td>该 MongoDB 服务器的主机名。固定为 "host:port"，点击连结可看其指标。</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">RS成员</th>
+						    	<td>RS成员的角色，包含以下类型：<br>
+								(P) PRIMARY<br>
+								(S) SECONDARY<br> 
+								(A) ARBITER</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">版本</th>
+						    	<td>该MongoDB服务器的MongoDB版本。<br> 
+								例. 3.4.10</td>
+						    </tr>
+						     <tr>
+						    	<th scope="row">启动时间</th>
+						    	<td>该MongoDB服务器启动后的运行时间。<br> 
+								例. 4D 23H 0m</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">响应时间</th>
+						    	<td>该MongoDB服务器最后被监控联机的时间。例. 2018-01-19 08:26:40</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row"><img src="../images/features/table_pencil.png" alt="gudab(編輯)設定 Exception Time"></th>
+						    	<td>(编辑)设定 Exception Time。</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row"><img src="../images/features/table_delete.png" alt="gudab(刪除) 按下此按鈕即可刪除該該MongoDB伺服器的監控設定"></th>
+						    	<td>(删除)按下此按钮即可删除该该 MongoDB 服务器的监控设定。</td>
+						    </tr>
+						</tbody>
+					</table>
+					<figure class="figure col-12 text-center gdMargintop30">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-2.png" alt="4-2 监控灯号">
+					  	<figcaption class="figure-caption">4-2 监控灯号</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center gdMargintop30">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 2 丛集灯号说明 (左边第一排)
+					  	</figcaption>
+					</figure>
+					<table class="table table-responsive table-striped table-sm table50">
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 80%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">灯号</th>
+						    	<th scope="col">说明</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_green_fullcircle.png" alt=""></th>
+						      	<td>所有成员正常监控中</td>
+						    </tr>
+						   	 <tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_green_circle.png" alt=""></th>
+						      	<td>部分成员处于例外时间，其余成员正常监控中</td>
+						    </tr>
+						     <tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_yellow_fullcircle.png" alt=""></th>
+						      	<td>所有成员处于例外时间</td>
+						    </tr>
+						     <tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_red_fullcircle.png" alt=""></th>
+						      	<td>所有成员脱离监控</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_red_circle.png" alt=""></th>
+						      	<td>部分成员脱离监控</td>
+						    </tr>
+						</tbody>
+					</table>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>设定被监控对象(MongoDB信息)</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>首次登入，预设只会监控gudab内建的consoleDB。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-3.png" alt="4-3 预设监控">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-3 预设监控</figcaption>
+					</figure>
+					<p>若需要监控某台MongoDB服务器，可透过「新增服务器」将该服务器加入监控列表中。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-4.png" alt="4‑4 新增服务器-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4‑4 新增服务器-1</figcaption>
+					</figure>
+					<p>请输入以下字段信息：</p>
+					<P>(一) 服务器的主机名 : MongoDB服务器的主机名(此字段为必填)。 </P>
+					<p>(二) Port : MongoDB服务器 所设定的Port(此字段为必填)。</p>
+					<p>(三) 数据库用户名称 : 若该MongoDB服务器有设定账号控管，则须输⼊此使用者名称。</p>
+					<p>(四) 数据库用户密码 : 若该MongoDB服务器有设定账号控管，则须输⼊此密码。</p>
+					<br>
+					<p>＊Auto Discovery</p>
+					<p>若您加⼊的 MongoDB 为丛集成员(Replica Set, Sharded Cluster)，本监控系统会自动带出此丛集的所有成员进⾏监控。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-5.png" alt="4-5 新增服务器-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-5 新增服务器-2</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-6.png" alt="4-6 新增服务器-3">
+					  	<figcaption class="figure-caption">4-6 新增服务器-3</figcaption>
+					</figure>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>自动重启机制</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(规划中)当监控的 MongoDB ⽆法联机或 process 不存在时，可额外设定是否对MongoDB 进⾏重启动作。例如当 MongoDB Process 未预期消失时，gudab 可自动 SSH 进到该 Server，执⾏准备好的 linux script，进⾏ MongoDB 启动作业。</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>监控指标</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>若需要检视 MongoDB 服务器的监控指标，可直接点选服务器列表中该服务器的 HOST 字段，即可检视各种监控指标。</p>
+					<p>如下图所示，左⽅选单为监控指标群组，包含「我的最爱」、「Host Status」、「Utilization」、「Events」、「Saturation」、「Throuhgput」、与「Performance」等群组，直接点选该群组，下⽅即会显示群组下的指针项目，点选该指针，右⽅即会显示该指针的图形。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-7.png" alt="4-7 监控指标-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-7 监控指标-1</figcaption>
+				  	</figure>
+					<p>以 Connections 指标为例，如上图所示，该 MongoDB 服务器的连接数量会以折线分区图的⽅式来呈现，X 轴(显示区间)是该信息被记录的时间，Y 轴则是该信息的数值。用户可点选「时间刻度」与「显示区间」来变更指针数据的显示⽅式与范围。</p>
+					<p>时间刻度是指要以何种资料取样时间 (频率)来显示，如下图 4 所示，若时间刻度选择 5sec，则数据取样时间会以每 5sec 的数据来显示，下图上⽅图形的数据取样时间为 13:27:17，下图 4 (下⼀笔数据)的数据取样时间则为 13:27:22。显示区间则是 X 轴所要显示的数据取样范围，如下图所示，若显示区间选择10min，则 X 轴会显示最近 10min 的资料。</p>
+					<p>每种时间刻度皆会提供默认的数组显示区间，以⽅便使用者操作。目前共有 4 种时间刻度可选，各自对应 3 种不同的显示区间。</p>
+					<ul class="disc">
+						<li>5sec(10min,30min,1hr)</li>
+						<li>1min(100min,3hr,6hr)</li>
+						<li>5min(3hr,6hr,12hr)</li>
+						<li>1hr(1day,1week,2week)</li>
+					</ul>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-8.png" alt="4-8 监控指标-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-8 监控指标-2</figcaption>
+				  	</figure>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-9.png" alt="4-9 监控指标-3">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-9 监控指标-3<figcaption>
+				  	</figure>
+				  	<p>点选爱⼼旁的⽅框，会显示 data point。点选 Auto Refresh，会关闭图表刷新(红底)。点选 SI 时，会列出 SI 的比例关系。注：data point 介于 50 到 300 个才可点选⽅框，小于 50 个时，会强制显示、⼤于 300 个时会强制关闭。</p>
+				  	<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-10.png" alt="4-10 SI比例">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-10 SI比例<figcaption>
+				  	</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 3 所有指标列表
+					  	<figcaption>
+				  	</figure>
+					<table class="table table-responsive table-striped table-sm table3">
+						
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col" colspan="3">Host Status</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row" rowspan="4">CPU</th>
+						      	<td>cpuUS</td>
+								<td>CPU总体使用率</td>
+						    </tr>
+						    <tr>
+						      	<td>cpuID</td>
+								<td>CPU空闲比率</td>
+						    </tr>
+						    <tr>
+						      	<td>cpuWA</td>
+								<td>CPU等待IO比率</td>
+						    </tr>
+						    <tr>
+						      	<td>cpuPidUS</td>
+								<td>Mongo的CPU使用率</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="7">Memory</th>
+						      	<td>memTotal</td>
+								<td>Server总共有多少Memory</td>
+						    </tr>
+						    <tr>
+						      	<td>memFree</td>
+								<td>剩余的Memory</td>
+						    </tr>
+						    <tr>
+						      	<td>memUsed</td>
+								<td>使用中的Memory</td>
+						    </tr>
+						    <tr>
+						      	<td>mongoVirt</td>
+								<td>Mongo使用的虚拟内存总量(Swap+Res)</td>
+						    </tr>
+						    <tr>
+						      	<td>mongoRes</td>
+								<td>Mongo使用非被置换的物理内存⼤小</td>
+						    </tr>
+						    <tr>
+						      	<td>mongoShr</td>
+								<td>Mongo使用共享内存⼤小</td>
+						    </tr>
+						    <tr>
+						      	<td>mongoUsed</td>
+								<td>Mongo使用的虚拟内存百分比</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="3" class="bgColerChange">Swap</th>
+						      	<td>swapTotal</td>
+								<td>Server总共有多少Swap Memory</td>
+						    </tr>
+						    <tr>
+						      	<td>swapFree</td>
+								<td>剩余的Swap Memory</td>
+						    </tr>
+						    <tr>
+						      	<td>swapUsed</td>
+								<td>使用中的Swap Memory</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="4">Storage</th>
+						      	<td>size</td>
+								<td>Mongo的dbPath共有多少空间</td>
+						    </tr>
+						    <tr>
+						      	<td>used</td>
+								<td>Mongo已使用的storage空间</td>
+						    </tr>
+						    <tr>
+						      	<td>alive</td>
+								<td>Mongo的dbPath剩下的空间</td>
+						    </tr>
+						    <tr>
+						      	<td>percent</td>
+								<td>Mongo使用storage的百分比</td>
+						    </tr>
+						<!---->
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col" colspan="3">Utilization</th>
+						    </tr>
+						</thead>
+						    <tr>
+						      	<th scope="row" rowspan="1">Connections</th>
+						      	<td>connections</td>
+								<td>用户联机的数量</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="2" class="bgColerChange">Cursors</th>
+						      	<td>open</td>
+								<td>当前 cursors 的数量</td>
+						    </tr>
+						    <tr>
+						      	<td>timedOut</td>
+								<td>启动至今，过期 cursors 的总数量</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="4" class="bgColerChange">DbMemory</th>
+						      	<td>mapped</td>
+								<td>映像的内存量。</td>
+						    </tr>
+						    <tr>
+						      	<td>mappedWithJournal</td>
+								<td>映像的内存量 (包含 journal)</td>
+						    </tr>
+						    <tr>
+						      	<td>resident</td>
+								<td>当前使用的内存量</td>
+						    </tr>
+						    <tr>
+						      	<td>virtual</td>
+								<td>使用的虚拟内存量</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="1" class="bgColerChange">Journaled Size (V2.6)</th>
+						      	<td>size</td>
+								<td>上⼀次 journal group 提交期间，写⼊ journal 的资料量。</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="3">WiredTiger Cache (V3.4)</th>
+						      	<td>current</td>
+								<td>正在使用的数据，佔 WT cache 的大小</td>
+						    </tr>
+						    <tr>
+						      	<td>maximum</td>
+								<td>WT cache 上限的大小</td>
+						    </tr>
+						    <tr>
+						      	<td>dirty</td>
+								<td>异动过的数据(脏数据)，占 WT cache 的⼤小。</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="4" class="bgColerChange">WiredTiger Transactions (V3.4)</th>
+						      	<td>readAvailable</td>
+								<td>WT 读交易 tickets，可用的数量</td>
+						    </tr>
+						    <tr>
+						      	<td>readOut</td>
+								<td>WT 读交易 tickets，当前使用的数量</td>
+						    </tr>
+						    <tr>
+						      	<td>writeAvailable</td>
+								<td>WT 写交易 tickets，可用的数量</td>
+						    </tr>
+						     <tr>
+						      	<td>writeOut</td>
+								<td>WT 写交易 tickets，当前使用的数量</td>
+						    </tr>
+						</tbody>
+						<!---->
+						<tbody>
+							<thead class="thead-dark text-center">
+								<tr>
+							    	<th scope="col" colspan="3">Events</th>
+							    </tr>
+							</thead>
+							<tr>
+						      	<th scope="row" rowspan="4">Asserts</th>
+						      	<td>msg</td>
+								<td>启动至今，message asserts 的数量。来自各种 DB 内部错误，例如参数不在指定范围内</td>
+						    </tr>
+						    <tr>
+						      	<td>regular</td>
+								<td>启动至今，regular asserts 的数量。违反不变条件的操作，例如读取 BSON 档案失败</td>
+						    </tr>
+						    <tr>
+						      	<td>user</td>
+								<td>启动⾄今，user asserts 的数量。这些是由使用者所产⽣的错误，例如磁盘空间不⾜、重复键值、⽆权访问。</td>
+						    </tr>
+						     <tr>
+						      	<td>warn</td>
+								<td>启动⾄今，warning 的数量。不是严重错误，但仍需检查，多数与环境配置有关，例如ulimit, readahead 太小，使用root 启动 DB。</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="1">Page Faults</th>
+						      	<td>pageFaults</td>
+								<td>发生 page faults 的总数量</td>
+						    </tr>
+						</tbody>
+						<!---->
+						<tbody>
+							<thead class="thead-dark text-center">
+								<tr>
+							    	<th scope="col" colspan="3">Saturation</th>
+							    </tr>
+							</thead>
+							<tr>
+						      	<th scope="row" rowspan="3">Current Queue</th>
+						      	<td>readers</td>
+								<td>因为 read lock，当前操作队列 (queued) 的数量。</td>
+						    </tr>
+						    <tr>
+						      	<td>total</td>
+								<td>因为 lock，当前操作队列 (queued) 的总数量。</td>
+						    </tr>
+						    <tr>
+						      	<td>writers</td>
+								<td>因为 write lock，当前操作队列 (queued) 的数量。</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="1" class="bgColerChange">Journaled Lock (V2.6)</th>
+						      	<td>lock</td>
+								<td>提交时，写锁被取走的次数。</td>
+						    </tr>
+						</tbody>
+						<!---->
+						<tbody>
+							<thead class="thead-dark text-center">
+								<tr>
+							    	<th scope="col" colspan="3">Throughput</th>
+							    </tr>
+							</thead>
+							<tr>
+						      	<th scope="row" rowspan="2">Active Clients</th>
+						      	<td>readers</td>
+								<td>当前的客户端联机，发起读操作的数量。</td>
+						    </tr>
+						    <tr>
+						      	<td>writers</td>
+								<td>当前的客户端联机，发起写操作的数量。</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="2">Network</th>
+						      	<td>in</td>
+								<td>接收的网路传输量</td>
+						    </tr>
+						    <tr>
+						      	<td>out</td>
+								<td>发送的网路传输量</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="6">Opcounters</th>
+						      	<td>command</td>
+								<td>启动至今，执行指令的总数量</td>
+						    </tr>
+						    <tr>
+						      	<td>delete</td>
+								<td>启动至今，删除操作的总数量</td>
+						    </tr>
+						    <tr>
+						      	<td>getmore</td>
+								<td>启动至今，getmore 操作的总数量</td>
+						    </tr>
+						    <tr>
+						      	<td>insert</td>
+								<td>启动至今，新增操作的总数量</td>
+						    </tr>
+						    <tr>
+						      	<td>query</td>
+								<td>启动至今，查询操作的总数量</td>
+						    </tr>
+						    <tr>
+						      	<td>update</td>
+								<td>启动至今，修改操作的总数量</td>
+						    </tr>
+						</tbody>
+						<!---->
+						<tbody>
+							<thead class="thead-dark text-center">
+								<tr>
+							    	<th scope="col" colspan="3">Performance</th>
+							    </tr>
+							</thead>
+							<tr>
+						      	<th scope="row" rowspan="3">Replication Oplog</th>
+						      	<td>timeDiff</td>
+								<td>剩馀同步时间</td>
+						    </tr>
+						    <tr>
+						      	<td>replicationLag</td>
+								<td>Secondary 同步 Primary 的延迟时间</td>
+						    </tr>
+						    <tr>
+						      	<td>replicationHeadroom</td>
+								<td>记录 oplog 第一笔与最后一笔的时间间隔 (Oplog Window)</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="1" class="bgColerChange">Background Flush (V2.6)</th>
+						      	<td>lastFlush</td>
+								<td>上一次落盘操作，所花费的时间</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="1">Journaled Time (V2.6)</th>
+						      	<td>time</td>
+								<td>Journaling 后，写入 data files 的时间</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="3" class="bgColerChange">Index (V2.6)</th>
+						      	<td>accesses</td>
+								<td>操作访问索引的次数 (hits+misses)</td>
+						    </tr>
+						    <tr>
+						      	<td>hits</td>
+								<td>操作访问的索引在内存的次数</td>
+						    </tr>
+						    <tr>
+						      	<td>misses</td>
+								<td>操作访问的索引不在内存的次数</td>
+						    </tr>
+						</tbody>
+					</table>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>我的最爱</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>使使用者可将不同群组中的监控指标加⼊「我的最爱」群组中，如下图所示，请点选「加入我的最爱」的爱心图案，待爱心图案变成全红，即代表设定完成。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-11.png" alt="4-11 我的最爱-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-11 我的最爱-1</figcaption>
+					</figure>
+					<p>另外提供「我的最爱」设定页面，一次总览所有的分类细项，如下图所示，请勾选或取消监控的项目。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-12.png" alt="4-12 我的最爱-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-12 我的最爱-2</figcaption>
+					</figure>
+					<p>使用者可点选「我的最爱」群组，如下图所示，系统即会显示方才所加入的监控指标。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-13.png" alt="4-13 我的最爱-3">
+					  	<figcaption class="figure-caption">4-13 我的最爱-3</figcaption>
+					</figure>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/features/featuresIcon04.png" alt="gudab 安裝icon">
+					<h3>历史活动资讯</h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>历史活动资讯</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>「系统状态列表」会显示依照时间来显示目前被监控中的MongoDB 服务器所发生的历史活动讯息与状态。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/5-1.png" alt="5-1 系统状态栏表">
+					  	<figcaption class="figure-caption gdPaddingbottom40">5-1 系统状态栏表</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 4 系统状态栏表(以下由左到右说明各字段的意义)</figcaption>
+					</figure>
+					<table class="table table-striped table-sm table50">
+						<colgroup>
+							<col style="width: 30%;">
+							<col style="width: 70%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">字段</th>
+						    	<th scope="col">说明</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row">DATE</th>
+						      	<td>发生该活动的日期</td>
+						    </tr>
+						   	 <tr>
+						      	<th scope="row">HOST</th>
+						      	<td>发生该活动的MongoDB服务器的主机名称</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">ACTIVITY</th>
+						      	<td>发生的活动讯息</td>
+						    </tr>
+						</tbody>
+					</table>
+                </div>    
+			</div>
+		<!--***********************-->	
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img class="gdMargintop3" src="../images/features/featuresIcon05.png" alt="gudab 安裝icon">
+					<h3>使用者管理</h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>个人资料</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>登入系统后，若需要检视或更新本身的个人资料，可按「个人资料」，系统会显示目前的个人资料，包含账号、Email、密码与密码确认。</p>
+					<p>若需要更新个人资料，可直接输入更新数据，并按「送出」。若不需更新数据，请按下右上⽅ X 按钮来关闭本页面。</p>
+					<p>首次使用系統中所預設的管理者帳號 root 登⼊，请记得马上更新用户密码。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/6-1.png" alt="6-1 更新用户数据">
+					  	<figcaption class="figure-caption">6-1 更新用户数据</figcaption>
+					</figure>
+                </div> 
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>新增使用者</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>若需要新增使用者，可按「新增用户」，系统会显示新增用户页面，请输⼊该用户的数据，包含账号、Email、密码与密码确认，并按「送出」。若不需新增使用者，请按下右上⽅ X 按钮来关闭本页面。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/6-2.png" alt="6-2 新增用户">
+					  	<figcaption class="figure-caption">6-2 新增用户</figcaption>
+					</figure>
+                </div>  
+			</div>
+		<!--***********************-->	
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img class="gdMargintop3" src="../images/features/featuresIcon06.png" alt="gudab 安裝icon">
+					<h3>系统告警 <small>(企业版)</small></h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>系统告警首页</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>「告警」模组的首页会显示目前所设定的告警设定清单</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-1.png" alt="7-1 告警列表">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-1 告警列表</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 5 告警列表(以下由左到右说明各栏位的意义)</figcaption>
+					</figure>
+					<table class="table table-striped table-sm table50">
+						<colgroup>
+							<col style="width: 30%;">
+							<col style="width: 70%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">字段</th>
+						    	<th scope="col">说明</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row">告警名称</th>
+						      	<td>该组告警设定的识别名称，可由使用者自行输入</td>
+						    </tr>
+						   	 <tr>
+						      	<th scope="row">告警频率(分)</th>
+						      	<td>侦测是否符合告警条件的频率，单位为分钟</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">操作钮</th>
+						      	<td>针对该组告警设定可执行的操作功能，包含 : <br>
+								编辑 : 编辑该组告警设定<br>
+								删除 : 删除该组告警设定<br>
+								</td>
+						    </tr>
+						</tbody>
+					</table>
+                </div> 
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>建立告警设定</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(一) 若需要建立告警设定，可透过「新增告警设定」来建立告警设定。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-2.png" alt="7-2 新增告警设定">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-2 新增告警设定</figcaption>
+					</figure>
+					<p>(二)设定以下信息 ，并按「送出」</p>
+					<ul class="decimal">
+						<li>输入告警名称：该组设定的识别名称，可由使用者自行输入。</li> 
+						<li>选择伺服器：需要纳入告警侦测范围的伺服器，可複选。</li> 
+						<li>告警情境设定：设定告警的条件，请勾选所需的条件项目，并输入条件值。</li> 
+						<li>发送给：设定告警的侦测频率，以及侦测到符合告警条件时，所需要执行的动作。请由文字框中输入告警 侦测频率的间隔频率，单位为分钟。目前提供的告警动作包含E-mail。</li>
+					</ul>	
+					<p>(三) 系统会显示告警设定建立成功，请按「关闭」离开此页面。</p>
+				</div>
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>例外时间</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>MongoDB的告警会需要有例外的时候。例如，当进行全备份时，MongoDB是在预期内被关闭的，此时是不需要发告警的。</p>
+					<p>因此，例外时间就是让告警系统，得知该MongoDB是在预期内shutdown，而不需要发告警。</p>
+					<p>(一) 例外时间可以对整个集群或特定成员设定</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-3.png" alt="7-3 例外时间-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-3 例外时间-1</figcaption>
+					</figure>
+					<p>(二) 针对 RS 特定成员 trs02c:23001 设定例外时间</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-4.png" alt="7-4 例外时间-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-4 例外时间-2</figcaption>
+					</figure>
+					<p>(三) 点选编辑钮可以设定例外时间。若尚未设定例外时间则为空</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-5.png" alt="7-5 例外时间-3">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-5 例外时间-3</figcaption>
+					</figure>
+					<p>(四) 例外时间会显示在伺服器列表上，可以设定多组。并可视其用途给予别名(New Alias)</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-6.png" alt="7-6 例外时间-4">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-6 例外时间-4</figcaption>
+					</figure>
+					<p>(五) 新增例外时间后，产生新的别名</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-7.png" alt="7-7 例外時間-5">
+					  	<figcaption class="figure-caption">7-7 例外时间-5</figcaption>
+					</figure>
+                </div> 
+			</div>
+		<!--***********************-->	
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img class="gdMargintop3" src="../images/features/featuresIcon07.png" alt="gudab 安裝icon">
+					<h3>备份还原 <small>(企业版)</small></h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>备份还原首页</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>gudab 是针对丛集架构(replica set / sharded cluster) 做备份，不支持对单一节点(standalone)备份。</p>
+					<p>若真有对单一节点备份的需求，请将 standalone 转成 primary；换句话说，就是没有 secondary 的 replica set</p>
+					<p>「备份还原」模组的首页会显示目前所设定的备份设定清单</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-1.png" alt="8-1 备份还原首页">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-1 备份还原首页</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 6 备份/回復(以下由左到右说明各字段的意义)</figcaption>
+					</figure>
+					<table class="table table-striped table-sm table65">
+						<colgroup>
+							<col style="width: 30%;">
+							<col style="width: 70%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">字段</th>
+						    	<th scope="col">说明</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row">ID</th>
+						      	<td>该组告警设定的识别名称，可由使用者自行输入</td>
+						    </tr>
+						   	<tr>
+						      	<th scope="row">CLUSTER</th>
+						      	<td>该组备份设定所包含MongoDB服务器</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">服务器类型</th>
+						      	<td>该MongoDB服务器的服务器类型，包含以下类型 : <br> 
+								MONGOS<br>  
+								Replica Set<br>  
+								Config Server</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">状态</th>
+						      	<td>该组备份设定目前是否启动，绿灯代表启动，红灯代表未启动</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">最后资料备份时间</th>
+						      	<td>该组备份设定中，各资料库的最后资料备份时间</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">操作</th>
+						      	<td>针对该组备份设定可执行的操作功能，包含 : <br>
+								开始备份 : 启动资料备份作业<br> 
+								回復 : 启动资料还原作业<br> 
+								编辑 : 编辑该组备份设定<br> 
+								删除 : 删除该组备份设定</td>
+						    </tr>
+						</tbody>
+					</table>
+                </div>
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>建立备份设定</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(一) 若需要备份MongoDB中的数据，可透过「新增备份设定」来建立备份设定。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-2.png" alt="8-2 新增备份设定-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-2 新增备份设定-1</figcaption>
+					</figure>
+					<p>(二) 请选择所需要备份的数据库与Collection，并按「下一步」</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-3.png" alt="8-3 新增备份设定-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-3 新增备份设定-2</figcaption>
+					</figure>
+					<p>(三) 完成备份设定，请按下「关闭」回到备份设定清单页面。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-4.png" alt="8-4 新增备份设定-3">
+					  	<figcaption class="figure-caption">8-4 新增备份设定-3</figcaption>
+					</figure>
+				</div>
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>启动备份作业</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(一) 请由备份设定清单页面中，针对需要启动备份作业的项目，按下「备份」</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-5.png" alt="8-5 启动备份设定-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-5 启动备份设定-1</figcaption>
+					</figure>
+					<p>(二) 系统会显示确认讯息，若需要启动备份作业，请按下「确定」，或按下「取消」离开本页面。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-6.png" alt="8-6 新增备份设定-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-6 新增备份设定-2</figcaption>
+					</figure>
+					<p>(三) 若按下「确定」，则会启动备份作业。状态区位会变成绿灯，代表该备份作业已经正常启动执行，可按下「停止备份」来停止该作业。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-7.png" alt="8-7 新增备份设定-3">
+					  	<figcaption class="figure-caption">8-7 新增备份设定-3</figcaption>
+					</figure>
+				</div>
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>执行还原作业</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(一) 若需要使用某备份设定项目的数据来进行还原作业，则需要先停止该备份项目的备份作业，请针对该备份设定项目按下「停止备份」，并按下「确定」。这时候会关闭所有 delayed 成员。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-8.png" alt="8-8 还原作业-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-8 还原作业-1</figcaption>
+					</figure>
+					<p>(二) 从指定目录手动複製底下所有 data files 方式，取代原本被监控对象所有成员的data files。 指定目录：./gudab/fullbackup_hidden_mongo/<scId>_<rsId>/data </p>
+					<p>例../gudab/fullbackup_hidden_mongo/1514958344362_Sa1/data/* <br>
+					scId 为 sharded cluster 加入监控的 timestamp。 <br>
+					rsId 为 Replica SetName。 </p>
+					<p>接着，请重新启动 MongoDB，根据 gudab.properties 预设回朔到3600秒之前，若是这部分没有把握完成，可由gudab团队人员进场协助。</p>
+					<p>(三) 该备份设定的状态栏位会显示为红灯，请按下「回復」，开始执行还原作业。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-9.png" alt="8-9 还原作业-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-9 还原作业-2</figcaption>
+					</figure>
+					<p>(四) 请完成各项还原作业的设定</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-10.png" alt="8-10 还原作业-3">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-10 还原作业-3</figcaption>
+					</figure>
+					<p>(五)还原作业的设定完成后，请按下「Confirm」来执行还原作业。</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-11.png" alt="8-11 还原作业-4">
+					  	<figcaption class="figure-caption">8-11 还原作业-4</figcaption>
+					</figure>
+				</div>
+			</div>
+		<!--***********************-->	
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img class="gdMargintop3" src="../images/features/featuresIcon08.png" alt="gudab 安裝icon">
+					<h3>联络方式</h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>原厂(新加坡) - gudab</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>地址：Level 40, Ocean Financial Centre 10 Collyer Quay Singapore 049315<br>
+					电话：+65-6808-6029<br> 
+					信箱：service@gudab.com<br> 
+					网址：https://www.gudab.com</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>代理商(台湾) - thinkpower</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>地址：3F., No.437, Ruiguang Rd. Neihu Dist., Taipei City 114, Taiwan (R.O.C.)<br> 
+					电话：+886-2-27942668 # 604<br> 
+					信箱：service@thinkpower.com.tw<br> 
+					网址：https://www.thinkpower.info/</p>
+				</div>
+			</div>
+		</div>
+	<!--footer start-->
+	    <footer>
+	        <div class="container-fluid footerTop">
+	            <div class="container">
+	                <div class="row justify-content-center">
+	                    <div class="col-md-12 col-xl-6">
+	                        <div class="row">
+	                            <div class="col-12 col-sm-4 footerLogo">
+	                                <img src="../images/index/footerLogo.png">
+	                            </div>
+	                            <div class="col-12 col-sm-8">
+	                                <div class="row">
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter1">相关文件</h5>
+	                                        <span onclick="javascript:window.open('../doc/gudab_v3.6.1.0_使用說明書(簡中).pdf')"><a href="#">使用手册</a></span>   <br>
+	                                        <span onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')"><a href="#">系统整合书</a></span>  <br>
+	                                        <span><a href="licenseCn.html">授权声明</a></span><br>
+	                                    </div>
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter2">FAQ</h5>
+	                                        <span><a href="gudabFAQCn.html">gudab</a></span><br>
+	                                        <span><a href="mongodbFAQCn.html">MongoDB</a></span><br>
+	                                    </div>
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter3">ThinkPower</h5>
+	                                        <span><a href="https://www.thinkpower.com.tw/about.html" target="_blank">关于我们</a></span><br>
+	                                        <span><a href="contactCn.html">联络我们</a></span><br>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+	                        <div class="row">
+	                            <div class="col-12">
+	                                <h5>我们的据点</h5>
+	                            </div>
+	                        </div>
+	                        <div class="row justify-content-between">
+	                            <div class="col-6 gudabLocationItem">
+	                                <p>台湾<br>
+	                                TEL +886-2-8751-1610 #134<br>
+	                                台北市内湖区瑞光路437号3F</p>
+	                            </div>
+	                            <div class="col-6 gudabLocationItem">
+	                                <p>新加坡<br>
+	                                TEL +65-6808-6029<br>
+	                                Level 40, Ocean Financial Centre, <br>
+	                                10 CollyerQuay, Singapore 049315</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="container-fluid footerBottom">
+	            <div class="container">
+	                <div class="row text-center">
+	                    <div class="col-12 d-none d-sm-block">
+	                        <p>Copyright©昕力资讯股份有限公司 ThinkPower Information Corporation</p>
+	                    </div>
+	                    <div class="col-12 d-block d-sm-none">
+	                        <p>Copyright©昕力资讯股份有限公司<br> ThinkPower Information Corporation</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </footer>
+	</div>   
+</body>
+</html>

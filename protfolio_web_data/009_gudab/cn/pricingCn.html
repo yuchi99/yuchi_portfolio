@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab 服务与价格</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleCn.css" rel="stylesheet">
+   	<link href="assets/gudabPricingStyleCn.css" rel="stylesheet">
+	<link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){			
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+				}
+    </script>	
+</head>
+<body>
+	<div>
+		<!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="indexCn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="indexCn.html">产品简介</a></li>
+                        <li><a href="newsCn.html">最新消息</a></li>
+                        <li><a href="featuresCn.html">使用说明</a></li>
+                        <li class="navFocus"><a href="pricingCn.html">服务与价格</a></li>
+                        <li><a href="successCn.html">成功案例</a></li>
+                        <li><a href="downloadCn.html">免费下载</a></li>
+                        <li><a href="contactCn.html">联络我们</a></li>
+                        <li><a class="navBtn rounded-circle" href="../en/pricingEn.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="pricingCn.html">简</a></li>
+                        <li><a class="navBtn rounded-circle" href="../pricing.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                        <ul>
+                            <li><a href="indexCn.html">产品简介</a></li>
+                            <li><a href="newsCn.html">最新消息</a></li>
+                            <li><a href="featuresCn.html">使用说明</a></li>
+                            <li class="navFocus"><a href="pricingCn.html">服务与价格</a></li>
+                            <li><a href="successCn.html">成功案例</a></li>
+                            <li><a href="downloadCn.html">免费下载</a></li>
+                            <li><a href="contactCn.html">联络我们</a></li>
+                            <hr class="showMenuLine">
+                            <div class="btn-group chooseLanguage">
+                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    选择语言
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../en/pricingEn.html">英文</a>
+                                    <a class="dropdown-item" href="pricingCn.html">简体中文</a>
+                                    <a class="dropdown-item" href="../pricing.html">繁体中文</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+		<!--pricing start-->
+		<div class="container pricing">
+			<div class="row">
+				<div class="col-12">
+					<h1>服务与价格</h1>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-9 col-sm-5 col-md-4 gdEnterprise">
+					<div class="text-center">
+						<img src="../images/pricing/enterpriseMan.png" alt="">
+						<h6>gudab Enterprise</h6>
+						<h3>以Data Node计费</h3>
+					</div>
+					<div class="enterpriseList">
+						<ul>
+							<li><i class="fa fa-check"></i>指标监控</li>
+							<li><i class="fa fa-check"></i>Mongodb 活动日志</li>
+							<li><i class="fa fa-check"></i>自动侦测丛集架构</li>
+							<li><i class="fa fa-check"></i>个性化仪表板</li>
+							<li><i class="fa fa-check"></i>Email和电话技术支持</li>
+							<li><i class="fa fa-check"></i>系统警报</li>
+							<li><i class="fa fa-check"></i>Mongodb 咨询</li>
+							<li><i class="fa fa-check"></i>备份还原</li>
+							<li><i class="fa fa-check"></i>高可用性HA 架构</li>
+							<li><i class="fa fa-check"></i>gudab 系统日志</li>
+							<li><i class="fa fa-check"></i>报表下载</li>	
+							<li><i class="fa fa-check"></i>用户权力控管</li>
+						</ul>
+					</div>
+					<div>
+						<a class="btn btn-primary btn-block" href="contactCn.html" role="button">立即询价</a>	
+					</div>
+				</div>
+				<div class="col-9 col-sm-5 col-md-4 gdExpress">
+					<div class="text-center">
+						<img src="../images/pricing/expressMan.png" alt="">
+						<h6>gudab Express</h6>
+						<h3>FREE</h3>
+					</div>
+					<div class="expressList">
+						<ul>
+							<li class="greenColor"><i class="fa fa-check"></i>指标监控</li>
+							<li class="greenColor"><i class="fa fa-check"></i>Mongodb 活动日志</li>
+							<li class="greenColor"><i class="fa fa-check"></i>自动侦测丛集架构</li>
+							<li class="greenColor"><i class="fa fa-check"></i>个性化仪表板</li>
+							<li class="greenColor"><i class="fa fa-check"></i>Email 安装支持</li>
+							<li class="greenColor"><i class="fa fa-check"></i>系统警报</li>
+							<li><i class="fa fa-times"></i>Mongodb 咨询</li>
+							<li><i class="fa fa-times"></i>备份还原</li>
+							<li><i class="fa fa-times"></i>高可用性HA 架构</li>
+							<li><i class="fa fa-times"></i>gudab 系统日志</li>
+							<li><i class="fa fa-times"></i>报表下载</li>	
+							<li><i class="fa fa-times"></i>用户权力控管</li>
+						</ul>
+					</div>
+					<div>
+						<a class="btn btn-primary btn-block btnFree" href="downloadCn.html" role="button">免费下载</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid pricingQA">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<h1>价格问与答</h1>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>技术支持服务有哪些?</h4>
+						<p>我们提供Email 和电话上的安装技术支持。 对于专人现场支持和MongoDB专业服务的细节与价格,请与我们联络。</p>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>授权到期前我可以升级服务吗?</h4>
+						<p>您可以随时升级至gudab Enterprise。 我们会依比例计算您的gudab business授权余额并折抵至新的gudab Enterprise帐单。</p>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>如何取得折扣?</h4>
+						<p>在授权期满前续约或增购data node/server服务可取得折扣，欲了解折扣详细内容请与我们联络。</p>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>购买授权后如想取消怎么办?</h4>
+						<p>我们提供45天的鉴赏期, 在这期间如有任何的问题, 请与我们联络. 若我们无法解决您的问题或满足您的需求, 我们将全额退费并把服务改为免费的gudab Express。</p>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>可否更换不同的服务器进行监控?</h4>
+						<p>可以, 只要在授权的Data Node 数量内,您可以任意的变更监控的服务器。</p>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>授权到期后怎么办?</h4>
+						<p>授权期满前一个月我们将会陆续发送到期通知。授权期满后，如未能准时续约，我们提供30天的宽限期。若不再续约, 可用服务将改为免费版的gudab Express。</p>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>gudab Enterprise 如何收费?</h4>
+						<p>以受监控的MongoDB Data Node数量为计费单位 (包含Primary主要伺服器与Secondary次要伺服器，不计算Router、Config Server与Arbiter)。欲了解更多价格详情，请与我们联络。</p>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<h4>gudab Business 如何收费?</h4>
+						<p>以设定警报的MongoDB伺服器数量为计费单位。欲了解更多价格详情，请与我们联络。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--footer start-->
+	    <footer>
+	        <div class="container-fluid footerTop">
+	            <div class="container">
+	                <div class="row justify-content-center">
+	                    <div class="col-md-12 col-xl-6">
+	                        <div class="row">
+	                            <div class="col-12 col-sm-4 footerLogo">
+	                                <img src="../images/index/footerLogo.png">
+	                            </div>
+	                            <div class="col-12 col-sm-8">
+	                                <div class="row">
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter1">相关文件</h5>
+	                                        <span onclick="javascript:window.open('../doc/gudab_v3.6.1.0_使用說明書(簡中).pdf')"><a href="#">使用手册</a></span>   <br>
+	                                        <span onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')"><a href="#">系统整合书</a></span>  <br>
+	                                        <span><a href="licenseCn.html">授权声明</a></span><br>
+	                                    </div>
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter2">FAQ</h5>
+	                                        <span><a href="gudabFAQCn.html">gudab</a></span><br>
+	                                        <span><a href="mongodbFAQCn.html">MongoDB</a></span><br>
+	                                    </div>
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter3">ThinkPower</h5>
+	                                        <span><a href="https://www.thinkpower.com.tw/about.html" target="_blank">关于我们</a></span><br>
+	                                        <span><a href="contactCn.html">联络我们</a></span><br>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+	                        <div class="row">
+	                            <div class="col-12">
+	                                <h5>我们的据点</h5>
+	                            </div>
+	                        </div>
+	                        <div class="row justify-content-between">
+	                            <div class="col-6 gudabLocationItem">
+	                                <p>台湾<br>
+	                                TEL +886-2-8751-1610 #134<br>
+	                                台北市内湖区瑞光路437号3F</p>
+	                            </div>
+	                            <div class="col-6 gudabLocationItem">
+	                                <p>新加坡<br>
+	                                TEL +65-6808-6029<br>
+	                                Level 40, Ocean Financial Centre, <br>
+	                                10 CollyerQuay, Singapore 049315</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="container-fluid footerBottom">
+	            <div class="container">
+	                <div class="row text-center">
+	                    <div class="col-12 d-none d-sm-block">
+	                        <p>Copyright©昕力资讯股份有限公司 ThinkPower Information Corporation</p>
+	                    </div>
+	                    <div class="col-12 d-block d-sm-none">
+	                        <p>Copyright©昕力资讯股份有限公司<br> ThinkPower Information Corporation</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </footer>
+	</div>   
+</body>
+</html>

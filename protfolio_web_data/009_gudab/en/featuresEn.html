@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab Features</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleEn.css" rel="stylesheet">
+   	<link href="assets/gudabFeaturesStyleEn.css" rel="stylesheet">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+	        $(".smallMark").click(clickHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+			}
+
+		var plus = "images/features/plus.png";
+		var minus = "images/features/minus.png";
+		function clickHandler(){
+			$(this).next(".featuresContent").slideToggle(800);
+			$(this).toggleClass("smallMark_click").toggleClass("smallMark_removeclick");
+			
+			  if ($(this).find(".gdImg").attr("src") === plus) {
+			    $(this).find(".gdImg").attr("src", minus);
+			  } else {
+			    $(this).find(".gdImg").attr("src", plus);
+			  }
+		}
+    </script>	
+</head>
+<body>
+	<div class="wrapper">
+		<!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="indexEn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="indexEn.html">Why gudab</a></li>
+                        <li><a href="newsEn.html">News</a></li>
+                        <li class="navFocus"><a href="featuresEn.html">Features</a></li>
+                        <li><a href="pricingEn.html">Pricing</a></li>
+                        <li><a href="successEn.html">Success</a></li>
+                        <li><a href="downloadEn.html">Download</a></li>
+                        <li><a href="contactEn.html">Contact</a></li>
+                        <li><a class="navBtn rounded-circle" href="featuresEn.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="../cn/featuresCn.html">简</a></li>
+                        <li><a class="navBtn rounded-circle" href="../features.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                        <ul>
+                            <li><a href="indexEn.html">Why gudab</a></li>
+                            <li><a href="newsEN.html">News</a></li>
+                            <li class="navFocus"><a href="featuresEn.html">Features</a></li>
+                            <li><a href="pricingEn.html">Pricing</a></li>
+                            <li><a href="successEn.html">Success</a></li>
+                            <li><a href="downloadEn.html">Download</a></li>
+                            <li><a href="contactEn.html">Contact</a></li>
+                            <hr class="showMenuLine">
+                            <div class="btn-group chooseLanguage">
+                                 <button type="button" class="btn dropdown-toggle dropdown-menu-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Language
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="featuresEn.html">English</a>
+                                    <a class="dropdown-item" href="../cn/featuresCn.html">simplified Chinese</a>
+                                    <a class="dropdown-item" href="../features.html">traditional Chinese</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+		<!--header start-->
+		<div class="container features">
+			<div class="row">
+				<div class="col-12">
+					<h1>Features</h1>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/features/featuresIcon01.png" alt="gudab 安裝icon">
+					<h3>Installation</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB requirement</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(1) MongoDB version : V2.6~3.4 </p>
+                    <p>(2) OS version<br>
+					a.Rehat6、Redhat7<br> 
+					b.CentOS6、CentOS7<br> 
+					c.Ubuntu14、Ubuntu16<br> 
+					d.Windows Server 2008 R2 64-bit and later
+	            	</p>
+	                <p>(3) Establishing Linux service account, please refer to
+                        <a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')">gudab v3.6.1.0 system integration document</a>.
+                    </p>
+                    <p>(4) Establishing MongoDB service account, please refer to
+                        <a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')">gudab v3.6.1.0 system integration document</a>. 
+                    </p>
+                    <p>(5) Edit Host file : please refer to
+                        <a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')">gudab v3.6.1.0 system integration document</a>.
+                    </p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>System requirements</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(1) Java 1.8</p>
+                    <p>(2) OS version<br>
+					<ol class="gdlower-alpha">
+						<li>Redhat6、Redhat7</li>
+						<li>CentOS6、CentOS7</li> 
+						<li>Ubuntu14、Ubuntu16</li> 
+						<li>Windows Server 2008 R2 64-bit and later</li>  
+					</ol>
+					 <p>(3) Hardware requirements <br> 
+					 	<ol class="gdlower-alpha">
+						<li>CPU：minimum: 4core, recommend: 8core and above. </li>
+						<li>RAM：minimum: 16GB, recommend: 32GB and above. </li>
+						<li>Disk： Installation, Performance metric, Backup.</li>
+					</ol>
+					<ol class="gdLower-roman">
+						<li>Installation: 300MB</li>
+						<li>Performance metrics:minimum; 10GB, recommend: 20GB for 10 host/month.</li>
+						<li>Backup:minimum:150%ofthedatasize,recommend:250% of the data size</li>
+					</ol>
+					<p>Note: Set at least one consoleDB on MongoDB for monitoring only. (No backup).</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="gdIllustrating">
+					  	<figcaption class="figure-caption">2-1 Architecture(Schematic)</figcaption>
+					</figure>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab Enterprise installation</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(1) Download gudab Enterprise from offical website.<a href="http://www.gudab.com/">http://www.gudab.com/</a></p>
+					<p>(2) Unzip file to any directory but the path cannot contain symbols. e.g. []</p>
+					<p>(3) Edit Host file : please refer to gudab v3.4.b5 system integration document.<a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')">gudab v3.6.1.0 system integration document</a>.</p>
+					<p>(4) SSH public key Authentication、edit SSH properties file please refer to<a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')">gudab v3.6.1.0 system integration document</a>.</p>
+					<p>(5) Edit Host file:please refer to<a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')">gudab v3.6.1.0 system integration document</a>.</p>
+					<p>(6) Firewall port setting : please refer to<a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')">gudab v3.6.1.0 system integration document</a>.</p>
+					<p>(7) Prepare file to designated path : please refer to<a onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')">gudab v3.6.1.0 system integration document</a>.</p> 
+					<p>(8) Change consoleDB password : execute changePwd.sh (linux) or changePwd.bat (windows). </p>
+					<p>(9) Activate gudab:execute start.sh (linux) or start.bat (windows)</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/downloadPageEn.png" alt="">
+					  	<figcaption class="figure-caption">2-2 official download</figcaption>
+					</figure>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/features/featuresIcon02.png" alt="gudab 安裝icon">
+					<h3>Login</h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Login</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>User can link to gudab login page via「http://localhost:8080/view」.Enter account, password and then click login to access to gudab.Once account and password verify successfully,The system will show monitoring list as the default front page.</p>
+                    <p>Please be informed the default username is「root」 and preset password is also 「root」. It is strongly suggested that user changes password from profile tab to ensure system security. <See details 6.1 Profile></p>
+					<p>Assume today is 20180118</p>
+					<ol class="inherit decimal">
+						<li>Ex1. The expiry date is 20180130
+							<ol class="inherit disc">
+								<li>A reminder message is displayed within 1 month before expiration.</li>
+								<li>Initial login,the upper left will remind the trial Enterprise 30 days due date.</li>
+								<figure class="figure col-12 text-center">
+								  	<img class="img-fluid gdDefinePic" src="images/features/3-1.png" alt="3-1 Login(within 1 month before expiration)">
+								  	<figcaption class="figure-caption gdPaddingbottom40">3-1 Login(within 1 month before expiration)</figcaption>
+								</figure>
+							</ol>
+						</li>
+						<li>Ex2. The expiry date is 20171225
+							<ol class="inherit disc">
+								<li>The alarm message is displayed within 1 month after expiration, and the countdown days are available.</li>
+								<li>Please subscribe to Enterprise or downgrade to Express.</li>
+								<figure class="figure col-12 text-center">
+								  	<img class="img-fluid gdDefinePic" src="images/features/3-2.png" alt="3-2 Login(within 1 month after expiration)">
+								  	<figcaption class="figure-caption gdPaddingbottom40">3-2 Login(within 1 month after expiration)</figcaption>
+								</figure>
+								<li>Click the button on the screen to permanently downgrade to Express.</li>
+								<figure class="figure col-12 text-center">
+								  	<img class="img-fluid gdDefinePic" src="images/features/3-3.png" alt="3-3 Login(Express)">
+								  	<figcaption class="figure-caption gdPaddingbottom40">3-3 Login(Express)</figcaption>
+								</figure>
+							</ol>
+						</li>
+						<li>Ex3. The expiry date is 20171212
+							<ol class="inherit disc">
+								<li>Locked the screen after expired for more than one month.</li>
+								<li>Please subscribe to Enterprise or downgrade to Express.</li>
+								<figure class="figure col-12 text-center">
+								  	<img class="img-fluid gdDefinePic" src="images/features/3-4.png" alt="3-4 Login(Expired)">
+								  	<figcaption class="figure-caption">3-4 Login(Expired)</figcaption>
+								</figure>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/features/featuresIcon03.png" alt="gudab 安裝icon">
+					<h3>Monitoring</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Monitoring page</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Monitoring page shows the list of MongoDB servers currently being monitored and their status.</p>
+                    <figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-1.png" alt="4-1 Monitoring list">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-1 Monitoring list</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 1 Monitoring information
+					  	<figcaption>
+				  	</figure>
+					<table class="table table-responsive table-striped table-sm">
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 80%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">Column</th>
+						    	<th scope="col">Description</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row">Server type</th>
+						      	<td>MongoDB Types of MongoDB server include the following<br>
+									SA (StandAlone)<br>
+									RS (Replica Set)<br> 
+									SC (Sharded Cluster)
+								</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">Status signal</th>
+						    	<td>Signal shows the current status of MongoDB server. Green signal indicates server is operating normally. Red signal means servers malfunction or there are abnormalities.</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">Alias</th>
+						    	<td>Users define server name. The default is "host:port"</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">Server Name</th>
+						    	<td>Name of MongoDB server . The default is “host:port”. Click the link for showing the index.</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">RS roles</th>
+						    	<td>RS roles include the following<br>
+								(P) PRIMARY<br>
+								(S) SECONDARY<br> 
+								(A) ARBITER</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">Version</th>
+						    	<td>Version of the MongoDB server.e.g. 3.4.10</td>
+						    </tr>
+						     <tr>
+						    	<th scope="row">Start Time</th>
+						    	<td>The running time of the monitored MongoDB server. e.g. 4D 23H 0m</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">Lsat Ping</th>
+						    	<td>The last connected time of the monitored MongoDB server. e.g. 2018-01-19 08:26:40</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row"><img src="../images/features/table_pencil.png" alt="gudab(編輯)設定 Exception Time"></th>
+						    	<td>Set Exception time</td>
+						    </tr>
+						    <tr>
+						    	<th scope="row"><img src="../images/features/table_delete.png" alt="gudab(刪除) 按下此按鈕即可刪除該該MongoDB伺服器的監控設定"></th>
+						    	<td>Remove MongoDB from monitoring list.</td>
+						    </tr>
+						</tbody>
+					</table>
+					<figure class="figure col-12 text-center gdMargintop30">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-2.png" alt="4-2 Monitoring Signal">
+					  	<figcaption class="figure-caption">4-2 Monitoring Signal</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center gdMargintop30">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 2 Status Signal
+					  	</figcaption>
+					</figure>
+					<table class="table table-responsive table-striped table-sm table50">
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 80%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">Signal</th>
+						    	<th scope="col">Description</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_green_fullcircle.png" alt=""></th>
+						      	<td>All affiliate MongoDB are being monitored normally.</td>
+						    </tr>
+						   	 <tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_green_circle.png" alt=""></th>
+						      	<td>Part of the affiliate MongoDB are under monitoring exception time while the rest of the databases are being monitored normally.</td>
+						    </tr>
+						     <tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_yellow_fullcircle.png" alt=""></th>
+						      	<td>All affiliate MongoDB are under monitoring exception time.</td>
+						    </tr>
+						     <tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_red_fullcircle.png" alt=""></th>
+						      	<td>All affiliate MongoDB fail to be monitored</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" class="text-center"><img src="../images/features/light_red_circle.png" alt=""></th>
+						      	<td>Part of the affiliate MongoDB fail to be monitored</td>
+						    </tr>
+						</tbody>
+					</table>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Add host</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>The first login, the default will only monitor gudab built consoleDB.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-3.png" alt="4-3 Preset monitoring">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-3 Preset monitoring</figcaption>
+					</figure>
+					<p>Add MongoDB server to the monitoring list by「Add Host」.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-4.png" alt="4‑4 Add host-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4‑4 Add host-1</figcaption>
+					</figure>
+					<p>Please enter the following host information: </p>
+					<P>(1) Host name : Name of the MongoDB server (Required field).</p> 
+					<P>(2) Port :Port number set by the MongoDB server (Required field).</p> 
+					<P>(3) DB username : Enter username if account authorization is required.</p> 
+					<P>(4) DB password : Enter password if account authorization is required.</p>
+					<br>
+					<p>＊Auto Discovery</p>
+					<p>When the added host is a clustered database (Replica Set, Sharded Cluster), gudab will automatically detect and show all affiliate databases within the cluster for monitoring.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-5.png" alt="4-5 Add host-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-5 Add host-2</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-6.png" alt="4-6 Add host-3">
+					  	<figcaption class="figure-caption">4-6 Add host-3</figcaption>
+					</figure>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Auto-restart</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(In the pipeline)When the monitored MongoDB fails to connect or process, auto-restart can be activated optionally. For instant, when MongoDB process fails unexpectedly, gudab can automatically access to the server via SSH, implement the prepared linux script, and restart MongoDB.</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Monitor Metrics</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>To view monitor metrics, click on host name of the chosen server.</p>
+					<p>As shown in the picture 4-5, monitor metric groups are at the left side menu including、「Favourite」,「Host Status」,「Utilization」,「Events」, 「Saturation」,「Throuhgput」,and「Performance」. Click on the metric group, metric items will appear underneath. </p>
+					<p>Click on the metric items, the monitoring chart will display on right side of the page.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-7.png" alt="4-7 Monitor Metrics-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-7 Monitor Metrics-1</figcaption>
+				  	</figure>
+					<p>Take Network metric as an example, MongoDB’s memory traffic is presented in line chart. X-axis specifies recording period and Y-axis shows the amount of traffic receiving/sending from database.</p>
+					<p>In addition, time scale can be set to adjust data recording frequency. As shown in picture 4-8 below, the time scale is 5 seconds, thurs at 13:27:17, one network traffic data is recorded and the next sampling point is at 13:27:22.Each time scale associates with a default time interval array display for simpler view setting.</p>
+					<p>Display time interval can also be modified to meet user’s monitoring requirements. If the interval is selected for 3 hours, then the chart will display data records in the last 3 hours.</p>
+					<ul class="disc">
+						<li>5sec(10min,30min,1hr)</li>
+						<li>1min(100min,3hr,6hr)</li>
+						<li>5min(3hr,6hr,12hr)</li>
+						<li>1hr(1day,1week,2week)</li>
+					</ul>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-8.png" alt="4-8 Monitor Metric-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-8 Monitor Metric-2</figcaption>
+				  	</figure>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-9.png" alt="4-9 Monitor Metric-3">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-9 Monitor Metric-3<figcaption>
+				  	</figure>
+				  	<p>Check the box beside the heart to display data sampling points.<br> 
+					Note: This function is only selectable between 50 to 300 Data sampling points. For 300 points and more, chart will only display by line chart. For 50 points and less, chart will only display by points.<br>  
+					Click on Auto to stop chart refreshing<br>  
+					Click on SI to display system of units</p>
+				  	<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-10.png" alt="4-10 system of unit">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-10 system of unit<figcaption>
+				  	</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 3 Metric List
+					  	<figcaption>
+				  	</figure>
+					<table class="table table-responsive table-striped table-sm table3">
+						
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col" colspan="3">Host Status</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row" rowspan="4">CPU</th>
+						      	<td>cpuUS</td>
+								<td>CPU usage rate</td>
+						    </tr>
+						    <tr>
+						      	<td>cpuID</td>
+								<td>CPU idle rate</td>
+						    </tr>
+						    <tr>
+						      	<td>cpuWA</td>
+								<td>CPU wait for IO rate.</td>
+						    </tr>
+						    <tr>
+						      	<td>cpuPidUS</td>
+								<td>MongoDB CPU usage rate</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="7">Memory</th>
+						      	<td>memTotal</td>
+								<td>Total memory of server</td>
+						    </tr>
+						    <tr>
+						      	<td>memFree</td>
+								<td>Available Memory</td>
+						    </tr>
+						    <tr>
+						      	<td>memUsed</td>
+								<td>Memory used</td>
+						    </tr>
+						    <tr>
+						      	<td>mongoVirt</td>
+								<td>Total MongoDB virtual memory used (Swap+Res)</td>
+						    </tr>
+						    <tr>
+						      	<td>mongoRes</td>
+								<td>MongoDB resident memory used.</td>
+						    </tr>
+						    <tr>
+						      	<td>mongoShr</td>
+								<td>MongoDB shared memory</td>
+						    </tr>
+						    <tr>
+						      	<td>mongoUsed</td>
+								<td>Percentage of MongoDB virtual memory used.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="3" class="bgColerChange">Swap</th>
+						      	<td>swapTotal</td>
+								<td>Total Swap Memory of server</td>
+						    </tr>
+						    <tr>
+						      	<td>swapFree</td>
+								<td>Available Swap Memory</td>
+						    </tr>
+						    <tr>
+						      	<td>swapUsed</td>
+								<td>Swap Memory used</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="4">Storage</th>
+						      	<td>size</td>
+								<td>Size of MongoDB dbPath</td>
+						    </tr>
+						    <tr>
+						      	<td>used</td>
+								<td>MongoDB storage used</td>
+						    </tr>
+						    <tr>
+						      	<td>alive</td>
+								<td>Available MongoDB dbPath size?</td>
+						    </tr>
+						    <tr>
+						      	<td>percent</td>
+								<td>Percentage of MongoDB storage used</td>
+						    </tr>
+						<!---->
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col" colspan="3">Utilization</th>
+						    </tr>
+						</thead>
+						    <tr>
+						      	<th scope="row" rowspan="1">Connections</th>
+						      	<td>connections</td>
+								<td>Number of user connection</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="2" class="bgColerChange">Cursors</th>
+						      	<td>open</td>
+								<td>The number of cursors that MongoDB is maintaining for clients.</td>
+						    </tr>
+						    <tr>
+						      	<td>timedOut</td>
+								<td>The total number of cursors that have timed out since the server process started.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="4" class="bgColerChange">DbMemory</th>
+						      	<td>mapped</td>
+								<td>The amount of mapped memory, in megabytes (MB), by the database.</td>
+						    </tr>
+						    <tr>
+						      	<td>mappedWithJournal</td>
+								<td>The amount of mapped memory, in megabytes (MB), including the memory used for journaling.</td>
+						    </tr>
+						    <tr>
+						      	<td>resident</td>
+								<td>The value of mem.resident is roughly equivalent to the amount of RAM, in megabytes (MB), currently used by the database process.</td>
+						    </tr>
+						    <tr>
+						      	<td>virtual</td>
+								<td>It displays the quantity, in megabytes (MB), of virtual memory used by the mongod process.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="1" class="bgColerChange">Journaled Size (V2.6)</th>
+						      	<td>size</td>
+								<td>The amount of data in megabytes (MB) written to journal during the last journal group commit interval.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="3">WiredTiger Cache (V3.4)</th>
+						      	<td>current</td>
+								<td>Size in byte of the data currently in cache.</td>
+						    </tr>
+						    <tr>
+						      	<td>maximum</td>
+								<td>Maximum cache size.</td>
+						    </tr>
+						    <tr>
+						      	<td>dirty</td>
+								<td>Size in bytes of the dirty data in the cache.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="4" class="bgColerChange">WiredTiger Transactions (V3.4)</th>
+						      	<td>readAvailable</td>
+								<td>Number of available read tickets remaining.</td>
+						    </tr>
+						    <tr>
+						      	<td>readOut</td>
+								<td>Number of read tickets in use.</td>
+						    </tr>
+						    <tr>
+						      	<td>writeAvailable</td>
+								<td>Number of available write tickets remaining.</td>
+						    </tr>
+						     <tr>
+						      	<td>writeOut</td>
+								<td>Number of write tickets in use.</td>
+						    </tr>
+						</tbody>
+						<!---->
+						<tbody>
+							<thead class="thead-dark text-center">
+								<tr>
+							    	<th scope="col" colspan="3">Events</th>
+							    </tr>
+							</thead>
+							<tr>
+						      	<th scope="row" rowspan="4">Asserts</th>
+						      	<td>msg</td>
+								<td>The number of message assertions raised since the MongoDB process started.</td>
+						    </tr>
+						    <tr>
+						      	<td>regular</td>
+								<td>The number of regular assertions raised since the MongoDB process started.</td>
+						    </tr>
+						    <tr>
+						      	<td>user</td>
+								<td>The number of 'user asserts' that have occurred since the last time the MongoDB process started.</td>
+						    </tr>
+						     <tr>
+						      	<td>warn</td>
+								<td>The number of warnings raised since the MongoDB process started.</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="1">Page Faults</th>
+						      	<td>pageFaults</td>
+								<td>The total number of page faults.</td>
+						    </tr>
+						</tbody>
+						<!---->
+						<tbody>
+							<thead class="thead-dark text-center">
+								<tr>
+							    	<th scope="col" colspan="3">Saturation</th>
+							    </tr>
+							</thead>
+							<tr>
+						      	<th scope="row" rowspan="3">Current Queue</th>
+						      	<td>readers</td>
+								<td>The number of operations that are currently queued and waiting for the read lock.</td>
+						    </tr>
+						    <tr>
+						      	<td>total</td>
+								<td>The total number of operations queued waiting for the lock.</td>
+						    </tr>
+						    <tr>
+						      	<td>writers</td>
+								<td>The number of operations that are currently queued and waiting for the write lock.</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="1" class="bgColerChange">Journaled Lock (V2.6)</th>
+						      	<td>lock</td>
+								<td>	The count of the commits that occurred while a write lock was held.</td>
+						    </tr>
+						</tbody>
+						<!---->
+						<tbody>
+							<thead class="thead-dark text-center">
+								<tr>
+							    	<th scope="col" colspan="3">Throughput</th>
+							    </tr>
+							</thead>
+							<tr>
+						      	<th scope="row" rowspan="2">Active Clients</th>
+						      	<td>readers</td>
+								<td>The number of the active client connections performing read operations.</td>
+						    </tr>
+						    <tr>
+						      	<td>writers</td>
+								<td>The number of active client connections performing write operations.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="2">Network</th>
+						      	<td>in</td>
+								<td>The number of bytes that reflects the amount of network traffic received by this database.</td>
+						    </tr>
+						    <tr>
+						      	<td>out</td>
+								<td>The number of bytes that reflects the amount of network traffic sent from this database.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" rowspan="6">Opcounters</th>
+						      	<td>command</td>
+								<td>The total number of commands issued to the database since the mongod instance last started.</td>
+						    </tr>
+						    <tr>
+						      	<td>delete</td>
+								<td>The total number of delete operations since the mongod instance last started.</td>
+						    </tr>
+						    <tr>
+						      	<td>getmore</td>
+								<td>The total number of "getmore" operations since the mongod instance last started.</td>
+						    </tr>
+						    <tr>
+						      	<td>insert</td>
+								<td>The total number of insert operations received since the mongod instance last started.</td>
+						    </tr>
+						    <tr>
+						      	<td>query</td>
+								<td>The total number of queries received since the mongod instance last started.</td>
+						    </tr>
+						    <tr>
+						      	<td>update</td>
+								<td>The total number of update operations received since the mongod instance last started.</td>
+						    </tr>
+						</tbody>
+						<!---->
+						<tbody>
+							<thead class="thead-dark text-center">
+								<tr>
+							    	<th scope="col" colspan="3">Performance</th>
+							    </tr>
+							</thead>
+							<tr>
+						      	<th scope="row" rowspan="3">Replication Oplog</th>
+						      	<td>timeDiff</td>
+								<td>Difference between the primary's oplog window and the replication lag of the secondary.</td>
+						    </tr>
+						    <tr>
+						      	<td>replicationLag</td>
+								<td>Delay between a write operation on the primary and its copy to a secondary.</td>
+						    </tr>
+						    <tr>
+						      	<td>replicationHeadroom</td>
+								<td>Oplog Window.</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="1" class="bgColerChange">Background Flush (V2.6)</th>
+						      	<td>lastFlush</td>
+								<td>The amount of time, in milliseconds, that the last flush operation took to complete.</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="1">Journaled Time (V2.6)</th>
+						      	<td>time</td>
+								<td>The amount of time, in milliseconds, spent writing to data files after journaling.</td>
+						    </tr>
+							<tr>
+						      	<th scope="row" rowspan="3" class="bgColerChange">Index (V2.6)</th>
+						      	<td>accesses</td>
+								<td>Accesses reports the number of times that operations have accessed indexes.</td>
+						    </tr>
+						    <tr>
+						      	<td>hits</td>
+								<td>The hits value reflects the number of times that an index has been accessed and mongod is able to return the index from memory.</td>
+						    </tr>
+						    <tr>
+						      	<td>misses</td>
+								<td>The misses value represents the number of times that an operation attempted to access an index that was not in memory.</td>
+						    </tr>
+						</tbody>
+					</table>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>My Favourite</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt=""  class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>User can add monitor metrics from different metrics group to my favourite. As shown in picture 4-11, Click on the heart until it turns solid red to add to my favourite.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-11.png" alt="4-11 My Favourite-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-11 My Favourite-1</figcaption>
+					</figure>
+					<p>Alternatively, metrics can also be added from my favourite setting page. Simply check or uncheck boxes beside monitor metrics to add or remove from my favourite.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-12.png" alt="4-12 My Favourite-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">4-12 My Favourite-2</figcaption>
+					</figure>
+					<p>Click on my favourite after setting completes to display the saved my favourite metric combination.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/4-13.png" alt="4-13 My Favourite-3">
+					  	<figcaption class="figure-caption">4-13 My Favourite-3</figcaption>
+					</figure>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/features/featuresIcon04.png" alt="gudab 安裝icon">
+					<h3>Activity log</h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Activity log</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Activity log displays activities of the monitored MongoDB in reverse chronological order.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/5-1.png" alt="5-1 Activity List">
+					  	<figcaption class="figure-caption gdPaddingbottom40">5-1 Activity List</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 4 Activity</figcaption>
+					</figure>
+					<table class="table table-striped table-sm table50">
+						<colgroup>
+							<col style="width: 30%;">
+							<col style="width: 70%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">Column</th>
+						    	<th scope="col">Description</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row">DATE</th>
+						      	<td>Time of activity occurance.</td>
+						    </tr>
+						   	 <tr>
+						      	<th scope="row">HOST</th>
+						      	<td>Host of the activity</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">ACTIVITY</th>
+						      	<td>Specification of the activity</td>
+						    </tr>
+						</tbody>
+					</table>
+                </div>    
+			</div>
+		<!--***********************-->	
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img class="gdMargintop3" src="../images/features/featuresIcon05.png" alt="gudab 安裝icon">
+					<h3>User control</h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Profile</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Click profile tab to view or update profile information including username, email, and password.</p>
+					<p>To update profile, enter new data in the field and click submit. To cancel update, click X button on the top right corner and close dialog.</p>
+					<p>Please be advised to change your password after your first login.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/6-1.png" alt="6-1 Update Profile">
+					  	<figcaption class="figure-caption">6-1 Update Profile</figcaption>
+					</figure>
+                </div> 
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Create User</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>To create user, click on create user tab. Enter user information including username, Email,and password and click submit. To withdraw creatinig user, click X button on the top right corner and close dialog.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/6-2.png" alt="6-2 Create user">
+					  	<figcaption class="figure-caption">6-2 Create user</figcaption>
+					</figure>
+                </div>  
+			</div>
+		<!--***********************-->	
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img class="gdMargintop3" src="../images/features/featuresIcon06.png" alt="gudab 安裝icon">
+					<h3>Alert <small>(Enterprise Edition)</small></h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Alert page</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Alert page shows the current alert list.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-1.png" alt="7-1 Alert List">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-1 Alert List</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 5 Alert</figcaption>
+					</figure>
+					<table class="table table-striped table-sm table50">
+						<colgroup>
+							<col style="width: 30%;">
+							<col style="width: 70%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">Column</th>
+						    	<th scope="col">Description</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row">Alert name</th>
+						      	<td>Name of alert defined by user.</td>
+						    </tr>
+						   	 <tr>
+						      	<th scope="row">Alert interval</th>
+						      	<td>Frequency to send alert by minute.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">Operation button</th>
+						      	<td>Edit : modify alert setting <br>
+								Delete : delete alert<br>
+								</td>
+						    </tr>
+						</tbody>
+					</table>
+                </div> 
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Create New Alert</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(1) Click on Create New Alert to access new alert settings.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-2.png" alt="7-2 Create New Alert">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-2 Create New Alert</figcaption>
+					</figure>
+					<p>(2) Complete the following fields and click submit to create new alert.</p> 
+					<ul class="disc">
+						<li>Setting Alert Name : Enter name of the alert for identification.</li> 
+						<li>Select hosts: Check the boxes beside host to include in the alert list.</li>
+						<li>Alert if : check and select the alert thresholds.</li> 
+						<li>Send to : Enter alert scanning frequency,Email and mobile number.</li>
+					</ul>	
+					<p>(3) Once alert setting completed and submitted, System will show if the alert is created successfully. Click exit to leave the page.</p>
+				</div>
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Exception Time</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Alerts can be deactivated when MongoDB shutdown is expected. For example, scheduled Full Backup is expected and does not need to be alarmed.</p>
+					<p>(1) Exception time can be configured to the whole shard cluser or specific server</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-3.png" alt="7-3 Exception Time-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-3 Exception Time-1</figcaption>
+					</figure>
+					<p>(2) Set exception time to RS server trs02c:23001</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-4.png" alt="7-4 Exception Time-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-4 Exception Time-2</figcaption>
+					</figure>
+					<p>(3) Click on edit to enter exception time setting.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-5.png" alt="7-5 Exception Time-3">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-5 Exception Time-3</figcaption>
+					</figure>
+					<p>(4) Exception time will display on the monitoring server list. New alias and mutiple schedules can be estabilished.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-6.png" alt="7-6 Exception Time-4">
+					  	<figcaption class="figure-caption gdPaddingbottom40">7-6 Exception Time-4</figcaption>
+					</figure>
+					<p>(5) Once exception time adds sccuccessfully, new alias will display on the monitoring list.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/7-7.png" alt="7-7 Exception Time-5">
+					  	<figcaption class="figure-caption">7-7 Exception Time-5</figcaption>
+					</figure>
+                </div> 
+			</div>
+		<!--***********************-->	
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img class="gdMargintop3" src="../images/features/featuresIcon07.png" alt="gudab 安裝icon">
+					<h3>Backup and Restore <small>(Enterprise Edition)</small></h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Backup and Restore page</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>gudab backup from replica set/sharded cluster and doesn’t support standalone back up.</p>
+					<p>If there is only one data node,please set standalone to primary (in other words; a replica set without secondary DB)</p>
+					<p>Backup and Restore configuration list is shown in the page.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-1.png" alt="8-1 Backup and Restore page">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-1 Backup and Restore page</figcaption>
+					</figure>
+					<figure class="figure col-12 text-center">
+					  	<figcaption class="figure-caption gdPaddingbottom5">Table 6 Backup/Restore</figcaption>
+					</figure>
+					<table class="table table-striped table-sm table65">
+						<colgroup>
+							<col style="width: 30%;">
+							<col style="width: 70%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col">column</th>
+						    	<th scope="col">Description</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row">ID</th>
+						      	<td>User defined backup/restore title</td>
+						    </tr>
+						   	<tr>
+						      	<th scope="row">CLUSTER</th>
+						      	<td>MongoDB servers include in the backup/restore list</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">Server type</th>
+						      	<td>MongoDB server types:<br> 
+								MONGOS<br>  
+								Replica Set<br>  
+								Config Server</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">Status</th>
+						      	<td>Backup/Restore enable/disable status. Green signal indicates enabling and red signal means disabling.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">Lastest backup time</th>
+						      	<td>Lastest database backup time.</td>
+						    </tr>
+						    <tr>
+						      	<th scope="row">Operation</th>
+						      	<td>Backup : activate backup<br>  
+								Restore : activate restore<br> 
+								Edit : enter backup configuration<br> 
+								Delete : remove backup</td>
+						    </tr>
+						</tbody>
+					</table>
+                </div>
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Add a new backup</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(1) Click on add a new backup configuration</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-2.png" alt="8-2 Add a new backup-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-2 Add a new backup-1</figcaption>
+					</figure>
+					<p>(2) Select database, collection and click next.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-3.png" alt="8-3 Add a new backup-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-3 Add a new backup-2</figcaption>
+					</figure>
+					<p>(3) Select database, collection and click next.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-4.png" alt="8-4 Add a new backup-3">
+					  	<figcaption class="figure-caption">8-4 Add a new backup-3</figcaption>
+					</figure>
+				</div>
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Backup</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(1) Choose ID from the backup list and click backup button to activate backup process.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-5.png" alt="8-5 Backup-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-5 Backup-1</figcaption>
+					</figure>
+					<p>(2) The system will ask confirmation before backup begins. Click submit to start backup. Click cancel to exit backup.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-6.png" alt="8-6 Backup-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-6 Backup-2</figcaption>
+					</figure>
+					<p>(3) When backup is being processed normally,status will show a green singal. System will show the message once backup starts successfully. Click close to exit dialog.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-7.png" alt="8-7 Backup-3">
+					  	<figcaption class="figure-caption">8-7 Backup-3</figcaption>
+					</figure>
+				</div>
+			<!---->
+                <div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Restore</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>(1) Before restoring, there shall be no backup in progress.If there is, stop backup process first and then execute restore.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-8.png" alt="8-8 還原作業-1">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-8 Restore-1</figcaption>
+					</figure>
+					<p>(2) Copy all data file from desginated directory mannually and replace the data file from the monitoring object.</p>
+					<p>Desginate<br>
+					directory : ./gudab/fullbackup_hidden_mongo/<scId>_<rsId>/data </p>
+					<p>e.g./gudab/fullbackup_hidden_mongo/1514958344362_Sa1/data/* <br>
+					scId is timestamp of the monitored sharded cluster.<br>
+					rsId is replca setname.</p>
+					<p>Then Please restart MongoDB and backtrack 3600 seconds ago. If you encounter problems on this setting. Please contact gudab service.</p>
+					<p>(3) Status signal will then turned red, click restore to start restoration process.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-9.png" alt="8-9 Restore-2">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-9 Restore-2</figcaption>
+					</figure>
+					<p>(4) Complete setting in all backup process.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-10.png" alt="8-10 Restore-3">
+					  	<figcaption class="figure-caption gdPaddingbottom40">8-10 Restore-3</figcaption>
+					</figure>
+					<p>(5)Once restore configuration completes, click restore to execute restoration.</p>
+					<figure class="figure col-12 text-center">
+					  	<img class="img-fluid gdDefinePic" src="images/features/8-11.png" alt="8-11 Restore-4">
+					  	<figcaption class="figure-caption">8-11 Restore-4</figcaption>
+					</figure>
+				</div>
+			</div>
+		<!--***********************-->	
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img class="gdMargintop3" src="../images/features/featuresIcon08.png" alt="gudab 安裝icon">
+					<h3>Contact information</h3>
+				</div>
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Singapore - gudab</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Address:Level 40, Ocean Financial Centre 10 Collyer Quay Singapore 049315<br>
+					Tel:+65-6808-6029<br>
+					Email:service@gudab.com<br>
+					Website:https://www.gudab.com</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Taiwan - thinkpower</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Address:3F., No.437, Ruiguang Rd. Neihu Dist., Taipei City 114, Taiwan (R.O.C.)<br>
+					Tel:+886-2-27942668 # 604<br> 
+					Email:service@thinkpower.com.tw<br>
+					Website:https://www.thinkpower.info/</p>
+				</div>
+			</div>
+		</div>
+	<!--footer-->   
+        <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="../images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8 footTxt">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">Document</h5>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_user guide (English).pdf')"><a href="#">User Guide</a></p><br>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')"><a href="#">System integration document</a></p><br>
+                                            <p><a href="licenseEn.html">License</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <p><a href="gudabFAQEn.html">gudab</a></p><br>
+                                            <p><a href="mongodbFAQEn.html">MongoDB</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <p><a href="https://www.thinkpower.com.tw/about.html" target="_blank">About</a></p><br>
+                                            <p><a href="contactEn.html">Contact</a></p><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>Our locations</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Taiwan<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    3F., No.437, Ruiguang Rd. Neihu Dist., Taipei City 114, Taiwan (R.O.C.)</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Singapore<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p>Copyright©ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	</div>   
+</body>
+</html>

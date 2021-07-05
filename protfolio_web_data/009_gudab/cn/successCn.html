@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab 成功案例</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleCn.css" rel="stylesheet">
+   	<link href="assets/gudabSuccessStyleCn.css" rel="stylesheet">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){			
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+
+				}
+			
+    </script>	
+</head>
+<body>
+	<div>
+		<!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="indexCn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="indexCn.html">产品简介</a></li>
+                        <li><a href="newsCn.html">最新消息</a></li>
+                        <li><a href="featuresCn.html">使用说明</a></li>
+                        <li><a href="pricingCn.html">服务与价格</a></li>
+                        <li class="navFocus"><a href="successCn.html">成功案例</a></li>
+                        <li><a href="downloadCn.html">免费下载</a></li>
+                        <li><a href="contactCn.html">联络我们</a></li>
+                        <li><a class="navBtn rounded-circle" href="../en/successEn.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="successCn.html">简</a></li>
+                        <li><a class="navBtn rounded-circle" href="../success.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                        <ul>
+                            <li><a href="indexCn.html">产品简介</a></li>
+                            <li><a href="newsCn.html">最新消息</a></li>
+                            <li><a href="featuresCn.html">使用说明</a></li>
+                            <li><a href="pricingCn.html">服务与价格</a></li>
+                            <li class="navFocus"><a href="successCn.html">成功案例</a></li>
+                            <li><a href="downloadCn.html">免费下载</a></li>
+                            <li><a href="contactCn.html">联络我们</a></li>
+                            <hr class="showMenuLine">
+                            <div class="btn-group chooseLanguage">
+                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    选择语言
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../en/successEn.html">英文</a>
+                                    <a class="dropdown-item" href="successCn.html">简体中文</a>
+                                    <a class="dropdown-item" href="../success.html">繁体中文</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+		<!--success start-->
+		<div class="container success">
+			<div class="row">
+				<div class="col-12">
+					<h1>成功案例</h1>
+				</div>
+			</div>
+			<div class="row justify-content-center successGroup">
+				<div class="col-10 col-md-5 col-lg-3 successList">
+					<div class="text-center"><img src="../images/success/cathayLogo.png"></div>
+					<p>国泰人寿的影像流程系统采用MongoDB储存大量的保单影像数据，并建立异地备援双中心架构。在超过20台MongoDB服务器的架构下，透过gudab进行系统监控管理与数据备份作业，全面满足国泰人寿的管理需求。</p>
+				</div>
+				<div class="col-10 col-md-5 col-lg-3 successList">
+					<div class="text-center"><img src="../images/success/ChunghwaTelecomLogo.png"></div>
+					<p>中华电信的CDR (Call Detail Record) 管理系统采用MongoDB进行大量CDR数据的整合，经由MongoDB的NoSQL与高效处理特性，每日可以处理超过6000万笔CDR数据。所有MongoDB系统管理采用gudab软件，让管理工作更轻松简单。</p>
+				</div>
+				<div class="col-10 col-md-5 col-lg-3 successList">
+					<div class="text-center"><img src="../images/success/fareastoneLogo.png"></div>
+					<p>远传电信的大量服务器Log集中管理系统，采用MongoDB为log储存数据库，透过gudab的监控与管理功能，有效协助系统维运人员轻松处理每日的管理工作。</p>
+				</div>
+				<div class="col-10 col-md-5 successList d-none d-md-block d-lg-none">
+					
+				</div>
+			</div>
+		</div>
+	<!--footer start-->
+	    <footer>
+	        <div class="container-fluid footerTop">
+	            <div class="container">
+	                <div class="row justify-content-center">
+	                    <div class="col-md-12 col-xl-6">
+	                        <div class="row">
+	                            <div class="col-12 col-sm-4 footerLogo">
+	                                <img src="../images/index/footerLogo.png">
+	                            </div>
+	                            <div class="col-12 col-sm-8">
+	                                <div class="row">
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter1">相关文件</h5>
+	                                        <span onclick="javascript:window.open('../doc/gudab_v3.6.1.0_使用說明書(簡中).pdf')"><a href="#">使用手册</a></span>   <br>
+	                                        <span onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')"><a href="#">系统整合书</a></span>  <br>
+	                                        <span><a href="licenseCn.html">授权声明</a></span><br>
+	                                    </div>
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter2">FAQ</h5>
+	                                        <span><a href="gudabFAQCn.html">gudab</a></span><br>
+	                                        <span><a href="mongodbFAQCn.html">MongoDB</a></span><br>
+	                                    </div>
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter3">ThinkPower</h5>
+	                                        <span><a href="https://www.thinkpower.com.tw/about.html" target="_blank">关于我们</a></span><br>
+	                                        <span><a href="contactCn.html">联络我们</a></span><br>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+	                        <div class="row">
+	                            <div class="col-12">
+	                                <h5>我们的据点</h5>
+	                            </div>
+	                        </div>
+	                        <div class="row justify-content-between">
+	                            <div class="col-6 gudabLocationItem">
+	                                <p>台湾<br>
+	                                TEL +886-2-8751-1610 #134<br>
+	                                台北市内湖区瑞光路437号3F</p>
+	                            </div>
+	                            <div class="col-6 gudabLocationItem">
+	                                <p>新加坡<br>
+	                                TEL +65-6808-6029<br>
+	                                Level 40, Ocean Financial Centre, <br>
+	                                10 CollyerQuay, Singapore 049315</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="container-fluid footerBottom">
+	            <div class="container">
+	                <div class="row text-center">
+	                    <div class="col-12 d-none d-sm-block">
+	                        <p>Copyright©昕力资讯股份有限公司 ThinkPower Information Corporation</p>
+	                    </div>
+	                    <div class="col-12 d-block d-sm-none">
+	                        <p>Copyright©昕力资讯股份有限公司<br> ThinkPower Information Corporation</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </footer>
+	</div>   
+</body>
+</html>

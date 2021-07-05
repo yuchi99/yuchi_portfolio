@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>MangoDB FAQ</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyleEn.css" rel="stylesheet">
+   	<link href="assets/gudabFeaturesStyleEn.css" rel="stylesheet">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+	        $(".smallMark").click(clickHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+			}
+
+		var plus = "images/features/plus.png";
+		var minus = "images/features/minus.png";
+		function clickHandler(){
+			$(this).next(".featuresContent").slideToggle(500);
+			$(this).toggleClass("smallMark_click").toggleClass("smallMark_removeclick");
+			
+			  if ($(this).find(".gdImg").attr("src") === plus) {
+			    $(this).find(".gdImg").attr("src", minus);
+			  } else {
+			    $(this).find(".gdImg").attr("src", plus);
+			  }
+		}
+    </script>
+    <style>
+		.features h1{
+			max-width: 300px;
+			font-family:"GbFontBB";
+		}
+		.features h1::after{
+			left: 110px;
+		}
+    </style>	
+</head>
+<body>
+	<div class="wrapper">
+		<!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="indexEn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="indexEn.html">Why gudab</a></li>
+                        <li><a href="newsEn.html">News</a></li>
+                        <li><a href="featuresEn.html">Features</a></li>
+                        <li><a href="pricingEn.html">Pricing</a></li>
+                        <li><a href="successEn.html">Success</a></li>
+                        <li><a href="downloadEn.html">Download</a></li>
+                        <li><a href="contactEn.html">Contact</a></li>
+                        <li><a class="navBtn rounded-circle" href="mongodbFAQEn.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="../cn/mongodbFAQCn.html">简</a></li>
+                        <li><a class="navBtn rounded-circle" href="../mongodbFAQ.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                        <ul>
+                            <li><a href="indexEn.html">Why gudab</a></li>
+                            <li><a href="newsEN.html">News</a></li>
+                            <li><a href="featuresEn.html">Features</a></li>
+                            <li><a href="pricingEn.html">Pricing</a></li>
+                            <li><a href="successEn.html">Success</a></li>
+                            <li><a href="downloadEn.html">Download</a></li>
+                            <li><a href="contactEn.html">Contact</a></li>
+                            <hr class="showMenuLine">
+                            <div class="btn-group chooseLanguage">
+                                 <button type="button" class="btn dropdown-toggle dropdown-menu-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Language
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="mongodbFAQEn.html">English</a>
+                                    <a class="dropdown-item" href="../cn/mongodbFAQCn.html">simplified Chinese</a>
+                                    <a class="dropdown-item" href="../mongodbFAQ.html">traditional Chinese</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+		<!--header start-->
+		<div class="container features">
+			<div class="row">
+				<div class="col-12">
+					<h1>MongoDB FAQ</h1>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/mongodbFAQ/Q1.png" alt="mongodbFAQ">
+					<h3>Common general problems</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>What can NoSQL databases like MongoDB do for me?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Generally speaking, NoSQL database provides benefits to the following applications</p>
+                   	<ol class="decimal">
+						<li>Big Data : Able to scale out horizontally with medium grade x86 hardware which can effectively lower the costs to build or expand a database.</li>
+						<li>Unstructured data : NoSQL database provides the convenience to directly store unstructured data such as web pages, articles, pictures, videos and etc.</li>
+						<li>Structure frequently altered data : NoSQL database has the feature of “schema free” which enable storage structure to be dynamically changed in response to the needs of different data structures.</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Should I implement sharding structure from the start?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Yes, we recommend building your database with sharding structure from the beginning unless the follow condition is certain.</p>
+                   	<ol class="decimal">
+						<li>Size of the stored data is fixed and does not need expansion in the future.</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>What are the advantages of MongoDB when building an application system?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>From cost point of view, MongoDB is much more economic compare to the brand name relational database. User can obtain a stable distributive data storage solution within a lower budget.</p>
+					<p>From technical perspective, the benefits are as follows:</p>
+                   	<ol class="decimal">
+						<li>A well-designed MongoDB can efficiently process massive amount of data. It can also simplify development of an application and dramatically improve system performance.</li>
+						<li>The application system can store and read unstructured data (e.g. web pages, image) simply via API.</li>
+						<li>It does not require pre-defined schema; the application system can control data storing structure and accelerate on development time.</li>
+						<li>Flexible data storage structure in response to different data records’ (document) needs, reduce workload of application system maintenance.</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Which scenario or application is suitable to adapt MongoDB?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+                   	<ol class="decimal">
+						<li>Storing large number of unstructured data such as Log, chat records, archival information, pictures, videos, etc.</li>
+						<li>Managing data that does not require immediate processing, separate from real-time transaction database and optimize system performance.</li>
+						<li>Executing remote backup on immense amount of data. MongoDB provides a decentralized architecture to ensure that replicas in different locations are synchronized.</li>
+						<li>Implementing full-text search function. MongoDB can retrieve from large number of unstructured data through index.</li>
+						<li>Improving existing system performance through a different database design in response to big data application or processing.</li>
+						<li>Reducing costs on relational database maintenance or build by transferring some portion of data to MongoDB.</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>What type of data is more suitable to transfer from the existing relational database (Oracle, MS SQL Server, etc.) to MongoDB ?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+                   	<ol class="decimal">
+						<li>All data can be moved from relational database to MongoDB. Particularly, the following unstructured data.</li>
+						<li>Files, such as web pages, articles, news, log and so on.</li>
+						<li>Archives, such as text files, images, videos and other files.</li>
+						<li>Data needs to be backup for preservation purposes.</li>
+					</ol>
+				</div>
+			</div>	
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/mongodbFAQ/Q2.png" alt="mongodbFAQ">
+					<h3>Common technical questions</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Can MongoDB be installed on a virtual machine?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Yes, MongoDB can be installed on VMWare, KVM etc. However, network and disk IO status are not accessible when MongoDB is installed on VM. User needs to ensure hardware capacity and performance are adequate.</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Can MongoDB pair with network storage device (such as SAN, NAS)?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Yes, However, performance wise local storage system will be superior than network storage system. Recommended priority for MongoDB storage devices is local SSD> local HDD> SAN> NAS.</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Which data backup method does MongoDB provide?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>Full backup: data backup through mongodump or mongoexport tool.</li>
+						<li>Incremental backup: backup continuously and uninterruptedly by rs.oplog collection within the DB. In addition, you can also pause the system or writing process and backup to other storage space when data is constant.</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>What are the common performance bottlenecks and optimization methods?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>mongostat , page fault value is too high.</p>
+					<ol class="decimal">
+						<li>Performance bottlenecks <br>Page fault is memory-related issue; meaning the data is not mapped in the RAM and need to load from disk. If the RAM capacity does not meet the performance requirements, then page fault occurs.</li>
+						<li>Optimization<br>As the error rate increases, opcounters will eventually be lower than expected. Adding more RAM will be the solution.。</li>
+					</ol>
+					<p>iostat, % util is too high.</p>
+					<ol class="decimal">
+						<li>Performance bottlenecks<br>If % util is close to 100%, it means there are too many I/O requests. I/O system is overloaded, the bottlenecks shall be the capability of hard disk.</li>
+						<li>Optimization
+							<ol class="gdlower-alpha">
+								<li>Improve with higher grade of hard disk drive, it is recommended to use SSD in local environment.</li>
+								<li>Increase fragmentation, disperse I/O workload.</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>How do I access the data in MongoDB?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>There are several ways:</p>
+					<ol class="decimal">
+						<li>Command-line: through Mongo Shell; native JavaScript interactive interface, connect DB instance, operate CRUD, system management and others.</li>
+						<li>Driver: supported by several programming languages such as Java, Python, Ruby, C #, PHP and so on.</li>
+						<li>GUI: supported by various tools such as Pentaho / Kettle, Talend Open Studio etc.</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+				<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="../images/mongodbFAQ/Q3.png" alt="mongodbFAQ">
+					<h3>Advanced technical issues</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>How much memory does MongoDB need?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>The main considerations to calculate required RAM size are as follow:</p>
+					<ol class="decimal">
+						<li>Working set size which is the maximum amount of data to be processed at once.
+						Index quantity and size.</li>
+						<li>The size of individual file.</li>
+						<li>connection (1MB per connection) </li>
+						<li>From the considerations above, it can be seen, the required RAM size will depend on each user’s data size and usage.</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>How do I release the memory used by MongoDB?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>Manually: restart MongoDB process to release RAM.</li>
+						<li>Automatically: managed by the operating system, if there are other processes needing RAM, the memory occupied by MongoDB will be released based on LRU (Least Recently Used).</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>How do I limit MongoDB's memory usage?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>Restricting MongoDB memory usage is not recommended and will directly affect MongoDB's processing performance. If limiting memory usage is inevitable, then the suggested alternative is to constrain by containers (e.g. lxc, cgroups, Docker, etc.)</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>How to plan MongoDB’s hardware setup and capacity?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>MongoDB’s hardware planning shall start with the test of POC (Proof Of Concept). Once the required performance can be confirmed, the hardware should gradually scale up to the desire level, and make adjustments according to the outcome from monitoring indicators.</li>
+						<li>Before the proof of concept test, performance requirements shall be recognized. (including but not limited to the following items):
+							<ol class="gdlower-alpha">
+								<li>The amount of data that needs to be stored.</li>
+								<li>The size of working set.</li>
+								<li>The number of requests sent per second.</li>
+								<li>Percentage of normal running time.</li>
+								<li>The tolerable delay time.</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>How to benchmark MongoDB?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>When comparing MongoDB’s earlier and new versions, or with other databases, they need to be based on the same arrangement (eg, number of machines, test tools, etc.). And the usual test parameters are throughput and latency value on different ratios of CRUD (eg. 95% read, 5% write).</li>
+						<li>There are many factors that can affect MongoDB’s Benchmark (including but not limited to the following):
+							<ol class="gdlower-alpha">
+								<li>hardware setup and capacity</li>
+								<li>The size and format of individual file</li>
+								<li>The proportion of reading and writing</li>
+								<li>Query syntax and index</li>
+								<li>MongoDB version</li>
+								<li>Storage engine (WiredTiger or MMAPv1)</li>
+								<li>Parameter setting (Write Concern Reference, Journaling, etc.)</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>How do I transfer data from RDBMS to MongoDB?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>The common ways are as follow:</p>
+					<ol class="decimal">
+						<li>Mongo Tool: Export RDBMS data to CSV, and import to MongoDB through mongoimport.</li>
+						<li>ETL Tool: Logstash, Pentaho / Kettle etc.</li>
+						<li>Community tools: Mongify, Firehose etc.</li>
+						<li>Programming script: r2m or self-written program via driver.</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	<!--footer-->   
+        <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="../images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8 footTxt">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">Document</h5>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_user guide (English).pdf')"><a href="#">User Guide</a></p><br>
+                                            <p onclick="javascript:window.open('../doc/gudab_v3.6.1.0_System integration document.pdf')"><a href="#">System integration document</a></p><br>
+                                            <p><a href="licenseEn.html">License</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <p><a href="gudabFAQEn.html">gudab</a></p><br>
+                                            <p><a href="mongodbFAQEn.html">MongoDB</a></p><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <p><a href="https://www.thinkpower.com.tw/about.html" target="_blank">About</a></p><br>
+                                            <p><a href="contactEn.html">Contact</a></p><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>Our locations</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Taiwan<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    3F., No.437, Ruiguang Rd. Neihu Dist., Taipei City 114, Taiwan (R.O.C.)</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>Singapore<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p>Copyright©ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	</div>   
+</body>
+</html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab FAQ</title>
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="assets/gudabAllStyleCn.css" rel="stylesheet">
+   	<link href="assets/gudabFeaturesStyleCn.css" rel="stylesheet">
+	<script src="../assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="../assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+	        $(".smallMark").click(clickHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+			}
+
+		var plus = "images/features/plus.png";
+		var minus = "images/features/minus.png";
+		function clickHandler(){
+			$(this).next(".featuresContent").slideToggle(500);
+			$(this).toggleClass("smallMark_click").toggleClass("smallMark_removeclick");
+			
+			  if ($(this).find(".gdImg").attr("src") === plus) {
+			    $(this).find(".gdImg").attr("src", minus);
+			  } else {
+			    $(this).find(".gdImg").attr("src", plus);
+			  }
+		}
+    </script>
+    <style>
+		.features h1{
+			max-width: 220px;
+			font-family:"GbFontBB";
+		}
+		.features h1::after{
+			left: 70px;
+		}
+    </style>	
+</head>
+<body>
+	<div class="wrapper">
+		<!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="indexCn.html"><img src="../images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="indexCn.html">产品简介</a></li>
+                        <li><a href="newsCn.html">最新消息</a></li>
+                        <li><a href="featuresCn.html">使用说明</a></li>
+                        <li><a href="pricingCn.html">服务与价格</a></li>
+                        <li><a href="successCn.html">成功案例</a></li>
+                        <li><a href="downloadCn.html">免费下载</a></li>
+                        <li><a href="contactCn.html">联络我们</a></li>
+                        <li><a class="navBtn rounded-circle" href="../en/gudabFAQEn.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="gudabFAQCn.html">简</a></li>
+                        <li><a class="navBtn rounded-circle" href="../gudabFAQ.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                        <ul>
+                            <li><a href="indexCn.html">产品简介</a></li>
+                            <li><a href="newsCn.html">最新消息</a></li>
+                            <li><a href="featuresCn.html">使用说明</a></li>
+                            <li><a href="pricingCn.html">服务与价格</a></li>
+                            <li><a href="successCn.html">成功案例</a></li>
+                            <li><a href="downloadCn.html">免费下载</a></li>
+                            <li><a href="contactCn.html">联络我们</a></li>
+                            <hr class="showMenuLine">
+                            <div class="btn-group chooseLanguage">
+                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    选择语言
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../en/gudabFAQEn.html">英文</a>
+                                    <a class="dropdown-item" href="gudabFAQCn.html">简体中文</a>
+                                    <a class="dropdown-item" href="../gudabFAQ.html">繁体中文</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+		<!--FAQ start-->
+		<div class="container features">
+			<div class="row">
+				<div class="col-12">
+					<h1>gudab FAQ</h1>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab 的config目录下，每个档案的用途?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>./id/gudab.id：给机器看的gudab ID</li>
+						<li>./id/im_ <XXX>.worker：给人看的gudab ID (档名的XXX)</li>
+						<li>./metrics_os_fetcher/linux_Fetcher_ <XXX>..yml：取得 Linux 指标的 Commad和 Regular Express的设定。</li>
+						<li>./metrics_os_fetcher/linux_SSH_default_Info.properties：gudab SSH连线到被监控对象主机的 Linux Service Account 设定。</li>
+						<li>./gudab.properties：gudab 内建的 consoleDB 和Mail Server设定。</li>
+						<li>./log4j2.xml：gudab 日志设定。</li>
+					</ol>	
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab 突然无法重启 (没有画面)?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>请优先与我们联络。<br>
+					若您想尝试自行处理，下列2种可能原因与解决方法：</p>
+					<ol class="decimal">
+						<li>ID问题：将gudab/config/id 目录内档案清除，重新启动。</li>
+						<li>ConsoleDB问题：尝试将 gudab/consoleDB/data 目录内档案清除，重新启动。注意：此步骤gudab会初始化，遗失所有指标、备份、设定等。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Linux Service Accounts、MongoDB Service Account 及 gudab Service Account，预设或建议的帐密为? 浏览器预设登入的帐密，是哪一种?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>Linux Service Accounts：(gudab/gudab) 建议</li>
+						<li>MongoDB Service Accounts：(root/gudab) 建议</li>
+						<li>gudab Service Accounts：(root/root) 预设</li>
+						<li>浏览器预设登入的帐密是 gudab Service Account。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>为什么要在被监控对象的主机上，建立 Linux Service Account?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>gudab透过SSH连结被监控对象，考量被监控对象所在的主机(Linux Host)的权限、安全、稽核等因素，建议所有主机统一新增专属Linux Service Account (eg. gudab)。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>忘记登入密码，执行首页的忘记密码，却无法解决 ?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>请优先与我们联络。<br>
+					若您想尝试自行处理，下列2种可能原因与解决方法：</p>
+					<ol class="decimal">
+						<li>设定问题：收不到信。不论内网或外网，gudab要能连结到某台Mail Server，并在gudab.properties输入寄件人的资讯。</li>
+						<li>信箱问题：帐号与email有误。此处 email是指注册时填写的信箱。 <br>预设的root帐号，其初始Email状态为空，请尽早更新使用者资料。</li>
+					</ol>	
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab 有几种 License 版本?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>License 有2个版本 (如下表)</p>
+					<table class="table table-responsive table-striped table-sm">
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 40%;">
+							<col style="width: 40%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col"></th>
+						    	<th scope="col">Express</th>
+						    	<th scope="col">Enterprise</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row" class="text-center">指标</th>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">告警</th>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						    </tr>
+						   	<tr>
+						      	<th scope="row" class="text-center">备份</th>
+						      	<td></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">付费</th>
+						      	<td></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">顾问服务</th>
+						      	<td></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">期限</th>
+						      	<td class="text-center">永久免费</td>
+						      	<td class="text-center">12个月</td>
+						    </tr>
+						</tbody>
+					</table>	
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Enterprise License (1)试用 30 天到期后，若不订阅 (Subscribe)；(2)若订阅到期后，若不续约 (Renew)。上述两种情况是否可继续使用 gudab?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>可以，透过告警方框内的 Express 按钮，可降版至 Express。</li>
+						<li>若是因故未申请，仍然可以延长使用 Enterprise License 30 天 (宽限期)，但是超过宽限期后将无法使用 gudab。</li>
+					</ol>
+					<p>注：Business & Enterprise到期前一个月内续约，可享有折扣。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab Account分成几种角色(权限)?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal gdPaddingbottom5">
+						<li>root user：是预设用户、名称唯一、不可删除、只能加admin用户。第一次登入，请记得更新使用者资料 (填写email、修改密码)。</li>
+						<li>admin group：全部功能。</li>
+						<li>power user group：除了加用户，全部操作功能。</li>
+						<li>operator group：看系统监控，无法新增伺服器；可开关告警 (发alert)，无法修改告警设定。</li>	
+					</ol>
+					<table class="table table-responsive table-striped table-sm">
+						<colgroup>
+							<col style="width: 30%;">
+							<col style="width: 15%;">
+							<col style="width: 15%;">
+							<col style="width: 25%;">
+							<col style="width: 15%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col"></th>
+						    	<th scope="col">root</th>
+						    	<th scope="col">admin</th>
+						    	<th scope="col">power user</th>
+						    	<th scope="col">operator</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<th scope="row" class="text-center">系统监控</th>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">新增伺服器</th>
+						      	<td></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">系統狀態</th>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">告警开关</th>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						    </tr>
+							<tr>
+						      	<th scope="row" class="text-center">告警设定</th>
+						      	<td></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">备份/回复</th>
+						      	<td></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">个人资料</th>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td></td>
+						    </tr>
+						    <tr>
+						      	<th scope="row" class="text-center">新增 admin</th>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+						      	<td></td>
+						      	<td></td>
+						    </tr>
+						    <tr>
+								<th scope="row" class="text-center">新增 power user</th>
+								<td></td>
+								<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row" class="text-center">新增 operator</th>
+								<td></td>
+								<td class="text-center greenColor"><i class="fa fa-check"></i></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>多用户，是否可以使用不同的 DB 帐密，监控同一对象。</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>不同 gudab 用户，均可以新增被监控对象。但 gudab 为了避免多用户监控同一对象，造成重复监控的情况，故采用第一次联机的 DB 帐密建立设定 (后面的用户无法改动)。<br>
+					范例如下：</p>	
+					<ol class="decimal">
+						<li>gudab 用户 1(root)，先使用 DB 帐密(root/12345)，加入监控 Replica SetA。</li>
+						<li>gudab 用户 2(test)，后使用 DB 帐密(test/67890)，加入监控 Replica SetA。</li>
+						<li>gudab 用户 2 输入的 DB 帐密正确(test/67890)，但实际是拿用户 1 的帐密 (root/12345)去做监控。</li>
+					</ol>
+					<p>注：第一次联机的 DB 帐密，应该采用专属的 MongoDB Service Account。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>为什么要在被监控对象上，建立MongoDB Service Account ?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 	
+					<ol class="decimal">
+						<li>为避免监控 n 个成员的丛集，需输入 n 次成员的信息，故 gudab 提供的 Auto Discovery 功能，能透过一组帐密连结所有丛集成员(需注意这组 DB 帐密是否有足够的管理权限)。</li>
+						<li>另考虑被监控对象的权限、安全、稽核等，建议所有被监控对象统一新增专属的 MongoDB Service Account (eg. root)。</li>
+					</ol>
+					<p>注：丛集是指 Resplica Set (RS)、Sharded Cluster (SC)。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>Auto Discovery 无法加入全部的丛集成员?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>请优先与我们联络。<br> 
+					若您想尝试自行处理，下列4种可能原因与解决方法：</p>
+					<ol class="decimal">
+						<li>确认是否建立gudab用的MongoDB Service Account。</li>
+						<li>RS必须从 Primary或Secondary做Auto Discovery，不可以从 Arbiter。</li>
+						<li>SC必须从 Router(mongos)做Auto Discovery，不可以从分片成员。</li>
+						<li>gudab 加入监控时，会取得 hostname，所以 gudab 主机需与被监控对象有相同 DNS 或在 hosts 档案加入对应 IP。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+		<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>为什么 gudab没有看到 Host Status 监控项目 (CPU, Memory, Storage, Swap)?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>请优先与我们联络。<br>
+					若您想尝试自行处理，下列2种可能原因与解决方法：</p>	
+					<ol class="decimal">
+						<li>此监控项目，若被监控对象安装在 Windows 上，则 gudab 暂不支持。</li>
+						<li>尚未设定 linux_SSH_default_Info.properties 的信息。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>除了现有的监控指标，能否加入其他项目指标?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>可以，这些属于客制化服务范畴。</p>	
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>除了发信告警，是否提供其他告警方式?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>可以，这些属于客制化服务范畴。</p>	
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab 的备份方式?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>对象：Replica Set 成员</li>
+						<li>完整备份(全备份、快照)：建立 delayed 成员做全备份，预设延迟3600 秒。(需手动复制 data files 重启环境、尚不支持快照)</li>
+						<li>增量备份：持续备份 Replica Set 成员的 oplog。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab采用哪种备份策略? (哪个DB成员作为备份对象)</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>gudab 采用 Secondary Prefer策略。<br>
+					优先从任一个 Secondary成员作为对象备份oplog，若无法连线Secondary，才会改从Primary备份。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB Standalone (Single node) 能否做增量备份 ?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>Standalone要做增量备份，需初始成单一成员的RS，作为Primary产生oplog，gudab便能做增量备份。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab备份的注意事项?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>第一次启动备份，无法备份之前的oplog，只会备份启动时间之后的oplog。之后会产生 tail collection记录最后一笔备份的时间，之后关闭备份再启动，会接续备份记录最后一笔时间之后的oplog(即使是在gudab关闭备份时产生的)。</li>
+						<li>在备份 Sharded Cluster 时：
+						<ol class="gdlower-alpha">
+							<li>不支持 Config Server 异动。<br>因此，备份前须做好分片的 Zone Range，并在 mongos 执行指令：</li>
+								<ol class="disc">
+									<li>sh.disableAutoSplit()</li>
+									<li>sh.setBalancerState(false)</li>
+								</ol>
+							<li>备份前，需先做完整备份。</li>
+							<li>分片须为 Replica Set。</li>
+						</ol>	
+					</ol>				
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab 还原的注意事项?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>被监控对象，必须先透过完整备份的档案重新启动，才能执行gudab还原。</li>
+						<li>目前还原起讫的设定值，为每小时的整点钟和半点钟。</li>
+					</ol>				
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>启动备份后，新增的 Collection无法备份加入之前的 oplog?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>若当初建立备份设定，是指定要备份的 Collection (非勾选所有资料库)，若有新的colleciton要加入原备份设定，则须修改后重新执行新增备份设定。</p>			
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab 备份多久的 oplog ? 是否有保护机制，避免硬碟空间不足?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>gudab预设备份 7日的 oplog。</li>
+						<li>用户须自行评估 oplog的成长量，选择适当容量的储存空间；或修改 config file的备份天数 (调整后须重启 Gudab)。</li>
+					</ol>		
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>可否指定要备份/还原的 Collection?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>备份：目前可指定 Collection。</li>
+						<li>还原：目前暂不支持指定 Collection，会一次还原全部。</li>
+					</ol>		
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB 已有Replica Set记录oplog，为什么还需要gudab 备份oplog?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>可以从2个面向来看：</p>
+					<table class="table table-responsive table-striped table-sm table65">
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 40%;">
+							<col style="width: 40%;">
+						</colgroup>
+						<thead class="thead-dark text-center">
+							<tr>
+						    	<th scope="col"></th>
+						    	<th scope="col">MongoDB's Replica Set</th>
+						    	<th scope="col">gudab</th>
+						    </tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row" class="text-center">备份上限</th>
+								<td>capped collection的大小</td>
+						 		<td>硬碟空间和备份天数</td>
+							</tr>
+						   	<tr>
+								<th scope="row" class="text-center">还原方式</th>
+								<td>Mongo Shell (输入指令)</td>
+						 		<td>操作介面 (滑鼠点击)</td>
+							</tr>
+						</tbody>
+					</table>
+					<ol class="decimal gdMargintop30">
+						<li>备份上限：假设资料量为1TB，记录oplog 的capped colletion为50GB，若是人为失误操作eg. db.coll.remove({ })，会产生大量oplog把旧有的oplog覆盖。即使发生人为失误，只要不超过硬碟上限，就可以继续保留，直到超过备份天数。而且主要由gudab备份oplog，MongoDB的capped collection就不用设定太大，保留运行环境的硬体资源。</li>
+						<li>还原方式：gudab提供操作介面，就不需要查找相对应的指令和步骤。</li>
+						<li>另外，gudab其独立于MongoDB架构之外，可安装在不同的系统环境OS、机房位置，采用不同的系统帐密、目录等管理权限，能提供更严谨的安全性，在储存备份资料上，等于多一份保障。</li>
+					</ol>		
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>请问网页上提的 gudab Express 是否为 opensource 软件?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>初期是免费软件 (freeware)，2018/2/1 正式转成开源软件 (opensource)。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>是否可以自行下载后用于任何企业内外或云端上 MongoDB 丛集的部署建置?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>gudab 可自行下载使用，监控 MongoDB 丛集。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>是否有软件授权声明可提供我们了解? (例如 GPL 或 apache 2 licenses 或贵公司自己的授权声明? )</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>请参考官网；或下载 gudab 后，位于 READ 目录下的 License.txt。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>是否可以提供自动部署 MongoDB Cluster、并针对一些重要情况设定告警 email 通知的功能吗?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>gudab 尚未支持自动化布署 MongoDB，2018 年下半年会导入 Ansible技术实现此功能。</li>
+						<li>gudab 支持用户设定触发条件，提供 email 发告警。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>针对安装部署、告警这两个功能，有没有主机数量或甚么特别的限制?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>gudab Express 没有卡限制，取决于 MongoDB 使用情境和 gudab 资源分配。</li>
+						<li>gudab Enterprise 取决于购买订阅的 data nodes 数量。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>如果要达到分散容错的丛集架构，是否有最小主机数量?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>根据您的需求：最小主机数量 + 分散容错<br>
+					以 Replica Set 为例，建议您最小主机数量为 3。<br>
+					架构：Svr1(Primary) + Svr2(Secondary) + Svr3(Arbiter & gudab)</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab 如何计费?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>gudab Express 永久免费</li>
+						<li>gudab Enterprise 以受监控的 MongoDB Data Node 数量为计费单位 (包含 Primary 主服务器与 Secondary 辅助服务器，不计算 Router、Config Server 与 Arbiter)。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>请问 gudab Express 是否免费? 有哪些功能?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>是的，永久免费。</li>
+						<li>主要有 "监控"、"告警"。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>能否提供 gudab Enterprise 的价格供评估? 是否有最小购买数量?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>具体细节，请留下联络方式，将由我们业务人员与您联系。</p>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>gudab 提供那些顾问服务?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<ol class="decimal">
+						<li>MongoDB 架构规划与建置</li>
+						<li>全备份(Full Backup)与还原规划与建置</li>
+						<li>异地备援规划与建置</li>
+						<li>系统告警整合(如简讯 SMS)</li>
+						<li>专业顾问与咨询</li>
+					</ol>			
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItemFAQ">
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>请问日后如须专人现场支持服务，或障碍排解，如何计价? 是以人日或问题等级大小之类如何计算吗?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent"> 
+					<p>具体细节，请留下联络方式，将由我们业务人员与您联系。</p>			
+				</div>
+			</div>
+		</div>
+	<!--footer start-->
+	    <footer>
+	        <div class="container-fluid footerTop">
+	            <div class="container">
+	                <div class="row justify-content-center">
+	                    <div class="col-md-12 col-xl-6">
+	                        <div class="row">
+	                            <div class="col-12 col-sm-4 footerLogo">
+	                                <img src="../images/index/footerLogo.png">
+	                            </div>
+	                            <div class="col-12 col-sm-8">
+	                                <div class="row">
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter1">相关文件</h5>
+	                                        <span onclick="javascript:window.open('../doc/gudab_v3.6.1.0_使用說明書(簡中).pdf')"><a href="#">使用手册</a></span>   <br>
+	                                        <span onclick="javascript:window.open('../doc/gudab_v3.6.1.0_系統整合書(簡中).pdf')"><a href="#">系统整合书</a></span>  <br>
+	                                        <span><a href="licenseCn.html">授权声明</a></span><br>
+	                                    </div>
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter2">FAQ</h5>
+	                                        <span><a href="gudabFAQCn.html">gudab</a></span><br>
+	                                        <span><a href="mongodbFAQCn.html">MongoDB</a></span><br>
+	                                    </div>
+	                                    <div class="col-4">
+	                                        <h5 class="gudabFooter3">ThinkPower</h5>
+	                                        <span><a href="https://www.thinkpower.com.tw/about.html" target="_blank">关于我们</a></span><br>
+	                                        <span><a href="contactCn.html">联络我们</a></span><br>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+	                        <div class="row">
+	                            <div class="col-12">
+	                                <h5>我们的据点</h5>
+	                            </div>
+	                        </div>
+	                        <div class="row justify-content-between">
+	                            <div class="col-6 gudabLocationItem">
+	                                <p>台湾<br>
+	                                TEL +886-2-8751-1610 #134<br>
+	                                台北市内湖区瑞光路437号3F</p>
+	                            </div>
+	                            <div class="col-6 gudabLocationItem">
+	                                <p>新加坡<br>
+	                                TEL +65-6808-6029<br>
+	                                Level 40, Ocean Financial Centre, <br>
+	                                10 CollyerQuay, Singapore 049315</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="container-fluid footerBottom">
+	            <div class="container">
+	                <div class="row text-center">
+	                    <div class="col-12 d-none d-sm-block">
+	                        <p>Copyright©昕力资讯股份有限公司 ThinkPower Information Corporation</p>
+	                    </div>
+	                    <div class="col-12 d-block d-sm-none">
+	                        <p>Copyright©昕力资讯股份有限公司<br> ThinkPower Information Corporation</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </footer>
+	</div>   
+</body>
+</html>
