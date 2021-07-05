@@ -1,0 +1,112 @@
+/*------------------news start------------------*/
+.news{
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+	min-height: 780px;
+}
+.news h1{
+	max-width: 180px;
+	text-align: center;
+	margin: 155px auto 63px auto; 
+    position: relative;
+    color: #5aaa23;
+    font-size: 2.5em;
+}
+.news h1::after{
+	position: absolute;
+    content: '';
+    height: 5px;
+    width: 80px;
+    background: #5aaa23;
+    border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	top: 55px;
+	left: 50px;
+}
+.NewsButtonGroups{
+	padding-bottom: 15px;
+}
+.newsItemContent a:hover{
+	text-decoration-line: none;
+}
+.newsItem{
+	padding: 0 8px;
+}
+.NewsButton{
+	color: #464646;
+	height: 35px;
+	line-height: 23px;
+	padding: 0 13px;
+	border-radius: 10px;
+  	border: solid 1px #646464;
+}
+.NewsButton:hover{
+	color: #5aaa23;
+	background-color: #fff;
+  	border: solid 1px #5aaa23;
+}
+.NewsButton:active{
+	color: #5aaa23;
+	background-color: #fff;
+  	border: solid 1px #5aaa23;
+}
+.btn-outline-secondary:not([disabled]):not(.disabled):active, .btn-outline-secondary:not([disabled]):not(.disabled).active,
+	.show > .btn-outline-secondary.dropdown-toggle {
+	color: #5aaa23;
+	background-color: #fff;
+	box-shadow: none;
+  	border: solid 1px #5aaa23;
+}
+.list-group-flush:first-child .list-group-item:first-child {
+	border-top: 1px solid #dbdbdb;
+	}
+.list-group-flush:last-child .list-group-item:last-child {
+	border-bottom: 1px solid #dbdbdb;
+}
+.list-group-flush:hover .list-group-item:hover {
+	border-bottom: 1px solid #94d041;
+}
+.list-group-item{
+	border-bottom: 1px solid #dbdbdb;
+	padding: 15px 10px;
+}
+.newsContent{
+	text-align: justify;
+}
+.newsClassification{
+	padding: 0 25px 0 0px;
+}
+.newsClassification p{
+	color: #5aaa23;
+	white-space:nowrap;
+}
+.newsTime{
+	text-align: right;
+	padding: 0 15px 0 15px;
+}
+.newsTime p{
+	color: #5aaa23;
+}	
+.clickHandlerHide{
+	display: none;
+}
+a:hover{
+	text-decoration: none;
+}
+
+	
+/********************************************/
+/********************************************/
+@media (max-width: 575px){
+/*------------------news start------------------*/
+	.news{
+		min-height: 400px;
+		margin-bottom: 80px;
+	}
+	.d-flex{
+		display: block !important;
+	}
+
+}

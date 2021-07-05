@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>gudab</title>
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyle.css" rel="stylesheet">
+   	<link href="assets/gudabIndexStyle.css" rel="stylesheet">
+	<script src="assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+	        $(window).resize(resizeHandler);
+	        resizeHandler();
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){			
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+
+				}
+
+		function resizeHandler(){
+    	var winW=$(window).width();
+			if(winW>=991){
+				$(".gudabMan").attr("src","images/index/bigPic.png");
+			}else{
+				$(".gudabMan").attr("src","images/index/bigPic2.png");
+				 }		
+		}
+    </script>	
+</head>
+<body>
+	<div class="wrapper">
+		<!--nav start-->
+		<div class="allMenu">
+			<nav>
+				<div class="logo"><a href="index.html"><img src="images/index/navLogo.png" alt="gudabLogo"></a></div>
+				<div class="menu">
+					<ul>
+						<li class="navFocus"><a href="index.html">產品簡介</a></li>
+						<li><a href="news.html">最新消息</a></li>
+						<li><a href="features.html">使用說明</a></li>
+						<li><a href="pricing.html">服務與價格</a></li>
+						<li><a href="success.html">成功案例</a></li>
+						<li><a href="download.html">免費下載</a></li>
+						<li><a href="contact.html">聯絡我們</a></li>
+						<li><a class="navBtn rounded-circle" href="en/indexEn.html">EN</a></li>
+						<li><a class="navBtn rounded-circle" href="cn/indexCn.html">簡</a></li>
+						<li><a class="navBtn rounded-circle" href="index.html">繁</a></li>
+					</ul>
+				</div>
+				<div class="showMenu">
+	           		<div class="toggle-icon">
+	           			<span class="bar"></span>
+					    <span class="bar"></span>
+					    <span class="bar"></span>
+	           		</div>
+						<ul>
+							<li class="navFocus"><a href="index.html">產品簡介</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="features.html">使用說明</a></li>
+							<li><a href="pricing.html">服務與價格</a></li>
+							<li><a href="success.html">成功案例</a></li>
+							<li><a href="download.html">免費下載</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+							<hr class="showMenuLine">
+							<div class="btn-group chooseLanguage">
+								 <button type="button" class="btn dropdown-toggle dropdown-menu-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    選擇語言
+								</button>
+								<div class="dropdown-menu">
+								    <a class="dropdown-item" href="en/indexEn.html">英文</a>
+								    <a class="dropdown-item" href="cn/indexCn.html">簡體中文</a>
+								    <a class="dropdown-item" href="index.html">繁體中文</a>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--header start-->
+		<header class="container">
+				<div class="row">
+					<div class="col-12 col-md-5 headerTxt">
+						<img class="headerLogo" src="images/index/headerLogo.png" alt="gudabLogo">
+						<h1>輕鬆管理您的MongoDB<br>
+						監控、告警、備份<br>
+						一次到位！</h1>
+						<a href="download.html" class="btn btn-lg downloadBtn" role="button" aria-pressed="true">免費安裝</a>
+					</div>
+					<div class="col-12 col-md-7 headerPic">
+						<img class="img-fluid" src="images/index/headerPic.png" alt="gudab pic">
+					</div>
+				</div>
+		</header>
+		<!--about start-->
+		<div class="container-fluid about">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-sm-4 order-12 order-sm-1 aboutPic">
+						<img src="images/index/about01.png" alt="gudab pic">
+					</div>
+					<div class="col-12 col-sm-7 order-1 order-sm-12 aboutTxt">
+						<h2>gudab : </h2>
+						<h2>企業級MongoDB監控管理平台</h2>
+						<p>MongoDB是企業最普遍使用的NoSQL資料庫，但若缺乏適當的監控管理工具將會使企業在系統營運過程無法即時掌控與解決問題，進而隱藏管理風險 。gudab提供了企業所需的管理功能，包含效能指標、監控、告警以及備份還原等，讓企業在使用MongoDB時，能同時滿足全方位的管理要求。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--features start-->
+		<div class="container features">
+			<div class="row">
+				<div class="col-12">
+					<h1>功能特色</h1>
+				</div>
+				<div class="row featureMain justify-content-center">
+					<div class="col-12 col-md-6 col-lg-4 featuresItem">
+						<h5>叢集架構自動偵測</h5>
+						<p>Auto-discovery 自動偵測並描繪系統拓樸，將所有叢集內MongoDB自動列出，並顯示主機型態與清單以便設定進行監控。</p>
+						<div class="itemPic"><img src="images/index/Features1.jpg" alt="gudab 叢集架構自動偵測"></div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4 featuresItem">
+						<h5>指標監控</h5>
+						<p>可針對CPU、RAM、Connection、Disk、Index、Throughput等超過30種以上指標進行監控，透過即時圖表，顯示系統狀況。</p>
+						<div class="itemPic"><img src="images/index/Features2.jpg" alt="gudab 指標監控"></div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4 featuresItem">
+						<h5>系統告警</h5>
+						<p>Auto-discovery 自動偵測並描繪系統拓樸，將所有叢集內MongoDB自動列出，並顯示主機型態與清單以便設定進行監控。</p>
+						<div class="itemPic"><img src="images/index/Features3.jpg" alt="gudab 系統告警"></div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4 featuresItem">
+						<h5>MongoDB系統活動日誌</h5>
+						<p>記錄受監控之MongoDB Server的活動歷程，以利稽核作。</p>
+						<div class="itemPic"><img src="images/index/Features4.jpg" alt="gudab MongoDB系統活動日誌"></div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4 featuresItem">
+						<h5>個人化儀錶板</h5>	
+						<p>提供管理者針對監控指標自行設定儀表板組合，以利日常監控管理工作。也可透過我的最愛方式將監控指標加入清單。</p>
+						<div class="itemPic"><img src="images/index/Features5.jpg" alt="gudab 個人化儀錶板"></div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4 featuresItem">
+						<h5>備份還原</h5>
+						<p>可進行差異備份以及匯出與匯入還原，並可進階設定監控目標。</p>
+						<div class="itemPic"><img src="images/index/Features6.jpg" alt="gudab 備份還原"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--advantages start-->
+		<div class="container-fluid advantages">
+			<div class="container">
+				<div class="row ">
+					<h1>產品優勢</h1>
+					<div class="row justify-content-center advantagesMain">
+						<div class="col-md-12 col-lg-4 col-xl-6 advantagesItemTxt">
+							<div class="row advantagesItem">
+								<!--1 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="images/index/index_icon01.png" alt="gudab advantages icon"></div>
+										<h5>針對企業管理需求</h5>
+									</div>
+									<p>完整企業管理所需功能，包含系統儀表板、監控與告警、備份還原、權限管理等，並提供系統規劃建置等專業服務，讓您使用MongoDB獲得最完整的支援。</p>
+								</div>
+								<!--2 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="images/index/index_icon02.png" alt="gudab advantages icon"></div>
+										<h5>無需安裝Agent程式</h5>
+									</div>
+									<p>採用 "訪問式" 取得各項指標和數據，無須在被監控端MongoDB另外安裝 Agent，大幅減少系統運維上的困擾。</p>
+								</div>
+								<!--3 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="images/index/index_icon03.png" alt="gudab advantages icon"></div>
+										<h5>瀏覽器操作</h5>
+									</div>
+									<p>透過瀏覽器即可操作，能讓客戶於遠端監控 MongoDB Server。</p>
+								</div>
+								<!--4 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="images/index/index_icon04.png" alt="gudab advantages icon"></div>
+										<h5>完整監控指標</h5>
+									</div>
+									<p>提供超過30種指標，提供全方位各式指標數據以供管理人員了解MongoDB運行狀況。</p>
+								</div>
+								<!--5 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="images/index/index_icon05.png" alt="gudab advantages icon"></div>
+										<h5>最快時間更新</h5>
+									</div>
+									<p>Stay up-to-date with MongoDB 。gudab支援最新MongoDB版本，從 version 3.4 開始以最快速度跟隨MongoDB新版本的發行。</p>
+								</div>
+								<!--6 start-->
+								<div class="col-12">
+									<div class="itemBar">
+										<div class="advantagesIcon"><img src="images/index/index_icon06.png" alt="gudab advantages icon"></div>
+										<h5>完整 MongoDB 專業服務</h5>
+									</div>
+									<p>MongoDB 全方位服務，從資料庫架構規劃，建置，到異地備援，全備份，系統告警整合等專業顧問與諮詢。</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-7 col-xl-6 advantagesPic">
+							<img class="gudabMan" src="images/index/bigPic.png" alt="gudab 產品優勢">
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	<!--footer start-->
+    <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">相關文件</h5>
+                                            <span onclick="javascript:window.open('doc/gudab_v3.6.1.0_使用說明書(繁中).pdf')"><a href="#">使用手冊</a></span>   <br>
+                                            <span onclick="javascript:window.open('doc/gudab_v3.6.1.0_系統整合書(繁中).pdf')"><a href="#">系統整合書</a></span>  <br>
+                                            <span><a href="license.html">授權聲明</a></span><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <span><a href="gudabFAQ.html">gudab</a></span><br>
+                                            <span><a href="mongodbFAQ.html">MongoDB</a></span><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <span><a href="https://www.thinkpower.com.tw/about.html" target="_blank">關於我們</a></span><br>
+                                            <span><a href="contact.html">聯絡我們</a></span><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>我們的據點</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>台灣<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    台北市內湖區瑞光路437號3F</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>新加坡<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12 d-none d-sm-block">
+                            <p>Copyright©昕力資訊股份有限公司 ThinkPower Information Corporation</p>
+                        </div>
+                        <div class="col-12 d-block d-sm-none">
+                            <p>Copyright©昕力資訊股份有限公司<br> ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	</div>   
+</body>
+</html>

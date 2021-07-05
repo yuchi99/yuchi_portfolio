@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>gudab 免費下載</title>
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyle.css" rel="stylesheet">
+    <link href="assets/gudabDownloadStyle.css" rel="stylesheet">
+    <script src="assets/jquery.js"></script>
+    <script src="assets/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script src="assets/download.js"></script>
+    <script>
+        $(document).ready(init);
+        function init() {
+            $(".toggle-icon").click(navHandler);
+            $(".gdDownloadPic img").hover(enterHandler1, leaveHandler1);
+            $(".gdDownloadPic2 img").hover(enterHandler2, leaveHandler2);
+        }
+
+        var toggle = true;
+        function navHandler() {
+            $('nav').toggleClass("pushed");
+
+            if (toggle) {
+                $(".showMenu ul, .toggleLanguage").show(0);
+            }
+            else {
+                $(".showMenu ul, .toggleLanguage").hide(0);
+            }
+            toggle = !toggle;
+
+        }
+        /*------------------------------------------*/
+        function enterHandler1() {
+            $(this).attr("src", "images/download/downloadWindowsHover.png");
+        }
+        function leaveHandler1() {
+            $(this).attr("src", "images/download/downloadWindows.png");
+        }
+        /*------------------------------------------*/
+        function enterHandler2() {
+            $(this).attr("src", "images/download/downloadLinuxHover.png");
+        }
+        function leaveHandler2() {
+            $(this).attr("src", "images/download/downloadLinux.png");
+        }
+        /*------------------------------------------*/
+        var recaptcha1;
+        var onloadCallback = function () {
+            recaptcha1 = grecaptcha.render(document.getElementById('RecaptchaField1'), {
+                'sitekey': '6LfmSy0UAAAAAKbune-h7gUBJ20xfq52oQne2OlD'
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <!--nav start-->
+        <div class="allMenu">
+            <nav>
+                <div class="logo"><a href="index.html"><img src="images/index/navLogo.png" alt="gudabLogo"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">產品簡介</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="features.html">使用說明</a></li>
+                        <li><a href="pricing.html">服務與價格</a></li>
+                        <li><a href="success.html">成功案例</a></li>
+                        <li class="navFocus"><a href="download.html">免費下載</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a class="navBtn rounded-circle" href="en/downloadEn.html">EN</a></li>
+                        <li><a class="navBtn rounded-circle" href="cn/downloadCn.html">簡</a></li>
+                        <li><a class="navBtn rounded-circle" href="download.html">繁</a></li>
+                    </ul>
+                </div>
+                <div class="showMenu">
+                    <div class="toggle-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">產品簡介</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="features.html">使用說明</a></li>
+                        <li><a href="pricing.html">服務與價格</a></li>
+                        <li><a href="success.html">成功案例</a></li>
+                        <li class="navFocus"><a href="download.html">免費下載</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <hr class="showMenuLine">
+                        <div class="btn-group chooseLanguage">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                選擇語言
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="en/downloadEn.html">英文</a>
+                                <a class="dropdown-item" href="cn/downloadCn.html">簡體中文</a>
+                                <a class="dropdown-item" href="download.html">繁體中文</a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--download start-->
+        <div class="container download">
+            <div class="row">
+                <div class="col-12 d-md-block d-none gdTitle1">
+                    <h1>
+                        現在就開始監控 MongoDB<br>
+                        gudab Enterprise 免費試用6個月
+                    </h1>
+                </div>
+                <div class="col-12 d-md-none d-block gdTitle2">
+                    <h1>
+                        現在就開始監控<br>MongoDB<br>
+                        gudab Enterprise<br>免費試用6個月
+                    </h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-10 col-md-7 col-lg-6 downloadInput">
+                    <form id="downloadForm" action="" method="POST">
+                        <fieldset>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="＊姓名">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control formMarginTop" id="email" name="email" aria-describedby="emailHelp" placeholder="＊E-mail">
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div id="RecaptchaField1" class="g-recaptcha"></div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="my-1 mr-2" for="clientDataNodeCounter">選擇作業系統</label>
+                                        <select class="custom-select my-1 mr-sm-2" id="systemSelector">
+                                            <option value="" selected>請選擇...</option>
+                                            <option value="windows">Windows</option>
+                                            <option value="linux">Linux</option>
+                                        </select>
+                                        <div id="error-message"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="my-1 mr-2" for="clientDataNodeCounter">選擇gudab版本</label>
+                                        <select class="custom-select my-1 mr-sm-2" id="versionSelector" lang="Tw">
+                                            <option selected>請選擇...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button id="submitBtn" type="submit" value="Submit" class="Submit btn btn-primary btn-block">下載安裝</button>
+                                </div>
+                                <p>若您無法正常安裝，請<span><a href="contact.html">聯絡我們</a></span>。</p>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-auto order-last order-sm-first">
+                    <div class="downloadGudabMan">
+                        <img src="images/download/downloadGudabMan.png">
+                    </div>
+                </div>
+                <div class="col-11 col-sm-auto GudabManTalk order-first order-sm-last">
+                    <h4 class="d-sm-block d-none">
+                        若您需要MongoDB專業服務，<br>
+                        歡迎與我們聯絡
+                    </h4>
+                    <h4 class="d-sm-none d-block">
+                        若您需要<br>MongoDB專業服務，<br>
+                        歡迎與我們聯絡
+                    </h4>
+                    <a href="contact.html" class="btn btn-lg QABtn" role="button" aria-pressed="true" data-type="inline">立即詢價</a>
+                </div>
+            </div>
+        </div>
+        <!--footer start-->
+        <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">相關文件</h5>
+                                            <span onclick="javascript:window.open('doc/gudab_v3.6.1.0_使用說明書(繁中).pdf')"><a href="#">使用手冊</a></span><br>
+                                            <span onclick="javascript:window.open('doc/gudab_v3.6.1.0_系統整合書(繁中).pdf')"><a href="#">系統整合書</a></span>  <br>
+                                            <span><a href="license.html">授權聲明</a></span><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <span><a href="gudabFAQ.html">gudab</a></span><br>
+                                            <span><a href="mongodbFAQ.html">MongoDB</a></span><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <span><a href="https://www.thinkpower.com.tw/about.html" target="_blank">關於我們</a></span><br>
+                                            <span><a href="contact.html">聯絡我們</a></span><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>我們的據點</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>
+                                        台灣<br>
+                                        TEL +886-2-8751-1610 #134<br>
+                                        台北市內湖區瑞光路437號3F
+                                    </p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>
+                                        新加坡<br>
+                                        TEL +65-6808-6029<br>
+                                        Level 40, Ocean Financial Centre, <br>
+                                        10 CollyerQuay, Singapore 049315
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12 d-none d-sm-block">
+                            <p>Copyright©昕力資訊股份有限公司 ThinkPower Information Corporation</p>
+                        </div>
+                        <div class="col-12 d-block d-sm-none">
+                            <p>Copyright©昕力資訊股份有限公司<br> ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Button trigger modal -->
+        <button id="modalButton" type="button" style="display:none;" data-toggle="modal" data-target="#exampleModalCenter"></button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="gudabSuccessMan"><img src="images/modal/gudabSuccessMan.png" alt=""></div>
+                        <h5 class="modal-title text-center" id="exampleModalCenterTitle">感謝您</h5>
+                        <p>下載已完成，已經將軟體連結寄至您的指定信箱。</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="text-center"><img src="images/modal/gdSuccessLogo.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

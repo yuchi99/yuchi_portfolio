@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>MongoDB FAQ</title>
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0/css/bootstrap-grid.css">
+    <link href="assets/gudabAllStyle.css" rel="stylesheet">
+   	<link href="assets/gudabFeaturesStyle.css" rel="stylesheet">
+	<script src="assets/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   	<script src="assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(init);
+		function init(){
+			$(".toggle-icon").click(navHandler);
+	        $(".smallMark").click(clickHandler);
+			}
+
+	    var toggle=true;
+		function navHandler(){
+			$('nav').toggleClass("pushed");
+
+			if(toggle){
+	            $(".showMenu ul, .toggleLanguage").show(0);
+				}
+			else{
+	            $(".showMenu ul, .toggleLanguage").hide(0);
+				}
+			toggle = !toggle;
+			}
+
+		var plus = "images/features/plus.png";
+		var minus = "images/features/minus.png";
+		function clickHandler(){
+			$(this).next(".featuresContent").slideToggle(500);
+			$(this).toggleClass("smallMark_click").toggleClass("smallMark_removeclick");
+			
+			  if ($(this).find(".gdImg").attr("src") === plus) {
+			    $(this).find(".gdImg").attr("src", minus);
+			  } else {
+			    $(this).find(".gdImg").attr("src", plus);
+			  }
+		}
+    </script>
+    <style>
+		.features h1{
+			max-width: 300px;
+			font-family:"GbFontBB";
+		}
+		.features h1::after{
+			left: 110px;
+		}
+    </style>	
+</head>
+<body>
+	<div class="wrapper">
+		<!--nav start-->
+		<div class="allMenu">
+			<nav>
+				<div class="logo"><a href="index.html"><img src="images/index/navLogo.png" alt="gudabLogo"></a></div>
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">產品簡介</a></li>
+						<li><a href="news.html">最新消息</a></li>
+						<li><a href="features.html">使用說明</a></li>
+						<li><a href="pricing.html">服務與價格</a></li>
+						<li><a href="success.html">成功案例</a></li>
+						<li><a href="download.html">免費下載</a></li>
+						<li><a href="contact.html">聯絡我們</a></li>
+						<li><a class="navBtn rounded-circle" href="en/mongodbFAQEn.html">EN</a></li>
+						<li><a class="navBtn rounded-circle" href="cn/mongodbFAQCn.html">簡</a></li>
+						<li><a class="navBtn rounded-circle" href="mongodbFAQ.html">繁</a></li>
+					</ul>
+				</div>
+				<div class="showMenu">
+	           		<div class="toggle-icon">
+	           			<span class="bar"></span>
+					    <span class="bar"></span>
+					    <span class="bar"></span>
+	           		</div>
+						<ul>
+							<li><a href="index.html">產品簡介</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="features.html">使用說明</a></li>
+							<li><a href="pricing.html">服務與價格</a></li>
+							<li><a href="success.html">成功案例</a></li>
+							<li><a href="download.html">免費下載</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+							<hr class="showMenuLine">
+							<div class="btn-group chooseLanguage">
+								 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    選擇語言
+								</button>
+								<div class="dropdown-menu">
+								    <a class="dropdown-item" href="en/mongodbFAQEn.html">英文</a>
+								    <a class="dropdown-item" href="cn/mongodbFAQCn.html">簡體中文</a>
+								    <a class="dropdown-item" href="mongodbFAQ.html">繁體中文</a>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--header start-->
+		<div class="container features">
+			<div class="row">
+				<div class="col-12">
+					<h1>MongoDB FAQ</h1>
+				</div>
+			</div>
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="images/mongodbFAQ/Q1.png" alt="mongodbFAQ">
+					<h3>常見一般問題</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>NoSQL資料庫 (MongoDB)可以幫我解決什麼問題?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>一般而言，NoSQL資料庫可以解決以下類型的問題 :</p>
+                   	<ol class="decimal">
+						<li>海量資料 : 可透過橫向擴充的建置方式搭配x86等中階系統硬體來處理海量資料，並可有效降低建置成本。</li>
+						<li>非結構化資料 : 針對較無結構化的資料類型，如網頁、文章、圖片或影像等，NoSQL資料庫提供便利的存取功能。</li>
+						<li>資料結構經常異動 : 若資料結構經常需要改變或較難預期資料欄位以及儲存類型，NoSQL 資料庫具備 “Schema Free”的特點，可隨時因應資料結構的需要去動態改變儲存結構。</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>我應該一開始就採用Sharding架構嗎?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>建議在一開始就直接建置Sharding架構，除非您很確認以下情形 :</p>
+                   	<ol class="decimal">
+						<li>所儲存的資料量僅維持固定大小，不會持續成長。</li>
+						<li>軟硬體設備與管理之成本與資源較為有限。</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>導入MongoDB 後，對於應用系統建置所能帶來的好處?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>以經濟效益而言，一般皆可大幅降低以往採用大廠牌資料庫所需的費用，能以合理預算獲得穩定的分散式存儲解決方案與技術服務。</p>
+					<p>以技術解決方案角度而言，好處如下：</p>
+                   	<ol class="decimal">
+						<li>透過良好設計使用MongoDB，可輕鬆以很高的效能處理海量資料，簡化應用系統開發之複雜度，並大幅提高系統效能。</li>
+						<li>可輕鬆存取非結構化資料，例如網頁、圖檔等，應用系統僅須呼叫存取API即可。</li>
+						<li>不需受限於預先定義之資料綱要，可由應用系統來控制資料儲存結構，加速開發時間。</li>
+						<li>不同的資料紀錄 (Document)可以有不同的儲存結構，可以彈性因應資料儲存需求的變動，減低應用系統維護的負擔。</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>一個系統專案在什麼使用情境與需求下可以使用MongoDB?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+                   	<ol class="decimal">
+						<li>大量非結構化資料需要儲存 ，如Log 、交談紀錄、檔案資料、圖片、影片等，非常適合以MongoDB儲存。</li>
+						<li>可將非即時需要批次計算之資料，轉交MongoDB儲存與計算，以便與即時交易之資料庫區隔，避免影響線上系統效能。</li>
+						<li>需要將大量資料進行異地備援時，MongoDB可提供分散式架構，確保資料副本異地同步。</li>
+						<li>需要提供全文檢索功能，MongoDB可從大量非結構化資料中透過索引(index)進行檢索</li>
+						<li>使用現有資料庫架構與技術仍無法解決問題，例如資料量太大而無法處理。可透過良好設計處理大量資料(特別是資料查詢)，並大幅改善系統效能。</li>
+						<li>現有關聯式資料庫之建置與維護成本太過昂貴時，可規劃引進MongoDB搭配使用，轉移部分資料至MongoDB，降低資料庫使用與維護成本。</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>有什麼資料適合從目前既有的關聯式資料庫(如Oracle,MS SQL Server等)移到MongoDB儲存嗎?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>只要搭配良好的儲存結構設計，大部分的資料都可以由目前既有的關聯式資料庫搬移到MongoDB，尤其下列幾種非結構化資料，更能發揮MongoDB彈性儲存的優勢 :</p>
+                   	<ol class="decimal">
+						<li>文件型資料，例如網頁、文章、新聞、Log資料等。</li>
+						<li>檔案型資料，例如文字檔、圖檔、影片等檔案。</li>
+						<li>需進行備份之資料，可轉交MongoDB進行歷史資料備份</li>
+					</ol>
+				</div>
+			</div>	
+		<!--***********************-->
+			<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="images/mongodbFAQ/Q2.png" alt="mongodbFAQ">
+					<h3>常見技術問題</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB可以安裝在虛擬機器上嗎?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>可以，如 VMWare或KVM。由於使用虛擬機器，無法預知網路和磁碟IO狀況，因此要保證硬體效能和資源充足。</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB可以搭配網路共用儲存設備嗎? (如SAN、NAS)</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>可以，但存取效能上本地檔案系統會優於網路共同儲存設備。建議選配MongoDB儲存設備的優先順序：local SSD > local HDD > SAN > NAS。</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB 提供哪些資料備份方式?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>完全備份：透過mongodump, mongoexport工具，將資料備份出來。</li>
+						<li>增量備份：透過備份DB內的 rs.oplog 集合，持續不間斷。</li>
+					</ol>
+					<p>另外，也可透過停機、或停止寫操作的方式，在資料不會異動的情況下，直接將資料檔案備份到其它的儲存空間。</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>常見效能瓶頸與優化方式?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>mongostat指令，發現過高的page fault (缺頁中斷)。</p>
+					<ol class="decimal">
+						<li>效能瓶頸<br>缺頁中斷和記憶體相關，代表資料不在記憶體，需要資料庫去磁碟裡面查找數據。如果記憶體的大小不能滿足性能需求，那麼你將會看到缺頁中斷。</li>
+						<li>優化方式 <br>隨著錯誤率的上升，opcounters 最終會低於期望值，所以這時你應該增加可用的 RAM。</li>
+					</ol>
+					<p>iostat指令，發現過高的 %util。</p>
+					<ol class="decimal">
+						<li>效能瓶頸<br>如果 %util 接近 100%，說明產生的I/O請求太多，I/O系統已經滿負荷，該硬碟可能存在瓶頸。</li>
+						<li>優化方式
+							<ol class="gdlower-alpha">
+								<li>提高硬碟的規格，建議在local用SSD。</li>
+								<li>增加分片，分散I/O的負載。</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>如何存取MongoDB中的資料?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>常見幾種方式：</p>
+					<ol class="decimal">
+						<li>Command-line：透過Mongo Shell這個原生的 JavaScript交互式介面，連接 DB 實例，做 CRUD、系統管理等操作。</li>
+						<li>Driver：多種語言都有支援，如 Java, Python, Ruby, C#, PHP等。</li>
+						<li>GUI：多種工具都有支援，如 Pentaho/Kettle, Talend Open Studio等。</li>
+					</ol>
+				</div>
+			</div>
+		<!--***********************-->
+				<div class="row featuresItem">
+				<div class="col-12 featuresTitle">
+					<img src="images/mongodbFAQ/Q3.png" alt="mongodbFAQ">
+					<h3>進階技術問題</h3>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB需要多少記憶體?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>計算需要多少 RAM，至少要考量到：</p>
+					<ol class="decimal">
+						<li>"工作集大小" (working set size)，也就是一次要處理的最大資料量。</li>
+						<li>索引數量和大小</li>
+						<li>每筆檔案的大小</li>
+						<li>連線數 ( 1MB per connection )<br>	由此可知，根據用戶不同的資料量和場景，會有不同的計算結果。	</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>如何釋放MongoDB使用的記憶體?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>手動方式：重啟 MongoDB的 process，就能釋放 RAM。</li>
+						<li>自動方式：由作業系統管理，若有其它 process需要RAM，則會根據LRU(最久未使用演算法)，將MongoDB使用的記憶體釋放。</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>如何限制MongoDB的記憶體上限?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>不建議限制，資料放在記憶體，MongoDB的效能才會好，一但限制記憶體，則限制的就是你存放在記憶體的資料量。若真的非要限制記憶體上限，建議用 container (e.g. lxc, cgroups, Docker, etc.)來限制。</p>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB的硬體配置與容量規劃?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>做硬體配置與容量規劃，應計劃一個概念驗證測試(PoC)，達成性能需求後，逐步提高測試規模，直到與正式環境相當，之後便是透過監控指標來做調整。</li>
+						<li>在概念驗證測試之前，請預先列出你的性能需求 (不限於以下項目)：
+							<ol class="gdlower-alpha">
+								<li>需要存儲的數據量。</li>
+								<li>工作集的大小。</li>
+								<li>每秒發送的請求數目。</li>
+								<li>正常運行時間百分比。</li>
+								<li>可以忍受的延遲時間。</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>MongoDB的Benchmark?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<ol class="decimal">
+						<li>當我們做 MongoDB新舊版本比較、或是與其它資料庫做比較時，需要在相同的基準點 (eg.機器台數、測試工具等)，比較的結果才有意義。<br>
+						通常是在不同比例的 CRUD上 (eg. 95%讀、5%寫)，比較各自的吞吐量(Throughput)和延遲程度(Latency)。</li>
+						<li>會影響MongoDB Benchmark的因素很多 (不限於以下項目)：
+							<ol class="gdlower-alpha">
+								<li>硬體配置與容量規劃</li>
+								<li>每筆檔案的大小與格式</li>
+								<li>讀寫的比例</li>
+								<li>查詢的語法與索引</li>
+								<li>MongoDB版本</li>
+								<li>storage engine (使用WiredTiger 或 MMAPv1)</li>
+								<li>參數設定 (Write Concern Reference, Journaling 等)</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			<!---->
+				<div class="col-12 smallMark">
+					<div class="row justify-content-between">
+						<div class="col-9 col-md-11">
+							<h4>如何把資料從RDBMS移轉到MongoDB?</h4>
+						</div>
+						<div class="col-auto gdPlus">
+							<img src="images/features/plus.png" alt="" class="gdImg">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 featuresContent">
+					<p>常見幾種方式:</p>
+					<ol class="decimal">
+						<li>Mongo Tool: 將RDBMS 的資料匯出成CSV，在透過mongoimport匯入MongoDB。</li>
+						<li>ETL Tool: Logstash, Pentaho/Kettle等。</li>
+						<li>社群工具: Mongify, Firehose等。</li>
+						<li>程式脚本: r2m或自行透過Driver寫程式。</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	<!--footer start-->
+    <footer>
+            <div class="container-fluid footerTop">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 footerLogo">
+                                    <img src="images/index/footerLogo.png">
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter1">相關文件</h5>
+                                            <span onclick="javascript:window.open('doc/gudab_v3.6.1.0_使用說明書(繁中).pdf')"><a href="#">使用手冊</a></span>   <br>
+                                            <span onclick="javascript:window.open('doc/gudab_v3.6.1.0_系統整合書(繁中).pdf')"><a href="#">系統整合書</a></span>  <br>
+                                            <span><a href="license.html">授權聲明</a></span><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter2">FAQ</h5>
+                                            <span><a href="gudabFAQ.html">gudab</a></span><br>
+                                            <span><a href="mongodbFAQ.html">MongoDB</a></span><br>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="gudabFooter3">ThinkPower</h5>
+                                            <span><a href="https://www.thinkpower.com.tw/about.html" target="_blank">關於我們</a></span><br>
+                                            <span><a href="contact.html">聯絡我們</a></span><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 offset-sm-4 col-xl-6 offset-xl-0 gudabLocation">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>我們的據點</h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-6 gudabLocationItem">
+                                    <p>台灣<br>
+                                    TEL +886-2-8751-1610 #134<br>
+                                    台北市內湖區瑞光路437號3F</p>
+                                </div>
+                                <div class="col-6 gudabLocationItem">
+                                    <p>新加坡<br>
+                                    TEL +65-6808-6029<br>
+                                    Level 40, Ocean Financial Centre, <br>
+                                    10 CollyerQuay, Singapore 049315</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footerBottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12 d-none d-sm-block">
+                            <p>Copyright©昕力資訊股份有限公司 ThinkPower Information Corporation</p>
+                        </div>
+                        <div class="col-12 d-block d-sm-none">
+                            <p>Copyright©昕力資訊股份有限公司<br> ThinkPower Information Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	</div>   
+</body>
+</html>
