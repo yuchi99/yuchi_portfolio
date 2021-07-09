@@ -834,7 +834,7 @@ header img {
 }
 
 .portfolio .right .item .txt {
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .portfolio .right .circle-group {
